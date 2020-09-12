@@ -23,11 +23,16 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
 function eliminarFavoritos(info)
 {
   console.log("info:",info);
+  console.log("mostrar favoritesarray", favoritesArray);
    for(i =0; i< favoritesArray.length;i++){
       favoritesArray.splice(i,1);
+      
+      console.log("entra al for y ejecuta con...",info.id);
+      //var contenedor = getElementById(info.id);
+      document.getElementById(info.id).style.display = "none";
       //logica para borrar el div
-      //var idAEliminar = getElementById(i);
-      ctn.classList.add("ocultar");
+      borrarCorazonTrendings(info.id)
+      //ctn.classList.add("ocultar");
 
    }
    saveInLocalStorage(favoritesArray);
@@ -35,6 +40,14 @@ function eliminarFavoritos(info)
    //ACA TENGO QUE VOLVER A VER EL ARRAY
 }
 
+function borrarCorazonTrendings(id){
+  
+  
+  //cambiar el estado del boton
+  //creamos una array con los q hay en trending
+
+
+}
 
 function addtoFavoritos(info) {
     console.log(info);
