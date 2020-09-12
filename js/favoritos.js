@@ -46,7 +46,9 @@ function borrarCorazonTrendings(id){
   //cambiar el estado del boton
   //creamos una array con los q hay en trending
 
-
+  console.log("ID: ", id);
+  //borrar corazon lleno
+  document.getElementById("boton-corazon-violeta_"+id).style.display = "none";
 }
 
 function addtoFavoritos(info) {
