@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="charts/chartist.css">
+    <script src="charts/chartist.js"></script>
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: aquamarine;
+}
+.fav{
+    color: blueviolet;
+    background-color: darksalmon;
+    height: 300px;
+    width: 100%;
+}
+.gif{
+    color:red;
+    background-color: darkseagreen;
+    height: 300px;
+    width: 100%;
+}
+.home{
+    color:red;
+    background-color:deepskyblue;
+    height: 300px;
+    width: 100%;
+}
+body.dark{
+    background-color: darkblue;
+}
+.dark .content{
+    color: white;
+}
+.dark .title{
+    color:darkorange;
+}
+.hide{
+    display: none;
+}
+#trend_container{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#trend_container img{
+    width: 30%;
+    height: auto;
+}
+.spinner{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+</style>
+<body id="body" class="algo otra cosa">
+    <input type="text" id="tags">
+    <ul id="tag_container"></ul>
+<script>
+var offset = 0;
+tags     = document.getElementById('tags')
+tag_container     = document.getElementById('tag_container')
+tags.addEventListener('input',function(event){
+    //console.log(this.value)
+    getTags(this.value)
+})
+
+function getTags(busqueda){
+    url = "https://api.giphy.com/v1/gifs/search/tags?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&q=" + busqueda; 
+    fetch(url)
+    .then(function(response){
+        return response = response.json();
+    })
+    .then(function(info){
+        showTags( info.data);
+    })
+    .then(function(){
+        spinner.classList.add("hide");
+    })
+    .catch(err)
+}
+function showTags(arrayTags){
+    tag_container.innerHTML = ''
+    for (let index = 0; index < arrayTags.length; index++) {
+        li = document.createElement("li");
+        li.textContent = arrayTags[index].name;
+        li.addEventListener('click', function(){
+            tags.value = this.textContent;
+        })
+        tag_container.append(li);d
+    }
+}
+getTrendings();
+</script>     
+</body>
+</html>
+
+
+
+
+
+
+

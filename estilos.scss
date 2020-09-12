@@ -1,0 +1,596 @@
+@import "variables";
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+//tipografias importadas
+//monserrat
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+//roboto
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+//fin tipografias importadas
+
+.foto {
+    background-color: rgb(197, 170, 170);
+    border: solid black;
+    width: 243px;
+    height: 187px;
+}
+.gift-posicion{
+    position: absolute;
+    width: 243px;
+    height: 187px;
+}
+//BOTONES GIFTS
+.boton-favoritos-corazon-activo {
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    margin-right: 11px;
+    margin-top: 10px;
+    z-index: 100;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.boton-descarga{
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    margin-top: 10px;
+    margin-right: 11px;
+    z-index: 100;
+
+
+
+    &:hover {
+        opacity: 1;
+    }
+}  
+.boton-agrandar{
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    margin-top: 10px;
+    margin-right: 11px;
+    z-index: 100;
+
+
+    &:hover {
+        opacity: 1;
+    }
+}  
+
+
+
+
+//FIN BOTONES GIFTS
+
+
+//LUPA QUE ESTA AL LADO DE LOS GIFTS
+.lupa {
+    float: left;
+    padding-top: 5px;
+    color: #9cafc3;
+    padding-right: 14px;
+    font-size: 20px;
+    opacity: 0;
+}
+
+//clase que utilizo para ocultar los elementos
+.ocultar {
+    display: none!important;
+
+}
+
+.linea {
+    width: 157px;
+    border-top: 1px solid #9cafc3c2;
+}
+
+//PADDING CELULAR
+
+.logo-padding {
+    padding-top: 34px;
+    padding-bottom: 17.2;
+    padding-left: 22px;
+}
+.boton-menu-padding {
+    padding-top: 52px;
+    padding-right: 26px;
+    padding-bottom: 34px;
+}
+.tipografia-home-padding {
+    padding-top: 7px;
+    padding-left: 45px;
+    padding-right: 44px;
+}
+.imagen-central-padding {
+    padding-top: 31px;
+    padding-left: 51px;
+    padding-right: 51px;
+}
+.fieldset-busqueda-padding {
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 55px;
+}
+.treding-padding {
+    padding-top: 31px;
+    padding-left: 70px;
+    padding-right: 69px;
+    padding-bottom: 2px;
+}
+.trendig-texto-padding {
+    padding-bottom: 45px;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+.tipo-de-busqueda-titulo-padding {
+    padding-bottom: 38px;
+    padding-top: 35px;
+}
+.treding-gifos-padding {
+    padding-top: 46px;
+    padding-bottom: 7px;
+}
+.ultimos-gifos-padding {
+    padding-right: 21px;
+    padding-left: 21px;
+    padding-bottom: 32px;
+}
+.compartir-en-padding {
+    padding-bottom: 21px;
+}
+.gifos-derechos-reservados-padding {
+    padding-bottom: 23px;
+    padding-top: 47.8;
+}
+.favoritos-titulo-padding{
+    padding-bottom: 46px;
+    padding-top:7px ;
+}
+
+.corazon-verde-padding{
+    padding-top: 12px;
+}
+.cara-verde-padding{
+    padding-top: 12px;
+}
+.corazon-grande-favoritos{
+    padding-top: 110px;
+}
+
+.tus-gifos-titulo-padding{
+    padding-bottom: 46px;
+    padding-top:7px ;
+}
+.texto-seccion-cabeza-grande{
+    font-family: "Montserrat, sans-serif";
+    font-size: 22px;
+    color: #50E3C2;
+    text-align: center;
+    line-height: 33px;
+    font-weight: 700;
+    padding-top: 24px;
+
+}
+//FIN PADDING CELULAR
+
+header {
+    border-top: 5px solid $color-violeta; //linea de color violeta arriba del header
+    height: 85px;
+    margin-bottom: 7px;
+}
+//fin header
+
+//Menu de navegacion (Celular y Desktop)// logo
+.boton-menu {
+    background-color: white;
+    outline: none;
+    border: none;
+}
+
+.menu {
+    background: $color-violeta-opacidad;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    //animaciones
+    animation-name: alto-menu;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+
+    .menu-link {
+        li {
+            list-style: none;
+        }
+        .links-menu {
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 60px;
+            text-decoration: none;
+            position: relative; //aca pongo posicion relativa para que despues se dibuje la linea
+        }
+    }
+}
+
+.links-menu {
+    &:after {
+        //esto lo utilizo para dibujar la linea correspondiente al texto pongo una posicion absoluta
+        //dibujo la linea a los elentos que tengan la ckase links-menu
+        content: "";
+        height: 1px;
+        width: 40%;
+        background: white;
+        position: absolute; //le pongo posicion absoluta para que luego internamente se fije quien es el primer elemento con relative
+        //de esta forma al ser los links le pone el contenido por debajo
+        left: 30%;
+        top: 30px;
+    }
+}
+
+//FIN MENU DE NAVEGACION (Celular y Desktop)
+
+/////////////////////////////////////////////////////
+
+/* ESTILOS DE TIPOGRAFIA */
+
+//texto cuando no hay favoritos
+.texto-seccion-favoritos{
+    font-family: "Montserrat, sans-serif";
+font-size: 22px;
+color: #50E3C2;
+text-align: center;
+line-height: 33px;
+font-weight: 700;
+padding-top: 24px;
+}
+
+//texto arriba de la imagen
+.tipografia-home {
+    font-size: 30px;
+    text-align: center;
+    line-height: 36px;
+    font-family: "Montserrat", sans-serif;
+    //color violeta(variable)
+    color: $color-violeta;
+}
+
+.tipografia-home-1 {
+    font-size: 30px;
+    //color verde(variable)
+    color: $color-verde;
+    text-align: center;
+    line-height: 36px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.trending-texto {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-violeta;
+    text-align: center;
+    line-height: 25px;
+}
+.treding {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-violeta;
+    text-align: center;
+    line-height: 25px;
+}
+.tipo-de-busqueda-titulo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    color: $color-violeta;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    border-top: #9cafc37e 1px solid;
+    width: 157px;
+
+    &::first-letter {
+        font-size: 130%;
+        text-transform: uppercase;
+    }
+}
+.treding-gifos {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-violeta;
+    text-align: center;
+    line-height: 30px;
+}
+.ultimos-gifos {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    line-height: 23px;
+}
+
+.compartir-en {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0;
+}
+.gifos-derechos-reservados {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.favoritos-titulo{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-violeta;
+    text-align: center;
+    line-height: 30px;
+}
+.tus-gifos-titulo{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-violeta;
+    text-align: center;
+    line-height: 30px;
+}
+/* FIN ESTILOS DE TIPOGRAFIA (Celular) */
+
+//////////////////////////////////////////
+
+//ESTILOS BARRA DE BUSQUEDA
+
+.formulario-busqueda {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.fieldset-busqueda {
+    border-radius: 40px;
+    border: solid 1px;
+    border-color: $color-violeta;
+    font-family: ProximaNova-Regular;
+    font-size: 16px;
+    text-align: left;
+    width: 334px;
+}
+//este es el elemento de donde se escribe// los margenes son para ubicarlo dentro del .fieldset-busqueda
+.busqueda {
+    //borde exterior
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    //Con esto saco el deliniado que viene por defecto
+    outline: none;
+    text-decoration: none;
+    background-color: white;
+    //margenes para ubicarlo en la pos exacta dentro del cuadro de busqueda
+    width: 215px;
+    margin-right: 24px;
+}
+.boton-busqueda {
+    // Saco el borde para que quede solamente la imagen svg
+    border: none;
+    //Le doy color blanco para que quede como el de referencia// ya que el boton por defecto viene gris
+    background-color: white;
+    //Con esto saco el deliniado que viene por defecto
+    outline: none;
+    cursor: pointer;
+}
+
+.mi-boton {
+    border: none;
+    border: 1px solid $color-violeta;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    color: $color-violeta;
+    letter-spacing: 0;
+    padding-bottom: 16px;
+    padding-left: 32.5px;
+    padding-right: 31.5px;
+
+    padding-top: 18px;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color: white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    margin-top: 78px;
+    margin-bottom: 79px;
+}
+
+.autocompletar-busquedas {
+    position: relative;
+    opacity: 0.5;
+    border-top: 1px solid #9cafc3;
+    z-index: 99;
+    float: 0;
+    right: 0;
+    padding-top: 14px;
+}
+
+.autocompletar-busquedas {
+    div {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #9cafc3;
+        text-align: left;
+        padding-bottom: 10px;
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-size: 20px;
+            content: " \f002";
+            font-weight: 900;
+            margin-right: 14.5px;
+        }
+    }
+}
+
+.autocompletar-busquedas {
+    div {
+        &:hover {
+            background-color: blueviolet;
+            border-radius: 20px;
+            opacity: 0.5;
+        }
+    }
+}
+
+// Fin de estilos de la barra de busqueda
+//////////////////////////////////////////////
+
+/* Estilos links */
+.footer-links {
+    list-style: none;
+    background-color: white;
+    color: $color-footer-links;
+    padding-top: 24px;
+    padding-bottom: 46px;
+    padding-right: 19px;
+    text-align: center;
+}
+
+/*Fin estilos links */
+
+//foter comienzo
+
+footer {
+    height: 196px;
+    border-bottom: 5px solid $color-violeta;
+}
+//footer fin
+
+///////////////////////////////////////
+
+//Contenedores Flex
+
+//Lo uso principalmente para  la parte del celular, pongo todo en columna
+.contenedor1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+//Lo uso principalmente para el ul del footer que contiene los links a las redes sociales
+.contenedor2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-flow: row;
+}
+//lo uso principalmente para el header
+.contenedor3 {
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: space-between;
+}
+//lo uso para el menu para el menu
+.contenedor4 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.contenedor5 {
+    width: 98%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 243px 243px;
+    grid-gap: 25px 21px;
+
+    padding: 10px;
+}
+.contenedor-gift{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-flow: row;
+    width: 243px;
+    height: 187px;
+
+}
+.contenedor-gift-trending{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-flow: row;
+   width: 243px;
+    height: 187px; 
+    margin-bottom: 131px;
+    margin-top: 32px;
+    margin-left: 22px;
+    margin-right: 22px;
+
+}
+.contenedor6{
+    width: 100%;
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/////////////////////////////////////
+//Fin contenedores Flex
+
+//animaciones
+
+@keyframes alto-menu {
+    from {
+        height: 40%;
+        display: none;
+    }
+    to {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+//fin anumaciones
+//////////////////////////////////////////
