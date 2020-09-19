@@ -17,9 +17,22 @@ next.addEventListener('click', function () {
     getTrendings();
 })
 
-function saveInLocalStorage(arr){
-    localStorage.setItem("favoritos",JSON.stringify(arr));
+
+function saveInLocalStorage(arr_nuevo){
+    if((localStorage.getItem("favoritos")) != null){
+    let array_viejo = []
+    array_viejo =JSON.parse( localStorage.getItem("favoritos"));
+   
+    let array_a_guardar= arr_nuevo;
+    for( i=0; i<array_viejo.length ; i++){
+    array_a_guardar.push(array_viejo[i]);
+
+        }
+    }
+    localStorage.setItem("favoritos",JSON.stringify(arr_nuevo));
 }
+
+
 
 function getTrendings() {
     url = "https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=3&offset=" + offset;
@@ -85,11 +98,12 @@ function getTrendings() {
                        ctn.classList.add(info.data[index].id);
 
                        array_ids.push(info.data[index].id);
-
+                        console.log("este es mi array de ids : ",array_ids);
                       saveInLocalStorage(array_ids);
                        
                     fetch_busqueda_favoritos();
                    // ocultar_corazon_grande_favoritos();
+
 
 
                         bt_switch = true;

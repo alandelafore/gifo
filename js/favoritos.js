@@ -10,7 +10,7 @@ var favoritesArray =[];
 
 function displayLocalStorageFavorites() {
   let newArray = JSON.parse(localStorage.getItem('favoritos'));
-  //console.log(newArray);
+  console.log(" mi array local: "+newArray);
   return newArray;
 }
 
