@@ -17,6 +17,7 @@ function displayLocalStorageFavorites() {
 document.getElementById("link-favoritos").addEventListener("click", function () {
     
   console.log(url+ "   mis urls")
+  fetch_busqueda_favoritos();
   
 })
     
