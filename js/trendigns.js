@@ -20,16 +20,16 @@ next.addEventListener('click', function () {
 
 function saveInLocalStorage(arr_nuevo){
     if((localStorage.getItem("favoritos")) != null){
-    let array_viejo = []
-    array_viejo =JSON.parse( localStorage.getItem("favoritos"));
-   
-    let array_a_guardar= arr_nuevo;
-    for( i=0; i<array_viejo.length ; i++){
-    array_a_guardar.push(array_viejo[i]);
+        let array_viejo = []
+        array_viejo =JSON.parse( localStorage.getItem("favoritos"));
+    
+        let array_a_guardar= arr_nuevo;
 
+        for( i=0; i<array_viejo.length ; i++){
+            array_a_guardar.push(array_viejo[i]);
         }
     }
-    localStorage.setItem("favoritos",JSON.stringify(arr_nuevo));
+    localStorage.setItem("favoritos", JSON.stringify(array_a_guardar));
 }
 
 
