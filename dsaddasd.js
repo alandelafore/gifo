@@ -15,7 +15,6 @@ document.getElementById("mi-boton-menu").addEventListener("click", function () {
 
 
 function addtoFavoritos(info) {
-    console.log(info);
     //creo un div
     let ctn = document.createElement("div");
     //CREO UNA IMAGEN gift
@@ -131,11 +130,9 @@ function addtoFavoritos(info) {
           
         }
    
-        console.log(info);
       })
   
       .catch(() => {
-        console.log("err")
       })
   }
   
@@ -143,7 +140,6 @@ function addtoFavoritos(info) {
 function ocultar_corazon_grande_favoritos(){
 
   if(arr_obj_gift !=""){
-   // console.log("verifico si el array esta vacio " +array_ids)
     var ocultar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
     for (let index = 0; index < ocultar_corazon_grande_favoritos.length; index++) {
       ocultar_corazon_grande_favoritos[index].classList.add("ocultar");

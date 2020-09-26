@@ -4,6 +4,7 @@ var offset = 0;
 var container = document.getElementById('trend_container')
 let previous = document.getElementById('previous')
 let next = document.getElementById('next')
+
 previous.addEventListener('click', function () {
     if (offset != 0) {
         offset -= 1;
@@ -19,17 +20,23 @@ next.addEventListener('click', function () {
 
 
 function saveInLocalStorage(arr_nuevo){
-    if((localStorage.getItem("favoritos")) != null){
+    
+    if((localStorage.getItem("favoritos")) != "undefined"){
+        
+        console.log("que trae local storage", localStorage.getItem("favoritos"));
+
         let array_viejo = []
-        array_viejo =JSON.parse( localStorage.getItem("favoritos"));
+        array_viejo =JSON.parse(localStorage.getItem("favoritos"));
     
        var array_a_guardar= arr_nuevo;
 
         for( i=0; i<array_viejo.length ; i++){
             array_a_guardar.push(array_viejo[i]);
         }
+        localStorage.setItem("favoritos", JSON.stringify(array_a_guardar));
     }
-    localStorage.setItem("favoritos", JSON.stringify(array_a_guardar));
+
+    localStorage.setItem("favoritos", JSON.stringify(arr_nuevo));
 }
 
 
@@ -98,10 +105,12 @@ function getTrendings() {
                        ctn.classList.add(info.data[index].id);
 
                        array_ids.push(info.data[index].id);
-                        console.log("este es mi array de ids : ",array_ids);
                       saveInLocalStorage(array_ids);
-                       
-                    fetch_busqueda_favoritos();
+                        if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
+                        {
+                            console.log("que trae local storage en trendings", localStorage.getItem("favoritos"))
+                           fetch_busqueda_favoritos();
+                        }
                    // ocultar_corazon_grande_favoritos();
 
 

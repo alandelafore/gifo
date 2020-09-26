@@ -10,34 +10,38 @@ var favoritesArray =[];
 
 function displayLocalStorageFavorites() {
   let newArray = JSON.parse(localStorage.getItem('favoritos'));
-  console.log(" mi array local: "+newArray);
+
   return newArray;
 }
 
 document.getElementById("link-favoritos").addEventListener("click", function () {
     
-  console.log(url+ "   mis urls")
-  fetch_busqueda_favoritos();
+  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != undefined)
+    fetch_busqueda_favoritos();
   
 })
     
 function eliminarFavoritos(info)
 {
-  console.log("info:",info);
+  console.log("ID del elemento que clickeo:",info.id);
  let arr_localStorage= JSON.parse(localStorage.getItem('favoritos'));
-   for(i =0; i< arr_localStorage.length;i++){
-     if(info.id === arr_localStorage[i]){
+  
+ console.log("Array antes de borrar: ", arr_localStorage)
+   for(i =0; i< arr_localStorage.length; i++){
+     if(info.id == arr_localStorage[i]){
       arr_localStorage.splice(i,1);
       
       document.getElementById(info.id).style.display = "none";
       //logica para borrar el div
+      
       borrarCorazonTrendings(info.id)
       //ctn.classList.add("ocultar");
      }
    }
    console.log(" : Este es mi array despues de borrar",arr_localStorage )
    saveInLocalStorage(arr_localStorage);
-   fetch_busqueda_favoritos();
+   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
+      fetch_busqueda_favoritos();
    //ACA TENGO QUE VOLVER A VER EL ARRAY
 }
 
@@ -47,7 +51,6 @@ function borrarCorazonTrendings(id){
   //cambiar el estado del boton
   //creamos una array con los q hay en trending
 
-  console.log("ID: ", id);
   //borrar corazon lleno
   if(document.getElementById("boton-corazon-violeta_"+id) != null){
   document.getElementById("boton-corazon-violeta_"+id).style.display = "none";

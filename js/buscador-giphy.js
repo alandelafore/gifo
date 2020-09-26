@@ -20,7 +20,6 @@ document.getElementById("btn").addEventListener("click", (ev) => {//cuando el us
   //esta funcion la utilizo para obtener datos de la api mediate un fetch
   fetch_busqueda();
 
-  console.log(offset);
 
 });
 document.getElementById("mi-boton").addEventListener("click", () => {
@@ -33,7 +32,6 @@ document.getElementById("mi-boton").addEventListener("click", () => {
 
 document.getElementById("btn-borrar").addEventListener("click", () => {
 
-  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaprete");
   document.getElementById("btn-borrar").classList.add("ocultar");
   
   // esta funcion  borra el contenido de la busqueda
@@ -49,7 +47,6 @@ document.getElementById("btn-borrar").addEventListener("click", () => {
 
 //Creo los div Y les doy sus respectivos tamaños a las imagenes traidas de giphy
 function addtoDOM(info) {
-  console.log(info.id+ "   dfkvkjdjvkjlfdkljkfjdkjfdkjdfklv");
   //creo un div
   let ctn = document.createElement("div");
   //CREO UNA IMAGEN gift
@@ -116,8 +113,9 @@ function addtoDOM(info) {
 
     arrayFavoritos.push(info.id);
 
-    saveInLocalStorage(arrayFavoritos);     
-    fetch_busqueda_favoritos();
+    saveInLocalStorage(arrayFavoritos); 
+    if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
+      fetch_busqueda_favoritos();
     bt_switch = true;
 }
 else {
@@ -190,12 +188,10 @@ function fetch_busqueda() {
         //agrego el boton de ver mas en cada una de las busquedas
         ver_mas.style.display ="inline-block"
       }
-      console.log(respuesta + "oOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
 
     })
 
     .catch(() => {
-      console.log("err")
     })
 }
 
