@@ -24,19 +24,19 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
 function eliminarFavoritos(info)
 {
   console.log("info:",info);
-  console.log("mostrar favoritesarray", favoritesArray);
-   for(i =0; i< favoritesArray.length;i++){
-      favoritesArray.splice(i,1);
+ let arr_localStorage= JSON.parse(localStorage.getItem('favoritos'));
+   for(i =0; i< arr_localStorage.length;i++){
+     if(info.id === arr_localStorage[i]){
+      arr_localStorage.splice(i,1);
       
-      console.log("entra al for y ejecuta con...",info.id);
-      //var contenedor = getElementById(info.id);
       document.getElementById(info.id).style.display = "none";
       //logica para borrar el div
       borrarCorazonTrendings(info.id)
       //ctn.classList.add("ocultar");
-
+     }
    }
-   saveInLocalStorage(favoritesArray);
+   console.log(" : Este es mi array despues de borrar",arr_localStorage )
+   saveInLocalStorage(arr_localStorage);
    fetch_busqueda_favoritos();
    //ACA TENGO QUE VOLVER A VER EL ARRAY
 }
@@ -49,7 +49,9 @@ function borrarCorazonTrendings(id){
 
   console.log("ID: ", id);
   //borrar corazon lleno
+  if(document.getElementById("boton-corazon-violeta_"+id) != null){
   document.getElementById("boton-corazon-violeta_"+id).style.display = "none";
+  }
 }
 
 function addtoFavoritos(info) {

@@ -23,7 +23,7 @@ function saveInLocalStorage(arr_nuevo){
         let array_viejo = []
         array_viejo =JSON.parse( localStorage.getItem("favoritos"));
     
-        let array_a_guardar= arr_nuevo;
+       var array_a_guardar= arr_nuevo;
 
         for( i=0; i<array_viejo.length ; i++){
             array_a_guardar.push(array_viejo[i]);
