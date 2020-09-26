@@ -23,10 +23,8 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
     
 function eliminarFavoritos(info)
 {
-  console.log("ID del elemento que clickeo:",info.id);
  let arr_localStorage= JSON.parse(localStorage.getItem('favoritos'));
   
- console.log("Array antes de borrar: ", arr_localStorage)
    for(i =0; i< arr_localStorage.length; i++){
      if(info.id == arr_localStorage[i]){
       arr_localStorage.splice(i,1);
@@ -38,7 +36,6 @@ function eliminarFavoritos(info)
       //ctn.classList.add("ocultar");
      }
    }
-   console.log(" : Este es mi array despues de borrar",arr_localStorage )
    saveInLocalStorage(arr_localStorage);
    if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
       fetch_busqueda_favoritos();
@@ -58,7 +55,6 @@ function borrarCorazonTrendings(id){
 }
 
 function addtoFavoritos(info) {
-    console.log(info);
     if(!favoritesArray.includes(info.id)){
     //creo un div
     let ctn = document.createElement("div");
@@ -168,7 +164,6 @@ function addtoFavoritos(info) {
 
   function fetch_busqueda_favoritos() {
     url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
-    console.log(array_ids);
     fetch(url)
       .then((respuesta) => respuesta.json())
       .then((info) => {
@@ -179,11 +174,9 @@ function addtoFavoritos(info) {
           
         }
    
-        console.log(info);
       })
   
       .catch(() => {
-        console.log("err")
       })
   }
   
@@ -191,7 +184,6 @@ function addtoFavoritos(info) {
 function ocultar_corazon_grande_favoritos(){
 
   if(favoritesArray || array_ids !=""){
-    // console.log("verifico si el array esta vacio " +array_ids)
      var ocultar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
      for (let index = 0; index < ocultar_corazon_grande_favoritos.length; index++) {
        ocultar_corazon_grande_favoritos[index].classList.add("ocultar");

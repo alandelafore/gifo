@@ -1,6 +1,5 @@
 document.getElementById("mi-boton-menu").addEventListener("click", function () {
     //fetch_busqueda_favoritos();
-  //console.log(url+ "   mis urls")
   var sec_fav=document.getElementById("favoritos")
   
   ocultar_corazon_grande_favoritos();
@@ -120,7 +119,6 @@ function addtoFavoritos(info) {
 
   function fetch_busqueda_favoritos() {
     url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+array_ids;
-    console.log(array_ids);
     fetch(url)
       .then((respuesta) => respuesta.json())
       .then((info) => {

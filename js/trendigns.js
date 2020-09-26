@@ -21,19 +21,19 @@ next.addEventListener('click', function () {
 
 function saveInLocalStorage(arr_nuevo){
     
-    if((localStorage.getItem("favoritos")) != "undefined"){
+    if((localStorage.getItem("favoritos")) != null && (localStorage.getItem("favoritos")) != "undefined"){
         
-        console.log("que trae local storage", localStorage.getItem("favoritos"));
 
         let array_viejo = []
         array_viejo =JSON.parse(localStorage.getItem("favoritos"));
     
        var array_a_guardar= arr_nuevo;
 
-        for( i=0; i<array_viejo.length ; i++){
-            array_a_guardar.push(array_viejo[i]);
+        for( i=0; i<array_a_guardar.length ; i++){
+            array_viejo.push(array_viejo[i]);
         }
-        localStorage.setItem("favoritos", JSON.stringify(array_a_guardar));
+        localStorage.setItem("favoritos", JSON.stringify(array_viejo));
+        
     }
 
     localStorage.setItem("favoritos", JSON.stringify(arr_nuevo));
@@ -48,7 +48,6 @@ function getTrendings() {
             return response = response.json();
         })
         .then(function (info) {
-            console.log(info.data)
             for (let index = 0; index < info.data.length; index++) {
                 img = info.data[index].images.downsized_large.url;
                 /* CREO LOS BOTONES */
@@ -96,7 +95,6 @@ function getTrendings() {
   
                      //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
                     if (bt_switch == false) {
-                        console.log("ID", info.id);
                       imagen_btn_corazon_violeta.classList.remove("ocultar")
                       //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
                       imagen_btn_corazon.classList.add("ocultar");
@@ -108,7 +106,6 @@ function getTrendings() {
                       saveInLocalStorage(array_ids);
                         if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
                         {
-                            console.log("que trae local storage en trendings", localStorage.getItem("favoritos"))
                            fetch_busqueda_favoritos();
                         }
                    // ocultar_corazon_grande_favoritos();
