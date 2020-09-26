@@ -41,6 +41,6 @@ function cambiar_menu_de_estado(){
         bt_switch = false;
     }
 
-    document.getElementById("menu-link").classList.add("ocultar");
+    //document.getElementById("menu-link").classList.add("ocultar");
 
 }

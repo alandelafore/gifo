@@ -16,7 +16,7 @@ function displayLocalStorageFavorites() {
 
 document.getElementById("link-favoritos").addEventListener("click", function () {
     
-  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != undefined)
+  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
     fetch_busqueda_favoritos();
   
 })
