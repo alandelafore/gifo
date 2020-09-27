@@ -510,6 +510,20 @@ footer {
     align-items: center;
     flex-flow: column;
 }
+
+@media only screen and (max-width: 360px) {
+    .contenedor1{
+        .imagen-central{
+            max-width: 100%;
+        }
+        
+    }
+    .fieldset-busqueda-padding {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
 //Lo uso principalmente para el ul del footer que contiene los links a las redes sociales
 .contenedor2 {
     width: 100%;
