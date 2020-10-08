@@ -51,6 +51,7 @@ function getTrendings() {
         .then(function (info) {
             for (let index = 0; index < info.data.length; index++) {
                 img = info.data[index].images.downsized_large.url;
+
                 /* CREO LOS BOTONES */
                 let btn_corazon = document.createElement("button");
                 let imagen_btn_corazon = document.createElement("img");
@@ -147,15 +148,15 @@ function getTrendings() {
                 btn_descarga.classList.add("boton-descarga");
                 btn_descarga.id = "btn-descarga";
                 btn_descarga.appendChild(imagen_btn_descarga);
-
-                console.log("Qué viene en img", img);
-                console.log("Qué viene en info id", info.data[index].id);
+                console.log("QUE VIENE EN IMG", img);
                 btn_descarga.addEventListener('click', function() {
-                    async function prueba() {
-                        let blob = await fetch(url).then(r => r.blob());
+                    async function prueba(img) {
+                        console.log("ASYNC QUE VIENE EN IMG", img);
+                        var blob = await fetch(img).then(r => r.blob());
                         invokeSaveAsDialog(blob);
+                        
                     }
-                    prueba();
+                    prueba(img);
                 })
 
                 imagen_btn_descarga.setAttribute("src", "Assets/icon-download.svg")
