@@ -5,6 +5,7 @@ var container = document.getElementById("trend_container");
 let previous = document.getElementById("previous");
 let next = document.getElementById("next");
 var file = {};
+console.log("COMO MIERDA VIENE BTN SWITCH", bt_switch);
 
 previous.addEventListener("click", function () {
   if (offset != 0) {
@@ -91,30 +92,42 @@ function getTrendings() {
         imagen_btn_corazon_violeta.classList.add("boton-corazon-hover");
         imagen_btn_corazon_violeta.classList.add("corazon-violeta");
 
-        if (
-          localStorage.getItem("favoritos") != null &&
-          localStorage.getItem("favoritos") != "undefined"
-        ) {
-          array_botones_favoritos = JSON.parse(
-            localStorage.getItem("favoritos")
-          );
+        if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+          array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
 
           console.log("mis botones array", array_botones_favoritos);
+
           for (let i = 0; i < array_botones_favoritos.length; i++) {
+
             if (array_botones_favoritos[i] == info.data[index].id) {
+              btn_corazon.value = true;
               imagen_btn_corazon.classList.add("ocultar");
+              imagen_btn_corazon_violeta.classList.remove("ocultar");
+              
             } else {
               imagen_btn_corazon_violeta.classList.add("ocultar");
+              imagen_btn_corazon.classList.remove("ocultar");
+              btn_corazon.value = false;
+              
             }
+            console.log("BOTON CORAZON BOOL", btn_corazon.value = false);
           }
         }
+        else
+        {
+          imagen_btn_corazon_violeta.classList.add("ocultar");
+          btn_corazon.value = false;
 
+        }
+        console.log("BOTON CORAZON BOOL FUERA DE LA VALIDACION", btn_corazon.value = false);
+
+        
         btn_corazon.appendChild(imagen_btn_corazon_violeta);
         imagen_btn_corazon_violeta.id = "boton-corazon-violeta";
 
         btn_corazon.addEventListener("click", (ev) => {
           //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
-          if (bt_switch == false) {
+          if (bt_switch = false) {
             imagen_btn_corazon_violeta.classList.remove("ocultar");
             //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
             imagen_btn_corazon.classList.add("ocultar");
@@ -124,10 +137,7 @@ function getTrendings() {
 
             array_ids.push(info.data[index].id);
             saveInLocalStorage(array_ids);
-            if (
-              localStorage.getItem("favoritos") != null &&
-              localStorage.getItem("favoritos") != "undefined"
-            ) {
+            if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
               fetch_busqueda_favoritos();
             }
             // ocultar_corazon_grande_favoritos();
