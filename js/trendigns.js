@@ -128,17 +128,7 @@ function getTrendings() {
                     
                       bt_switch = false;
                   }
-                  
-                  
-                   
-                  
-                 
-                  
-                   
                   })
-                  
-                    
-                
                 /* FIN BOTON FAVORITOS */
                 //////////////////////////////////////
 
@@ -156,7 +146,7 @@ function getTrendings() {
                         invokeSaveAsDialog(blob);
                         
                     }
-                    prueba(img);
+                    prueba(info.data[index].images.downsized_large.url);
                 })
 
                 imagen_btn_descarga.setAttribute("src", "Assets/icon-download.svg")
