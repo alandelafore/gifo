@@ -163,6 +163,10 @@
   padding-top: 7px;
 }
 
+.ouch {
+  margin-top: 105px;
+}
+
 .corazon-verde-padding {
   padding-top: 12px;
 }
@@ -240,6 +244,17 @@ header {
 }
 
 /* ESTILOS DE TIPOGRAFIA */
+.texto-otra-busqueda {
+  font-family: Montserrat-Bold;
+  font-size: 22px;
+  color: #50E3C2;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 900;
+  margin-bottom: 149px;
+  margin-top: 29px;
+}
+
 .texto-seccion-favoritos {
   font-family: "Montserrat, sans-serif";
   font-size: 22px;

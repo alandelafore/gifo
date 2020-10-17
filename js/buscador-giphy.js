@@ -34,7 +34,6 @@ document.getElementById("mi-boton").addEventListener("click", () => {
 document.getElementById("btn-borrar").addEventListener("click", () => {
 
   document.getElementById("btn-borrar").classList.add("ocultar");
-  
   // esta funcion  borra el contenido de la busqueda
   for (let index = 0; index < 100; index++) {
     borrar_busqueda();
@@ -185,11 +184,11 @@ function fetch_busqueda() {
     .then((respuesta) => respuesta.json())
     .then((info) => {
       if(info.data ==""){
-        console.log("mi array esta vacio");
-     
-      
+        seccion_no_encontrados(info.data);
+      }else{
+        console.log("entro el else")
+        seccion_no_encontrados_02();
       }
-      console.log("este es es info.data",info)
       for (let index = 0; index < info.data.length; index++) {
         addtoDOM(info.data[index]);
 
@@ -361,11 +360,23 @@ function Remover_clase_ocultar_corazon_violeta(){
 
 
 function seccion_no_encontrados(){
+  let busqueda_fallida = document.getElementById("seccion-busqueda-fallida");
   let contendor_gifts=document.getElementById("gifts");
 
-  let contendor_gifts=document.getElementById("gifts");
-  contendor_gifts.append()
 
+  contendor_gifts.appendChild(busqueda_fallida);
+  contendor_gifts.classList.remove("contenedor5");
+  busqueda_fallida.classList.remove("ocultar");
+
+  }
+
+  function seccion_no_encontrados_02(){
+    let busqueda_fallida = document.getElementById("seccion-busqueda-fallida");
+    let contendor_gifts=document.getElementById("gifts");
   
-}
+    contendor_gifts.appendChild(busqueda_fallida);
 
+    contendor_gifts.classList.add("contenedor5");
+
+    busqueda_fallida.classList.add("ocultar");
+    }
