@@ -9,8 +9,10 @@ var arr_local_storage =[];
 var ver_mas = document.getElementById("mi-boton");
 
 var numero_gift = 12; //Esta variable la uso para dar la cantidad de gift
+
 //con este Envento hago la busqueda
-document.getElementById("btn").addEventListener("click", (ev) => {//cuando el usuario da click en el btn
+document.getElementById("btn").addEventListener("click", (ev) => {
+  
   ev.preventDefault();
   busqueda = document.getElementById("busqueda").value;// Obtengo el elemento con el id busqueda 
   //aca paso el valor de la buqueda a la funcion para que lo escriba
@@ -29,7 +31,6 @@ document.getElementById("mi-boton").addEventListener("click", () => {
   
 
 });
-
 document.getElementById("btn-borrar").addEventListener("click", () => {
 
   document.getElementById("btn-borrar").classList.add("ocultar");
@@ -162,14 +163,14 @@ else {
 }
 // esta funcion pide como parametro el valor que usuario escribe en el input
 function texto_tipo_busqueda(info_texto) {
-  let texto_obtenido = document.getElementById("tipo-de-busqueda-titulo");
-  texto_obtenido.textContent = info_texto;
-  texto_obtenido.classList.remove("ocultar")
+  let h2_texto = document.getElementById("tipo-de-busqueda-titulo");
+  h2_texto.textContent = info_texto;
+  h2_texto.classList.remove("ocultar")
 
 
 }
 
-// rmuevo la clase de ocultar de
+// remuevo la clase de ocultar de
 function mostrar_boton() {
   var boton = document.getElementById("mi-boton-ocultar").classList.remove("ocultar");
 
@@ -183,8 +184,15 @@ function fetch_busqueda() {
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((info) => {
+      if(info.data ==""){
+        console.log("mi array esta vacio");
+     
+      
+      }
+      console.log("este es es info.data",info)
       for (let index = 0; index < info.data.length; index++) {
         addtoDOM(info.data[index]);
+
         //agrego el boton de ver mas en cada una de las busquedas
         ver_mas.style.display ="inline-block"
       }
@@ -230,8 +238,6 @@ function borrar_busqueda() {
 
   }
 }
-
-
 //hago visible la lupa cuando escribo
 var lupa = document.getElementById("lupa");
 tags = document.getElementById('busqueda')
@@ -268,6 +274,9 @@ tags.addEventListener('input', function (event) {
 
 })
 
+
+
+
 function fetch_tags(busqueda) {
   url = "https://api.giphy.com/v1/gifs/search/tags?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&q=" + busqueda;
   fetch(url)
@@ -279,8 +288,8 @@ function fetch_tags(busqueda) {
     })
     .then(function () {
     })
-    .catch(err)
 }
+
 function mostrar_busqueda_tags(arrayTags) {
 
   let div_contenedor_busquedas;
@@ -290,7 +299,7 @@ function mostrar_busqueda_tags(arrayTags) {
     div = document.createElement("div");
     div.textContent = arrayTags[index].name;
     div.addEventListener('click', function () {
-      tags.value = this.textContent;
+    tags.value = this.textContent;
 
       busqueda = document.getElementById("busqueda").value;// Obtengo el elemento con el id busqueda 
       //aca paso el valor de la buqueda a la funcion para que lo escriba
@@ -313,15 +322,13 @@ function mostrar_busqueda_tags(arrayTags) {
     //Si array tags esta vacio agrego la clase ocultar
     div_contenedor_busquedas = document.getElementById("busquedaautocompletar-lista");
     div_contenedor_busquedas.classList.add("ocultar");
-
+    
 
   }
 
 
 
 }
-
-
 
 
 function Agregar_clase_ocultar_corazon_blanco(){
@@ -336,8 +343,6 @@ function Remover_clase_ocultar_corazon_blanco(){
 
   corazon_blanco.classList.remove("ocultar");
 }
-
-
 
 
 function Agregar_clase_ocultar_corazon_violeta(){
@@ -355,5 +360,12 @@ function Remover_clase_ocultar_corazon_violeta(){
 
 
 
+function seccion_no_encontrados(){
+  let contendor_gifts=document.getElementById("gifts");
 
+  let contendor_gifts=document.getElementById("gifts");
+  contendor_gifts.append()
+
+  
+}
 
