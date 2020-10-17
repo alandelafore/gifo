@@ -2,17 +2,16 @@ var busqueda = "";
 var numero;
 var array_busqueda = [];
 var offset = 0;
-var arrayFavoritos =[];
+var arrayFavoritos = [];
 var bt_switch = false;
-var arr_local_storage =[];
-
+var arr_local_storage = [];
 var ver_mas = document.getElementById("mi-boton");
 
 var numero_gift = 12; //Esta variable la uso para dar la cantidad de gift
 
 //con este Envento hago la busqueda
 document.getElementById("btn").addEventListener("click", (ev) => {
-  
+
   ev.preventDefault();
   busqueda = document.getElementById("busqueda").value;// Obtengo el elemento con el id busqueda 
   //aca paso el valor de la buqueda a la funcion para que lo escriba
@@ -28,10 +27,13 @@ document.getElementById("mi-boton").addEventListener("click", () => {
 
   offset += 12;
   fetch_busqueda();
-  
+
 
 });
 document.getElementById("btn-borrar").addEventListener("click", () => {
+  setTimeout(function(){
+    seccion_no_encontrados_02();
+  },500);
 
   document.getElementById("btn-borrar").classList.add("ocultar");
   // esta funcion  borra el contenido de la busqueda
@@ -39,10 +41,9 @@ document.getElementById("btn-borrar").addEventListener("click", () => {
     borrar_busqueda();
 
   }
-
+  
 
 })
-
 
 
 //Creo los div Y les doy sus respectivos tamaños a las imagenes traidas de giphy
@@ -84,55 +85,55 @@ function addtoDOM(info) {
   imagen_btn_corazon.setAttribute("src", "Assets/icon-fav-hover.svg")
   imagen_btn_corazon.classList.add("boton-corazon-hover");
   imagen_btn_corazon.classList.add("corazon-blanco");
-  
 
 
 
 
 
- 
-  imagen_btn_corazon_violeta.setAttribute("src","Assets/icon-fav-active.svg")
+
+
+  imagen_btn_corazon_violeta.setAttribute("src", "Assets/icon-fav-active.svg")
   imagen_btn_corazon_violeta.classList.add("boton-corazon-hover");
   imagen_btn_corazon_violeta.classList.add("corazon-violeta");
   imagen_btn_corazon_violeta.classList.add("ocultar");
 
   btn_corazon.appendChild(imagen_btn_corazon_violeta);
-  imagen_btn_corazon_violeta.id ="boton-corazon-violeta";
-  imagen_btn_corazon.id="boton-corazon-blanco";
-//ACA HAGO EL CAMBIO DEL BOTON
+  imagen_btn_corazon_violeta.id = "boton-corazon-violeta";
+  imagen_btn_corazon.id = "boton-corazon-blanco";
+  //ACA HAGO EL CAMBIO DEL BOTON
   btn_corazon.addEventListener("click", (ev) => {
-  
-  //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
-  if (bt_switch == false) {
-    imagen_btn_corazon_violeta.classList.remove("ocultar")
-    //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
-    imagen_btn_corazon.classList.add("ocultar");
-    ctn.classList.add("activo")
-    ctn.classList.remove("no-activo")
-    ctn.classList.add(info.id);
 
-    arrayFavoritos.push(info.id);
+    //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
+    if (bt_switch == false) {
+      imagen_btn_corazon_violeta.classList.remove("ocultar")
+      //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
+      imagen_btn_corazon.classList.add("ocultar");
+      ctn.classList.add("activo")
+      ctn.classList.remove("no-activo")
+      ctn.classList.add(info.id);
 
-    saveInLocalStorage(arrayFavoritos); 
-    if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
-      fetch_busqueda_favoritos();
-    bt_switch = true;
-}
-else {
-  //Y ACA SIMPLEMENTE ES LO CONTRARIO PARA QUE PUEDA HACER UN LOOP DE CLICKS
-  imagen_btn_corazon.classList.remove("ocultar")
-  imagen_btn_corazon_violeta.classList.add("ocultar")  
-  ctn.classList.add("no-activo")
-  ctn.classList.remove("activo");
-    bt_switch = false;
-}
+      arrayFavoritos.push(info.id);
+
+      saveInLocalStorage(arrayFavoritos);
+      if ((localStorage.getItem('favoritos')) != null && (localStorage.getItem("favoritos")) != "undefined")
+        fetch_busqueda_favoritos();
+      bt_switch = true;
+    }
+    else {
+      //Y ACA SIMPLEMENTE ES LO CONTRARIO PARA QUE PUEDA HACER UN LOOP DE CLICKS
+      imagen_btn_corazon.classList.remove("ocultar")
+      imagen_btn_corazon_violeta.classList.add("ocultar")
+      ctn.classList.add("no-activo")
+      ctn.classList.remove("activo");
+      bt_switch = false;
+    }
 
 
 
- 
-})
 
-  
+  })
+
+
   /* FIN BOTON FAVORITOS */
   //////////////////////////////////////
 
@@ -183,17 +184,19 @@ function fetch_busqueda() {
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((info) => {
-      if(info.data ==""){
-        seccion_no_encontrados(info.data);
-      }else{
-        console.log("entro el else")
+      if (info.data == "") {
+        console.log("entro el ifo.data");
+        seccion_no_encontrados()
+        
+      } else {
         seccion_no_encontrados_02();
       }
+      
       for (let index = 0; index < info.data.length; index++) {
         addtoDOM(info.data[index]);
 
         //agrego el boton de ver mas en cada una de las busquedas
-        ver_mas.style.display ="inline-block"
+        ver_mas.style.display = "inline-block"
       }
 
     })
@@ -206,7 +209,7 @@ function fetch_busqueda() {
 function borrar_busqueda() {
   var gift_js
   //borro el boton
-  ver_mas.style.display ="none";
+  ver_mas.style.display = "none";
 
   gift_js = document.getElementsByClassName("contenedor-gift");
 
@@ -221,7 +224,7 @@ function borrar_busqueda() {
   reset_div_busquedas.classList.add("ocultar");
   // hago invisible el logo de la lupa
   lupa.style.opacity = "0";
-  
+
   //borro el contenido del titulo de la busqueda 
   /* Borro los elementos y ademas borro el valor de busqueda */
   for (let index = 0; index < gift_js.length; index++) {
@@ -233,8 +236,8 @@ function borrar_busqueda() {
     let texto_obtenido = document.getElementById("tipo-de-busqueda-titulo");
     //oculto el texto agregando esta clase
     texto_obtenido.classList.add("ocultar");
-    
 
+    let busqueda_fallida=document.getElementById("seccion-busqueda-fallida");
   }
 }
 //hago visible la lupa cuando escribo
@@ -275,7 +278,6 @@ tags.addEventListener('input', function (event) {
 
 
 
-
 function fetch_tags(busqueda) {
   url = "https://api.giphy.com/v1/gifs/search/tags?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&q=" + busqueda;
   fetch(url)
@@ -298,12 +300,12 @@ function mostrar_busqueda_tags(arrayTags) {
     div = document.createElement("div");
     div.textContent = arrayTags[index].name;
     div.addEventListener('click', function () {
-    tags.value = this.textContent;
+      tags.value = this.textContent;
 
       busqueda = document.getElementById("busqueda").value;// Obtengo el elemento con el id busqueda 
       //aca paso el valor de la buqueda a la funcion para que lo escriba
 
-      texto_tipo_busqueda(busqueda);
+       texto_tipo_busqueda(busqueda);
       //con esta funcion le saco la clase que oculata el boton cuando hago click
 
       mostrar_boton();
@@ -321,7 +323,6 @@ function mostrar_busqueda_tags(arrayTags) {
     //Si array tags esta vacio agrego la clase ocultar
     div_contenedor_busquedas = document.getElementById("busquedaautocompletar-lista");
     div_contenedor_busquedas.classList.add("ocultar");
-    
 
   }
 
@@ -330,53 +331,51 @@ function mostrar_busqueda_tags(arrayTags) {
 }
 
 
-function Agregar_clase_ocultar_corazon_blanco(){
-  corazon_blanco=document.getElementById("boton-corazon-blanco");
+function Agregar_clase_ocultar_corazon_blanco() {
+  corazon_blanco = document.getElementById("boton-corazon-blanco");
 
   corazon_blanco.classList.add("ocultar");
 }
 
 
-function Remover_clase_ocultar_corazon_blanco(){
-  corazon_blanco=document.getElementById("boton-corazon-blanco");
+function Remover_clase_ocultar_corazon_blanco() {
+  corazon_blanco = document.getElementById("boton-corazon-blanco");
 
   corazon_blanco.classList.remove("ocultar");
 }
 
 
-function Agregar_clase_ocultar_corazon_violeta(){
-  corazon_violeta=document.getElementById("boton-corazon-violeta");
+function Agregar_clase_ocultar_corazon_violeta() {
+  corazon_violeta = document.getElementById("boton-corazon-violeta");
 
   corazon_violeta.classList.add("ocultar");
 }
 
-function Remover_clase_ocultar_corazon_violeta(){
-  corazon_violeta=document.getElementById("boton-corazon-violeta");
+function Remover_clase_ocultar_corazon_violeta() {
+  corazon_violeta = document.getElementById("boton-corazon-violeta");
 
   corazon_violeta.classList.remove("ocultar");
 }
 
 
-
-
-function seccion_no_encontrados(){
+function seccion_no_encontrados() {
   let busqueda_fallida = document.getElementById("seccion-busqueda-fallida");
-  let contendor_gifts=document.getElementById("gifts");
+  let contendor_gifts = document.getElementById("gifts");
 
 
   contendor_gifts.appendChild(busqueda_fallida);
   contendor_gifts.classList.remove("contenedor5");
   busqueda_fallida.classList.remove("ocultar");
 
-  }
+}
 
-  function seccion_no_encontrados_02(){
-    let busqueda_fallida = document.getElementById("seccion-busqueda-fallida");
-    let contendor_gifts=document.getElementById("gifts");
-  
-    contendor_gifts.appendChild(busqueda_fallida);
+function seccion_no_encontrados_02() {
+  let busqueda_fallida = document.getElementById("seccion-busqueda-fallida");
+  let contendor_gifts = document.getElementById("gifts");
 
-    contendor_gifts.classList.add("contenedor5");
+  contendor_gifts.appendChild(busqueda_fallida);
 
-    busqueda_fallida.classList.add("ocultar");
-    }
+  contendor_gifts.classList.add("contenedor5");
+
+  busqueda_fallida.classList.add("ocultar");
+}
