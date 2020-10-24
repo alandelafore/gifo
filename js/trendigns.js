@@ -5,6 +5,7 @@ var container = document.getElementById("trend_container");
 let previous = document.getElementById("previous");
 let next = document.getElementById("next");
 var file = {};
+var array_ids_favoritos = [];
 
 previous.addEventListener("click", function () {
   if (offset != 0) {
@@ -90,65 +91,117 @@ function getTrendings() {
         );
         imagen_btn_corazon_violeta.classList.add("boton-corazon-hover");
         imagen_btn_corazon_violeta.classList.add("corazon-violeta");
+        
+          if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+            array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
+              for (let i = 0; i < array_botones_favoritos.length; i++) {
+                console.log("UN FAVORITO   ", info.data[index].id);
 
-        if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
-          array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
+                if (array_botones_favoritos[i] == info.data[index].id) {
+                  console.log("está en favorito ", info.data[index].id);
+                  imagen_btn_corazon.classList.add("ocultar");
+                  imagen_btn_corazon_violeta.classList.remove("ocultar");
+                  
+                  btn_corazon.addEventListener("click", (ev) => {
+                    eliminarFavoritos(info.data[index].id);
+                  });
 
+                } else {
+                  imagen_btn_corazon_violeta.classList.add("ocultar");
+                  imagen_btn_corazon.classList.remove("ocultar");
+                  console.log("no está en favorito ", info.data[index].id);
+                  
+                  btn_corazon.addEventListener("click", (ev) => {
+                    imagen_btn_corazon_violeta.classList.remove("ocultar");
+                    //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
+                    imagen_btn_corazon.classList.add("ocultar");
+                    ctn.classList.add("activo");
+                    ctn.classList.remove("no-activo");
+                    ctn.classList.add(info.data[index].id);
+                    
+                    if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+                      array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
 
-          for (let i = 0; i < array_botones_favoritos.length; i++) {
-
-            if (array_botones_favoritos[i] == info.data[index].id) {
-              btn_corazon.value = true;
-              imagen_btn_corazon.classList.add("ocultar");
-              imagen_btn_corazon_violeta.classList.remove("ocultar");
-              
-            } else {
-              imagen_btn_corazon_violeta.classList.add("ocultar");
-              imagen_btn_corazon.classList.remove("ocultar");
-              btn_corazon.value = false;
-              
+                      array_ids_favoritos.push(info.data[index].id);
+                    }
+      
+                    else{
+                    array_ids_favoritos = [];
+                    array_ids_favoritos.push(info.data[index].id);
+                    }
+                    
+                    saveInLocalStorage(array_ids_favoritos);
+                    if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+                      fetch_busqueda_favoritos();
+                    }
+                  })                
+                }
+              }
             }
-          }
-        }
-        else
-        {
-          imagen_btn_corazon_violeta.classList.add("ocultar");
-          btn_corazon.value = false;
+          else
+          {
+            console.log("NO HAY LOCAL STORAGE")
+            imagen_btn_corazon_violeta.classList.add("ocultar");
+            btn_corazon.value = false;
+            btn_corazon.addEventListener("click", (ev) => {
+              imagen_btn_corazon_violeta.classList.remove("ocultar");
+              //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
+              imagen_btn_corazon.classList.add("ocultar");
+              ctn.classList.add("activo");
+              ctn.classList.remove("no-activo");
+              ctn.classList.add(info.data[index].id);
+              
+              if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+                array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
+                console.log("ID ", info.data[index].id);
+                console.log("ARRAYS ID ", array_ids);
 
-        }
+                array_ids_favoritos.push(info.data[index].id);
+              }
+
+              else{
+              array_ids_favoritos.push(info.data[index].id);
+              }
+
+              saveInLocalStorage(array_ids_favoritos);
+              if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+                fetch_busqueda_favoritos();
+              }
+            })
+          }
 
         
         btn_corazon.appendChild(imagen_btn_corazon_violeta);
         imagen_btn_corazon_violeta.id = "boton-corazon-violeta";
 
-        btn_corazon.addEventListener("click", (ev) => {
-          //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
-          if (bt_switch = false) {
-            imagen_btn_corazon_violeta.classList.remove("ocultar");
-            //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
-            imagen_btn_corazon.classList.add("ocultar");
-            ctn.classList.add("activo");
-            ctn.classList.remove("no-activo");
-            ctn.classList.add(info.data[index].id);
+        // btn_corazon.addEventListener("click", (ev) => {
+        //   //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
+        //   if (bt_switch = false) {
+        //     imagen_btn_corazon_violeta.classList.remove("ocultar");
+        //     //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
+        //     imagen_btn_corazon.classList.add("ocultar");
+        //     ctn.classList.add("activo");
+        //     ctn.classList.remove("no-activo");
+        //     ctn.classList.add(info.data[index].id);
 
-            array_ids.push(info.data[index].id);
-            saveInLocalStorage(array_ids);
-            if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
-              fetch_busqueda_favoritos();
-            }
-            // ocultar_corazon_grande_favoritos();
+        //     array_ids.push(info.data[index].id);
+        //     saveInLocalStorage(array_ids);
+        //     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+        //       fetch_busqueda_favoritos();
+        //     }
+        //     // ocultar_corazon_grande_favoritos();
 
-            bt_switch = true;
-          } else {
-            //Y ACA SIMPLEMENTE ES LO CONTRARIO PARA QUE PUEDA HACER UN LOOP DE CLICKS
-            imagen_btn_corazon.classList.remove("ocultar");
-            imagen_btn_corazon_violeta.classList.add("ocultar");
-            ctn.classList.add("no-activo");
-            ctn.classList.remove("activo");
+        //     bt_switch = true;
+        //   } else {
+        //     //Y ACA SIMPLEMENTE ES LO CONTRARIO PARA QUE PUEDA HACER UN LOOP DE CLICKS
+        //     imagen_btn_corazon.classList.remove("ocultar");
+        //     imagen_btn_corazon_violeta.classList.add("ocultar");
+        //     ctn.classList.add("no-activo");
+        //     ctn.classList.remove("activo");
 
-            bt_switch = false;
-          }
-        });
+        //     bt_switch = false;
+        //   }
+        // });
         /* FIN BOTON FAVORITOS */
         //////////////////////////////////////
 
