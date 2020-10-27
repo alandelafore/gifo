@@ -623,6 +623,122 @@ footer {
           align-items: center;
 }
 
+.seccion-crear-gifos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 4px;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla {
+  width: 688px;
+  height: 390px;
+  border: 1px solid #572EE5;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla .div-bordes1 {
+  width: 27px;
+  height: 25px;
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 24px;
+  background-color: white;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla .div-bordes2 {
+  width: 27px;
+  height: 25px;
+  position: absolute;
+  -webkit-transform: translateX(641px);
+          transform: translateX(641px);
+  background-color: white;
+  border-top: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+  margin-top: 24px;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla .div-bordes3 {
+  width: 27px;
+  height: 25px;
+  position: absolute;
+  -webkit-transform: translateY(346px);
+          transform: translateY(346px);
+  background-color: white;
+  border-bottom: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  position: absolute;
+  margin-left: 20px;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla .div-bordes4 {
+  width: 27px;
+  height: 25px;
+  position: absolute;
+  -webkit-transform: translate(641px, 346px);
+          transform: translate(641px, 346px);
+  background-color: white;
+  border-bottom: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla .crear-gifos-titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 35px;
+}
+
+.seccion-crear-gifos .crea-tus-gifos-pantalla .crear-gifo-p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 29px;
+}
+
+.seccion-crear-gifos .contenedor-de-los-numeros .contenedor-boton-numero {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: 1px solid #572EE5;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #572EE5;
+  text-align: center;
+}
+
+.seccion-crear-gifos .contenedor-comenzar-grabar .comenzar {
+  border: none;
+  border: 1px solid #572EE5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #572EE5;
+  letter-spacing: 0;
+  padding-bottom: 16px;
+  padding-left: 23.5px;
+  padding-right: 23.5px;
+  padding-top: 16px;
+  border-radius: 25px;
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+
 @-webkit-keyframes alto-menu {
   from {
     height: 40%;

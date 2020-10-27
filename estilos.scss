@@ -78,7 +78,6 @@
 
 
 
-
 //FIN BOTONES GIFTS
 
 
@@ -600,6 +599,125 @@ footer {
     align-items: center;
 
 }
+
+///////////////////////////////////@
+//Crear gifos seccion
+.seccion-crear-gifos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;    
+    
+.crea-tus-gifos-pantalla{
+    .div-bordes1{
+        width: 27px;
+        height: 25px;
+        border-top: 1px solid #50E3C2;
+        border-left: 1px solid #50E3C2;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 24px;
+
+        background-color: white;
+    }
+    .div-bordes2{
+        width: 27px;
+        height: 25px;
+        position: absolute;
+        transform: translateX(641px);
+        background-color: white;
+        border-top: 1px solid #50E3C2;
+        border-right: 1px solid #50E3C2;
+        margin-top: 24px;
+    }
+    .div-bordes3{
+        width: 27px;
+        height: 25px;
+        position: absolute;
+        transform: translateY(346px);
+        background-color: white;
+        border-bottom: 1px solid #50E3C2;
+        border-left: 1px solid #50E3C2;
+        position: absolute;
+        margin-left: 20px;
+        
+
+    }
+    .div-bordes4{
+        width: 27px;
+        height: 25px;
+        position: absolute;
+        transform: translate(641px,346px);
+        background-color: white;
+        border-bottom: 1px solid #50E3C2;
+        border-right: 1px solid #50E3C2;
+    }
+    width: 688px;
+    height: 390px;
+    border: 1px solid #572EE5;
+    .crear-gifos-titulo{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 35px;
+       
+    }
+    .crear-gifo-p{
+    font-family: 'Roboto', sans-serif; ;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    line-height: 29px;
+        }
+    }
+    .contenedor-de-los-numeros{
+    .contenedor-boton-numero{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border: 1px solid #572EE5;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #572EE5;
+    text-align: center;
+        }
+    }
+    .contenedor-comenzar-grabar{
+        .comenzar{
+            border: none;
+            border: 1px solid $color-violeta;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            color: $color-violeta;
+            letter-spacing: 0;
+            padding-bottom: 16px;
+            padding-left: 23.5px;
+            padding-right: 23.5px;
+        
+            padding-top: 16px;
+            border-radius: 25px;
+            border-radius: 25px;
+            background-color: white;
+        
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
+
+//fin crear gifos seccion
+
+//////////////////////////////////
+
+
 
 /////////////////////////////////////
 //Fin contenedores Flex
