@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <script src="https://kit.fontawesome.com/6322690388.js" crossorigin="anonymous"></script>
+
+    <title>Gifos</title>
+</head>
+
+
+<body>
+    <!-- header es el que tiene el logo y el boton para desplegar-lo hare con JS -->
+    <header>
+        <!-- Logo menu(GIFOS) -->
+        <div class="contenedor3">
+            <img id="logo" src="Assets/logo-mobile.svg" alt="logo" class="logo-padding" />
+
+            <!-- menu hamburguesa -->
+            <button id="mi-boton-menu" class="boton-menu boton-menu-padding " type="submit">
+                <img id="hamburguesa" src="Assets/burger.svg" alt="">
+                <img id="cruz-menu" class="ocultar" src="Assets/button-close.svg" alt="">
+
+            </button>
+        </div>
+
+        <nav class="menu ocultar " id="menu">
+
+            <ul class="menu-link contenedor4">
+                <li><a id="link-modo-noccturno" class="links-menu" href="">Modo Nocturno</a></li>
+                <li><a id="link-favoritos" class="links-menu " href="">Favoritos</a></li>
+                <li><a id="link-mis-gifos" class="links-menu " href="">Mis GIFOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="seccion-crear-gifos" id="seccion-crear-gifos">
+        <div>
+            <div class="crea-tus-gifos-pantalla">
+                <div class="div-bordes1"></div>
+                <div class="div-bordes2"></div>
+                <div class="div-bordes3"></div>
+                <div class="div-bordes4"></div>
+
+                <h2 class="crear-gifos-titulo">Aquí podrás tus propios GIFOS</h2>
+                <p class="crear-gifo-p">¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)
+                </p>
+            </div>
+            <div class="contenedor-de-los-numeros">
+                <div><button class="btn-1 contenedor-boton-numero" type="button">1</button> </div>
+                <div><button class="btn-2 contenedor-boton-numero" type="button">2</button></div>
+                <div><button class="btn-3 contenedor-boton-numero" type="button">3</button></div>
+
+
+                <div class="contenedor-comenzar-grabar">
+                    <buttton class="comenzar" type="button">COMENZAR</buttton>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="contenedor1">
+        <h4 class="compartir-en compartir-en-padding"> Compartir en: </h4>
+
+
+        <ul class="contenedor2">
+            <a class="footer-links" href="https://es-la.facebook.com/">
+                <i class="fa fa-facebook icono-redes"></i>
+            </a>
+
+            <a class="footer-links" href="https://twitter.com/">
+                <i class="fa fa-twitter icono-redes"></i>
+            </a>
+
+            <a class="footer-links" href="https://www.instagram.com/?hl=es">
+                <i class="fa fa-instagram icono-redes"></i>
+            </a>
+
+        </ul>
+
+
+        <h5 class="gifos-derechos-reservados gifos-derechos-reservados-padding">© GIFOS 2020 All Rights Reserved.</h5>
+    </footer>
+</body>
+<!-- JAVA SCRIPT IMPORTADOS -->
+<!-- Este es el codigo del menu del celular -->
+<script src="js/menu-celular.js"></script>
+<script src="js/buscador-giphy.js"></script>
+<script src="js/trendigns.js"></script>
+<script src="js/funcionalidad-botones-links.js"></script>
+<script src="js/favoritos.js"></script>
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+<!--  FIN JAVA SCRIPT IMPORTADOS -->
+
+
+</html>
