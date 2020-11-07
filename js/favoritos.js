@@ -23,13 +23,11 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
     
 function eliminarFavoritos(info)
 {
-  console.log("entra a eliminar")
  let arr_localStorage= JSON.parse(localStorage.getItem('favoritos'));
-  console.log("arr_localStorage de eliminar antes de eliminar", arr_localStorage)
    for(i =0; i< arr_localStorage.length; i++){
      if(info.id == arr_localStorage[i]){
-       console.log("Que viene en eliminar", i)
       arr_localStorage.splice(i,1);
+      if (document.getElementById(info.id) != null)
       document.getElementById(info.id).style.display = "none";
       //logica para borrar el div
       
