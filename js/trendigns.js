@@ -95,17 +95,16 @@ function getTrendings() {
         
         if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined"){
           array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
-          for (let i = 0; i < array_botones_favoritos.length; i++) {
-            if (array_botones_favoritos[i] == info.data[index].id) {
+          
+            if (array_botones_favoritos.includes(info.data[index].id)) {
               imagen_btn_corazon.classList.add("ocultar");
             }
+            
             else{
-              console.log("No coincide con ls")
-              
               imagen_btn_corazon_violeta.classList.add("ocultar");
             }
         }
-        }
+        
         else{
           imagen_btn_corazon_violeta.classList.add("ocultar");
         }
@@ -114,19 +113,15 @@ function getTrendings() {
         btn_corazon.addEventListener("click",()=>{
           if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
             array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
-              for (let i = 0; i < array_botones_favoritos.length; i++) {
-                console.log("UN FAVORITO   ", info.data[index].id);
-
-                if (array_botones_favoritos[i] == info.data[index].id) {
+              console.log("ARRAY FAVORITOS", array_botones_favoritos)
+                if (array_botones_favoritos.includes(info.data[index].id)) {
                   imagen_btn_corazon.classList.add("ocultar");
                   imagen_btn_corazon_violeta.classList.remove("ocultar");
-                  
-                    eliminarFavoritos(info.data[index].id);
+                    eliminarFavoritos(info.data[index]);
 
                 } else {
                   imagen_btn_corazon_violeta.classList.add("ocultar");
                   imagen_btn_corazon.classList.remove("ocultar");
-                  console.log("no está en favorito ", info.data[index].id);
                   
                     imagen_btn_corazon_violeta.classList.remove("ocultar");
                     //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
@@ -137,7 +132,6 @@ function getTrendings() {
                     
                     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
                       array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
-
                       array_ids_favoritos.push(info.data[index].id);
                     }
       
@@ -151,11 +145,9 @@ function getTrendings() {
                       fetch_busqueda_favoritos();
                     }
                 }
-              }
             }
           else
           {
-            console.log("NO HAY LOCAL STORAGE")
             imagen_btn_corazon_violeta.classList.add("ocultar");
             //imagen_btn_corazon_violeta.classList.remove("ocultar");
               //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
@@ -166,8 +158,6 @@ function getTrendings() {
               
             // if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
             //   array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
-            //   console.log("ID ", info.data[index].id);
-            //   console.log("ARRAYS ID ", array_ids);
 
             //   array_ids_favoritos.push(info.data[index].id);
             // }

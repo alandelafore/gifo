@@ -23,12 +23,13 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
     
 function eliminarFavoritos(info)
 {
+  console.log("entra a eliminar")
  let arr_localStorage= JSON.parse(localStorage.getItem('favoritos'));
-  
+  console.log("arr_localStorage de eliminar antes de eliminar", arr_localStorage)
    for(i =0; i< arr_localStorage.length; i++){
      if(info.id == arr_localStorage[i]){
+       console.log("Que viene en eliminar", i)
       arr_localStorage.splice(i,1);
-      
       document.getElementById(info.id).style.display = "none";
       //logica para borrar el div
       
@@ -43,12 +44,6 @@ function eliminarFavoritos(info)
 }
 
 function borrarCorazonTrendings(id){
-  
-  
-  //cambiar el estado del boton
-  //creamos una array con los q hay en trending
-
-  //borrar corazon lleno
   if(document.getElementById("boton-corazon-violeta_"+id) != null){
   document.getElementById("boton-corazon-violeta_"+id).style.display = "none";
   }
