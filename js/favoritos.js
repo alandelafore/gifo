@@ -6,17 +6,16 @@ var favoritesArray=[];
 
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");
 
-var favoritesArray =[];
 
 function displayLocalStorageFavorites() {
   let newArray = JSON.parse(localStorage.getItem('favoritos'));
-
+  console.log("printear new array", newArray)
   return newArray;
 }
 
 document.getElementById("link-favoritos").addEventListener("click", function () {
     
-  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
+  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" )
     fetch_busqueda_favoritos();
   
 })
@@ -48,7 +47,10 @@ function borrarCorazonTrendings(id){
 }
 
 function addtoFavoritos(info) {
+    // favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
+    console.log("printear favoritesArray", favoritesArray)
     if(!favoritesArray.includes(info.id)){
+      console.log("entra a add to favoritos")
     //creo un div
     let ctn = document.createElement("div");
     //CREO UNA IMAGEN gift
@@ -156,26 +158,27 @@ function addtoFavoritos(info) {
 
 
   function fetch_busqueda_favoritos() {
-    url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
-    fetch(url)
-      .then((respuesta) => respuesta.json())
-      .then((info) => {
-        for (let index = 0; index < info.data.length; index++) {
-          addtoFavoritos(info.data[index]);
-          //agrego el boton de ver mas en cada una de las busquedas
-          ocultar_corazon_grande_favoritos()
-          
-        }
-   
-      })
-  
-      .catch(() => {
-      })
+    if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
+      console.log("Hay favoritos", localStorage.getItem("favoritos"));
+      url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
+      fetch(url)
+        .then((respuesta) => respuesta.json())
+        .then((info) => {
+          for (let index = 0; index < info.data.length; index++) {
+            console.log(info.data)
+            addtoFavoritos(info.data[index]);
+            //agrego el boton de ver mas en cada una de las busquedas
+            ocultar_corazon_grande_favoritos()
+            
+          }
+    
+        })
+    }
   }
   
 
 function ocultar_corazon_grande_favoritos(){
-
+  favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
   if(favoritesArray || array_ids !=""){
      var ocultar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
      for (let index = 0; index < ocultar_corazon_grande_favoritos.length; index++) {

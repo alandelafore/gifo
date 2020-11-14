@@ -111,7 +111,7 @@ function getTrendings() {
 
 
         btn_corazon.addEventListener("click",()=>{
-          if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+          if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && localStorage.getItem("favoritos") != "") {
             array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
                 if (array_botones_favoritos.includes(info.data[index].id)) {
                   console.log("Elimina de favoritos")
