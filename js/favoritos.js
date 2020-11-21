@@ -9,13 +9,13 @@ var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde
 
 function displayLocalStorageFavorites() {
   let newArray = JSON.parse(localStorage.getItem('favoritos'));
-  console.log("printear new array", newArray)
   return newArray;
 }
 
 document.getElementById("link-favoritos").addEventListener("click", function () {
     
   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" )
+  console.log("mostrar favoritos")
     fetch_busqueda_favoritos();
   
 })
@@ -35,9 +35,10 @@ function eliminarFavoritos(info)
      }
    }
    saveInLocalStorage(arr_localStorage);
-   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
-      fetch_busqueda_favoritos();
+  //  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
+  //     fetch_busqueda_favoritos();
    //ACA TENGO QUE VOLVER A VER EL ARRAY
+   fetch_busqueda_favoritos();
 }
 
 function borrarCorazonTrendings(id){
@@ -46,11 +47,9 @@ function borrarCorazonTrendings(id){
   }
 }
 
-function addtoFavoritos(info) {
-    // favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
-    console.log("printear favoritesArray", favoritesArray)
+function displayFavoritos(info) {
+    favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
     if(!favoritesArray.includes(info.id)){
-      console.log("entra a add to favoritos")
     //creo un div
     let ctn = document.createElement("div");
     //CREO UNA IMAGEN gift
@@ -104,6 +103,7 @@ function addtoFavoritos(info) {
     btn_corazon.addEventListener("click", (ev) => {
     
     //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
+    //TODO
     if (bt_switch == false) {
       imagen_btn_corazon.classList.remove("ocultar");
       imagen_btn_corazon_violeta.classList.add("ocultar");
@@ -152,21 +152,18 @@ function addtoFavoritos(info) {
 
     favoritesArray.push(info.id);
   }
-
 }
   
 
 
   function fetch_busqueda_favoritos() {
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
-      console.log("Hay favoritos", localStorage.getItem("favoritos"));
       url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
       fetch(url)
         .then((respuesta) => respuesta.json())
         .then((info) => {
           for (let index = 0; index < info.data.length; index++) {
-            console.log(info.data)
-            addtoFavoritos(info.data[index]);
+            displayFavoritos(info.data[index]);
             //agrego el boton de ver mas en cada una de las busquedas
             ocultar_corazon_grande_favoritos()
             

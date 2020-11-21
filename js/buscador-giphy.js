@@ -185,7 +185,6 @@ function fetch_busqueda() {
     .then((respuesta) => respuesta.json())
     .then((info) => {
       if (info.data == "") {
-        console.log("entro el ifo.data");
         seccion_no_encontrados()
         
       } else {

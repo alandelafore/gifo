@@ -114,7 +114,6 @@ function getTrendings() {
           if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && localStorage.getItem("favoritos") != "") {
             array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
                 if (array_botones_favoritos.includes(info.data[index].id)) {
-                  console.log("Elimina de favoritos")
                   imagen_btn_corazon_violeta.classList.add("ocultar");
                   imagen_btn_corazon.classList.remove("ocultar");
                   
@@ -138,9 +137,6 @@ function getTrendings() {
                   }
                   
                   saveInLocalStorage(array_ids_favoritos);
-                  if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
-                    fetch_busqueda_favoritos();
-                  }
                 }
             }
           else
@@ -153,12 +149,11 @@ function getTrendings() {
             array_ids_favoritos.push(info.data[index].id);
               
             saveInLocalStorage(array_ids_favoritos);
-            if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
-              fetch_busqueda_favoritos();
-            }
+            
           }
-
-
+          if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+            fetch_busqueda_favoritos();
+          }
         });
         
 
