@@ -126,15 +126,15 @@ function getTrendings() {
                   ctn.classList.remove("no-activo");
                   ctn.classList.add(info.data[index].id);
                   
-                  if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+                //  if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
                     array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
                     array_ids_favoritos.push(info.data[index].id);
-                  }
+                  //}
     
-                  else{
-                  array_ids_favoritos = [];
-                  array_ids_favoritos.push(info.data[index].id);
-                  }
+                  // else{
+                  // array_ids_favoritos = [];
+                  // array_ids_favoritos.push(info.data[index].id);
+                  // }
                   
                   saveInLocalStorage(array_ids_favoritos);
                 }
