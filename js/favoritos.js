@@ -2,6 +2,7 @@
 
 
 var favoritesArray=[];
+var listaFavoritos=[];
 
 
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");
@@ -15,7 +16,6 @@ function displayLocalStorageFavorites() {
 document.getElementById("link-favoritos").addEventListener("click", function () {
     
   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" )
-  console.log("mostrar favoritos")
     fetch_busqueda_favoritos();
   
 })
@@ -35,10 +35,6 @@ function eliminarFavoritos(info)
      }
    }
    saveInLocalStorage(arr_localStorage);
-  //  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined")
-  //     fetch_busqueda_favoritos();
-   //ACA TENGO QUE VOLVER A VER EL ARRAY
-   fetch_busqueda_favoritos();
 }
 
 function borrarCorazonTrendings(id){
@@ -48,8 +44,9 @@ function borrarCorazonTrendings(id){
 }
 
 function displayFavoritos(info) {
-    favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
-    if(!favoritesArray.includes(info.id)){
+
+
+    if(!listaFavoritos.includes(info.id)){
     //creo un div
     let ctn = document.createElement("div");
     //CREO UNA IMAGEN gift
@@ -149,14 +146,16 @@ function displayFavoritos(info) {
     gifts.appendChild(ctn);
     ctn.classList.add("contenedor-gift");
     ctn.id = info.id;
-
-    favoritesArray.push(info.id);
+    listaFavoritos.push(info.id);
   }
+
+  listaFavoritos = JSON.parse(localStorage.getItem('favoritos'));
 }
   
 
 
   function fetch_busqueda_favoritos() {
+    console.log("mostrame favoritos, ", localStorage.getItem("favoritos"))
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
       url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
       fetch(url)
@@ -166,9 +165,7 @@ function displayFavoritos(info) {
             displayFavoritos(info.data[index]);
             //agrego el boton de ver mas en cada una de las busquedas
             ocultar_corazon_grande_favoritos()
-            
           }
-    
         })
     }
   }
