@@ -478,7 +478,7 @@ padding-top: 24px;
 .autocompletar-busquedas {
     div {
         &:hover {
-            background-color: blueviolet;
+            background-color: $color-violeta;
             border-radius: 20px;
             opacity: 0.5;
         }
