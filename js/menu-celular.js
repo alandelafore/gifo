@@ -13,20 +13,30 @@ document.getElementById("mi-boton-menu").addEventListener("click", function () {
 
 document.getElementById("link-modo-nocturno").addEventListener("click",function (ev) {
     ev.preventDefault();
-   let x= document.getElementById("link-modo-nocturno");
-    // CAMBIO A MODO NOCTURNO
-    if(x.innerHTML == "Modo Nocturno"){
-        modo_nocturno(x);
-        console.log("entro el primer if" , x.innerHTML);
-
-    }
-   else {
-        modo_diurno(x);
-        console.log("entro el segundo if" , x.innerHTML);
-
-    }
+    agrega_clase_dark();
+    modo_nocturno_modo_diurno();
+  
+   
+  
 })
 
+
+function modo_nocturno_modo_diurno() {
+    let x= document.getElementById("link-modo-nocturno");
+
+    if(x.innerHTML == "Modo Nocturno"){
+        x.innerHTML ="Modo Diurno";
+    }
+    else {
+        x.innerHTML ="Modo Nocturno";
+
+    }
+    
+}
+function agrega_clase_dark(params) {
+    document.body.classList.toggle("dark");
+    
+}
 function cambiar_menu_de_estado(){
     if (bt_switch == false) {
         // Cuando cliqueo el boton se oculta el menu haburguesa // agragando la clase ocultar (display none)
@@ -57,15 +67,4 @@ function cambiar_menu_de_estado(){
 
     //document.getElementById("menu-link").classList.add("ocultar");
 
-}
-
-
-function modo_nocturno(cambio_de_modo) {
-    cambio_de_modo.innerHTML ="Modo Diurno";
-    
-}
-
-function modo_diurno(cambio_de_modo) {
-    cambio_de_modo.innerHTML ="Modo Nocturno";
-    
 }

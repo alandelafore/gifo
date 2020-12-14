@@ -187,7 +187,7 @@
 .texto-seccion-cabeza-grande {
   font-family: "Montserrat, sans-serif";
   font-size: 22px;
-  color: #50E3C2;
+  color: #5ED7C6;
   text-align: center;
   line-height: 33px;
   font-weight: 700;
@@ -247,7 +247,7 @@ header {
 .texto-otra-busqueda {
   font-family: Montserrat-Bold;
   font-size: 22px;
-  color: #50E3C2;
+  color: #5ED7C6;
   text-align: center;
   line-height: 25px;
   font-weight: 900;
@@ -258,7 +258,7 @@ header {
 .texto-seccion-favoritos {
   font-family: "Montserrat, sans-serif";
   font-size: 22px;
-  color: #50E3C2;
+  color: #5ED7C6;
   text-align: center;
   line-height: 33px;
   font-weight: 700;
@@ -455,7 +455,7 @@ header {
 }
 
 .autocompletar-busquedas div:hover {
-  background-color: blueviolet;
+  background-color: #572EE5;
   border-radius: 20px;
   opacity: 0.5;
 }
