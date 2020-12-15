@@ -16,41 +16,41 @@ body {
     }
 }
 .boton-menu{
-    body.dark &{
+    .dark &{
         background-color: $dark-color-background-01;
     }
 }
 .trendigns-section-estilos {
-    body.dark & {
+    .dark & {
         background-color: $dark-color-background-02;
     }
 }
 .compartir-en {
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }
 .gifos-derechos-reservados {
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }
 ul {
     .footer-links {
-        body.dark & {
+        .dark & {
             background-color: $dark-color-background-01;
             color: $dark-color-texto-01;
         }
     }
 }
 input{
-    body.dark &{
+    .dark &{
         background-color: $dark-color-background-01;
         color: $dark-color-texto-01;
     }
 }
 .fieldset-busqueda{
-    body.dark &{
+    .dark &{
         border-color:white;
     }
 
@@ -237,7 +237,7 @@ header {
     border-top: 5px solid $color-violeta; //linea de color violeta arriba del header
     height: 85px;
     margin-bottom: 7px;
-    body.dark & {
+    .dark & {
         border-top: 5px solid #000000;
     }
 }
@@ -259,7 +259,7 @@ header {
     animation-name: alto-menu;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-    body.dark & {
+    .dark & {
         background-color: #000000;
     }
     .menu-link {
@@ -327,7 +327,7 @@ header {
     font-family: "Montserrat", sans-serif;
     //color violeta(variable)
     color: $color-violeta;
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }
@@ -348,7 +348,7 @@ header {
     color: $color-violeta;
     text-align: center;
     line-height: 25px;
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }
@@ -359,7 +359,7 @@ header {
     color: $color-violeta;
     text-align: center;
     line-height: 25px;
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }
@@ -372,7 +372,7 @@ header {
     position: relative;
     border-top: #9cafc37e 1px solid;
     width: 157px;
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 
@@ -388,7 +388,7 @@ header {
     color: $color-violeta;
     text-align: center;
     line-height: 30px;
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }
@@ -399,7 +399,7 @@ header {
     color: #000000;
     text-align: center;
     line-height: 23px;
-    body.dark & {
+    .dark & {
         color: $dark-color-texto-01;
     }
 }

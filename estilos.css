@@ -11,33 +11,33 @@ body.dark {
   background-color: #37383C;
 }
 
-body.dark .boton-menu {
+.dark .boton-menu {
   background-color: #37383C;
 }
 
-body.dark .trendigns-section-estilos {
+.dark .trendigns-section-estilos {
   background-color: #222326;
 }
 
-body.dark .compartir-en {
+.dark .compartir-en {
   color: #FFFFFF;
 }
 
-body.dark .gifos-derechos-reservados {
+.dark .gifos-derechos-reservados {
   color: #FFFFFF;
 }
 
-body.dark ul .footer-links {
+.dark ul .footer-links {
   background-color: #37383C;
   color: #FFFFFF;
 }
 
-body.dark input {
+.dark input {
   background-color: #37383C;
   color: #FFFFFF;
 }
 
-body.dark .fieldset-busqueda {
+.dark .fieldset-busqueda {
   border-color: white;
 }
 
@@ -234,7 +234,7 @@ header {
   margin-bottom: 7px;
 }
 
-body.dark header {
+.dark header {
   border-top: 5px solid #000000;
 }
 
@@ -257,7 +257,7 @@ body.dark header {
           animation-fill-mode: forwards;
 }
 
-body.dark .menu {
+.dark .menu {
   background-color: #000000;
 }
 
@@ -315,7 +315,7 @@ body.dark .menu {
   color: #572EE5;
 }
 
-body.dark .tipografia-home {
+.dark .tipografia-home {
   color: #FFFFFF;
 }
 
@@ -336,7 +336,7 @@ body.dark .tipografia-home {
   line-height: 25px;
 }
 
-body.dark .trending-texto {
+.dark .trending-texto {
   color: #FFFFFF;
 }
 
@@ -349,7 +349,7 @@ body.dark .trending-texto {
   line-height: 25px;
 }
 
-body.dark .treding {
+.dark .treding {
   color: #FFFFFF;
 }
 
@@ -364,7 +364,7 @@ body.dark .treding {
   width: 157px;
 }
 
-body.dark .tipo-de-busqueda-titulo {
+.dark .tipo-de-busqueda-titulo {
   color: #FFFFFF;
 }
 
@@ -382,7 +382,7 @@ body.dark .tipo-de-busqueda-titulo {
   line-height: 30px;
 }
 
-body.dark .treding-gifos {
+.dark .treding-gifos {
   color: #FFFFFF;
 }
 
@@ -395,7 +395,7 @@ body.dark .treding-gifos {
   line-height: 23px;
 }
 
-body.dark .ultimos-gifos {
+.dark .ultimos-gifos {
   color: #FFFFFF;
 }
 
