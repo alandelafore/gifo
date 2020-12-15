@@ -7,6 +7,40 @@
   border: 0;
 }
 
+body.dark {
+  background-color: #37383C;
+}
+
+body.dark .boton-menu {
+  background-color: #37383C;
+}
+
+body.dark .trendigns-section-estilos {
+  background-color: #222326;
+}
+
+body.dark .compartir-en {
+  color: #FFFFFF;
+}
+
+body.dark .gifos-derechos-reservados {
+  color: #FFFFFF;
+}
+
+body.dark ul .footer-links {
+  background-color: #37383C;
+  color: #FFFFFF;
+}
+
+body.dark input {
+  background-color: #37383C;
+  color: #FFFFFF;
+}
+
+body.dark .fieldset-busqueda {
+  border-color: white;
+}
+
 .foto {
   background-color: #c5aaaa;
   border: solid black;
@@ -200,6 +234,10 @@ header {
   margin-bottom: 7px;
 }
 
+body.dark header {
+  border-top: 5px solid #000000;
+}
+
 .boton-menu {
   background-color: white;
   outline: none;
@@ -217,6 +255,10 @@ header {
           animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+body.dark .menu {
+  background-color: #000000;
 }
 
 .menu .menu-link li {
@@ -273,6 +315,10 @@ header {
   color: #572EE5;
 }
 
+body.dark .tipografia-home {
+  color: #FFFFFF;
+}
+
 .tipografia-home-1 {
   font-size: 30px;
   color: #5ED7C6;
@@ -290,6 +336,10 @@ header {
   line-height: 25px;
 }
 
+body.dark .trending-texto {
+  color: #FFFFFF;
+}
+
 .treding {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -297,6 +347,10 @@ header {
   color: #572EE5;
   text-align: center;
   line-height: 25px;
+}
+
+body.dark .treding {
+  color: #FFFFFF;
 }
 
 .tipo-de-busqueda-titulo {
@@ -308,6 +362,10 @@ header {
   position: relative;
   border-top: #9cafc37e 1px solid;
   width: 157px;
+}
+
+body.dark .tipo-de-busqueda-titulo {
+  color: #FFFFFF;
 }
 
 .tipo-de-busqueda-titulo::first-letter {
@@ -324,6 +382,10 @@ header {
   line-height: 30px;
 }
 
+body.dark .treding-gifos {
+  color: #FFFFFF;
+}
+
 .ultimos-gifos {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -331,6 +393,10 @@ header {
   color: #000000;
   text-align: center;
   line-height: 23px;
+}
+
+body.dark .ultimos-gifos {
+  color: #FFFFFF;
 }
 
 .compartir-en {
