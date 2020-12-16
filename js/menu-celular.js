@@ -36,7 +36,6 @@ function modo_nocturno_modo_diurno() {
 function agrega_clase_dark() {
     //agrega la clase dark si es que no la tiene y si la tiene la quita
     document.body.classList.toggle("dark");
-    
 }
 function cambiar_menu_de_estado(){
     if (bt_switch == false) {

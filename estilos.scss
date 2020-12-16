@@ -15,6 +15,14 @@ body {
         background-color: $dark-color-background-01;
     }
 }
+
+.hamburguesa{
+    .dark &{
+    content:url("Assets/burger-noc.svg");
+    }
+}
+
+
 footer {
     .dark & {
         border-color: #000000;
