@@ -15,8 +15,13 @@ body {
         background-color: $dark-color-background-01;
     }
 }
-.boton-menu{
-    .dark &{
+footer {
+    .dark & {
+        border-color: #000000;
+    }
+}
+.boton-menu {
+    .dark & {
         background-color: $dark-color-background-01;
     }
 }
@@ -43,17 +48,16 @@ ul {
         }
     }
 }
-input{
-    .dark &{
+input {
+    .dark & {
         background-color: $dark-color-background-01;
         color: $dark-color-texto-01;
     }
 }
-.fieldset-busqueda{
-    .dark &{
-        border-color:white;
+.fieldset-busqueda {
+    .dark & {
+        border-color: white;
     }
-
 }
 
 //fin tipografias importadas

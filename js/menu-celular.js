@@ -33,7 +33,8 @@ function modo_nocturno_modo_diurno() {
     }
     
 }
-function agrega_clase_dark(params) {
+function agrega_clase_dark() {
+    //agrega la clase dark si es que no la tiene y si la tiene la quita
     document.body.classList.toggle("dark");
     
 }
