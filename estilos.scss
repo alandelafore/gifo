@@ -15,7 +15,40 @@ body {
         background-color: $dark-color-background-01;
     }
 }
+.boton-busqueda {
+    .dark & {
+        border: none;
+        //Le doy color blanco para que quede como el de referencia// ya que el boton por defecto viene gris
+        background-color: $dark-color-background-01;
+        //Con esto saco el deliniado que viene por defecto
+        outline: none;
+        cursor: pointer;
+    }
+    .btn-borrar{
+        .dark &{
+            content: url("Assets/button-close-noc.svg");
 
+        }
+    }
+   
+}
+.lupa-derecha{
+    .dark &{
+        content: url("Assets/icon-search-noc.svg");
+        background-color: $dark-color-background-01;
+    }
+}
+.logo{
+    .dark &{
+        content: url("Assets/logo-mobile-noc.svg");
+
+    }
+}
+.cruz-menu{
+    .dark &{
+        content: url("Assets/button-close-noc.svg");
+    }
+}
 .hamburguesa{
     .dark &{
     content:url("Assets/burger-noc.svg");

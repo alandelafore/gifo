@@ -11,6 +11,30 @@ body.dark {
   background-color: #37383C;
 }
 
+.dark .boton-busqueda {
+  border: none;
+  background-color: #37383C;
+  outline: none;
+  cursor: pointer;
+}
+
+.dark .boton-busqueda .btn-borrar {
+  content: url("Assets/button-close-noc.svg");
+}
+
+.dark .lupa-derecha {
+  content: url("Assets/icon-search-noc.svg");
+  background-color: #37383C;
+}
+
+.dark .logo {
+  content: url("Assets/logo-mobile-noc.svg");
+}
+
+.dark .cruz-menu {
+  content: url("Assets/button-close-noc.svg");
+}
+
 .dark .hamburguesa {
   content: url("Assets/burger-noc.svg");
 }
