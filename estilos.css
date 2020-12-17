@@ -11,6 +11,13 @@ body.dark {
   background-color: #37383C;
 }
 
+.dark .mi-boton {
+  border: none;
+  border: 1px solid white;
+  color: white;
+  background-color: #222326;
+}
+
 .dark .boton-busqueda {
   border: none;
   background-color: #37383C;

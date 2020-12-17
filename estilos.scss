@@ -15,6 +15,15 @@ body {
         background-color: $dark-color-background-01;
     }
 }
+.mi-boton{
+    .dark & {
+        border: none;
+        border: 1px solid white;
+        color: white;
+        background-color:$dark-color-background-02;
+
+    }
+}
 .boton-busqueda {
     .dark & {
         border: none;
