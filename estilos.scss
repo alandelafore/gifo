@@ -15,6 +15,18 @@ body {
         background-color: $dark-color-background-01;
     }
 }
+.ouch{
+    img{
+        .dark & {
+            content: url("/Assets/icon-busqueda-sin-resultado-noc.svg");
+        }
+    }
+}
+.corazon-grande-noc{
+    .dark & {
+        content: url("Assets/icon-fav-sin-contenido-noc.svg");
+    }
+}
 .cabeza-grande-tus-gifos-img-noc{
     content: url("Assets/icon-mis-gifos-sin-contenido-noc.svg");
 
@@ -209,7 +221,9 @@ input {
     width: 157px;
     border-top: 1px solid #9cafc3c2;
 }
-
+#logo{
+    cursor: pointer;
+}
 //PADDING CELULAR
 
 .logo-padding {

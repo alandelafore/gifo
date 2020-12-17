@@ -11,6 +11,14 @@ body.dark {
   background-color: #37383C;
 }
 
+.dark .ouch img {
+  content: url("/Assets/icon-busqueda-sin-resultado-noc.svg");
+}
+
+.dark .corazon-grande-noc {
+  content: url("Assets/icon-fav-sin-contenido-noc.svg");
+}
+
 .cabeza-grande-tus-gifos-img-noc {
   content: url("Assets/icon-mis-gifos-sin-contenido-noc.svg");
 }
@@ -172,6 +180,10 @@ body.dark {
 .linea {
   width: 157px;
   border-top: 1px solid #9cafc3c2;
+}
+
+#logo {
+  cursor: pointer;
 }
 
 .logo-padding {
