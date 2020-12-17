@@ -11,6 +11,18 @@ body.dark {
   background-color: #37383C;
 }
 
+.cabeza-grande-tus-gifos-img-noc {
+  content: url("Assets/icon-mis-gifos-sin-contenido-noc.svg");
+}
+
+.dark .tus-gifos-titulo {
+  color: white;
+}
+
+.dark .favoritos-titulo {
+  color: white;
+}
+
 .dark .mi-boton {
   border: none;
   border: 1px solid white;
