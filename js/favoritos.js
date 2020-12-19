@@ -46,7 +46,7 @@ function borrarCorazonTrendings(id){
 function displayFavoritos(info) {
 
 
-    if(!listaFavoritos.includes(info.id)){
+   // if(!listaFavoritos.includes(info.id)){
     //creo un div
     let ctn = document.createElement("div");
     //CREO UNA IMAGEN gift
@@ -150,7 +150,7 @@ function displayFavoritos(info) {
   }
 
   listaFavoritos = JSON.parse(localStorage.getItem('favoritos'));
-}
+//}
   
 
 
