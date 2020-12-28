@@ -759,3 +759,18 @@ footer {
 
 //fin anumaciones
 //////////////////////////////////////////
+@media screen and (min-width: 768px) {
+    header {
+        border-top: 5px solid $color-violeta; //linea de color violeta arriba del header
+        height: 90px;
+        margin-bottom: 76px;
+        .dark & {
+            border-top: 5px solid #000000;
+            
+        }
+        
+    }
+
+
+
+}

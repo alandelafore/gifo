@@ -773,4 +773,15 @@ footer {
     width: 100%;
   }
 }
+
+@media screen and (min-width: 768px) {
+  header {
+    border-top: 5px solid #572EE5;
+    height: 90px;
+    margin-bottom: 76px;
+  }
+  .dark header {
+    border-top: 5px solid #000000;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */
