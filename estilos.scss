@@ -757,6 +757,7 @@ footer {
     }
 }
 
+
 //fin anumaciones
 //////////////////////////////////////////
 @media screen and (min-width: 768px) {
@@ -764,6 +765,7 @@ footer {
         border-top: 5px solid $color-violeta; //linea de color violeta arriba del header
         height: 90px;
         margin-bottom: 76px;
+        width: 100%;
         .dark & {
             border-top: 5px solid #000000;
             
@@ -771,6 +773,28 @@ footer {
         
     }
 
-
+    .menu{
+        background-color: red;
+        
+       
+        .menu-link{
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+            background-color: blue;
+            .links-menu{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 13px;
+                color: #572EE5;
+                letter-spacing: 0;
+                text-align: center;
+                &:after {
+                    content: "";
+                    display: none;
+                }
+            }
+        }
+    }
 
 }

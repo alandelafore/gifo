@@ -779,9 +779,35 @@ footer {
     border-top: 5px solid #572EE5;
     height: 90px;
     margin-bottom: 76px;
+    width: 100%;
   }
   .dark header {
     border-top: 5px solid #000000;
+  }
+  .menu {
+    background-color: red;
+  }
+  .menu .menu-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    background-color: blue;
+  }
+  .menu .menu-link .links-menu {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .menu .menu-link .links-menu:after {
+    content: "";
+    display: none;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

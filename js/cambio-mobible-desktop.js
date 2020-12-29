@@ -1,11 +1,11 @@
 function mobible_desktop(media_q) {
     if (media_q.matches) {
-      alert("DESKTOP")
       ocultar_hamburgurza();
+      mostrar_menu();
       
     } else {
-     alert("mobible")
      mostrar_hamburgueza();
+     ocultar_menu();
     }
   }
   
@@ -18,7 +18,17 @@ function mobible_desktop(media_q) {
   function ocultar_hamburgurza() {
       document.getElementById("mi-boton-menu").classList.add("ocultar");
       
-  }function mostrar_hamburgueza(params) {
+  }
+  function mostrar_hamburgueza(params) {
     document.getElementById("mi-boton-menu").classList.remove("ocultar");
       
   }
+
+function mostrar_menu() {
+    document.getElementById("menu").classList.remove("ocultar");
+    
+}
+function ocultar_menu() {
+    document.getElementById("menu").classList.add("ocultar");
+    
+}
