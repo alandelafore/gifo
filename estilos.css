@@ -851,5 +851,17 @@ footer {
   .dark header .menu .menu-link .links-menu {
     color: white;
   }
+  .contenedor5 {
+    width: 98%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 243px 243px 243px 243px;
+        grid-template-columns: 243px 243px 243px 243px;
+    grid-gap: 28px 29px;
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

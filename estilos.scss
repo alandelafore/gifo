@@ -837,4 +837,12 @@ footer {
             }
         }
     }
+        .contenedor5 {
+            width: 98%;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 243px 243px 243px 243px;
+            grid-gap: 28px 29px;
+            padding: 10px;
+        }
 }
