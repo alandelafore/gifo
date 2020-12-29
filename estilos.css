@@ -784,12 +784,24 @@ footer {
   .dark header {
     border-top: 5px solid #000000;
   }
-  .menu {
-    background-color: red;
+  header .contenedor3 {
+    position: absolute;
+  }
+  header .contenedor3 .logo {
+    z-index: 10000;
+  }
+  header .menu {
+    background-color: white;
     position: relative;
     height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-  .menu .menu-link {
+  header .menu .menu-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -798,18 +810,19 @@ footer {
             justify-content: space-evenly;
     -ms-flex-flow: wrap;
         flex-flow: wrap;
-    background-color: blue;
+    background-color: white;
     position: absolute;
+    width: 50%;
     height: 90px;
   }
-  .menu .menu-link .btn-crear-gifo {
+  header .menu .menu-link .btn-crear-gifo {
     background: #FFFFFF;
     border: 1px solid #572EE5;
     height: 54px;
     width: 54px;
     border-radius: 50%;
   }
-  .menu .menu-link .links-menu {
+  header .menu .menu-link .links-menu {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 13px;
@@ -817,7 +830,7 @@ footer {
     letter-spacing: 0;
     text-align: center;
   }
-  .menu .menu-link .links-menu:after {
+  header .menu .menu-link .links-menu:after {
     content: "";
     display: none;
   }

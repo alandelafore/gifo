@@ -771,19 +771,28 @@ footer {
             
         }
         
+    .contenedor3{
+        position: absolute;
+        .logo{
+            z-index: 10000;
+        }
     }
 
     .menu{
-        background-color: red;
+        background-color: white;
         position: relative;
         height: 90px;
+        display: flex;
+        justify-content: flex-end;
        
         .menu-link{
             display: flex;
             justify-content: space-evenly;
             flex-flow: wrap;
-            background-color: blue;
+            
+            background-color: white;
             position: absolute;
+            width: 50%;
             height: 90px;
             .btn-crear-gifo{
                 background: #FFFFFF;
@@ -802,9 +811,9 @@ footer {
                 &:after {
                     content: "";
                     display: none;
+                    }
                 }
             }
         }
     }
-
 }
