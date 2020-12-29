@@ -786,16 +786,28 @@ footer {
   }
   .menu {
     background-color: red;
+    position: relative;
+    height: 90px;
   }
   .menu .menu-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -ms-flex-flow: wrap;
         flex-flow: wrap;
     background-color: blue;
+    position: absolute;
+    height: 90px;
+  }
+  .menu .menu-link .btn-crear-gifo {
+    background: #FFFFFF;
+    border: 1px solid #572EE5;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
   }
   .menu .menu-link .links-menu {
     font-family: 'Montserrat', sans-serif;

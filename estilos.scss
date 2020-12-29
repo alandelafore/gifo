@@ -775,13 +775,23 @@ footer {
 
     .menu{
         background-color: red;
-        
+        position: relative;
+        height: 90px;
        
         .menu-link{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             flex-flow: wrap;
             background-color: blue;
+            position: absolute;
+            height: 90px;
+            .btn-crear-gifo{
+                background: #FFFFFF;
+                border: 1px solid #572EE5;
+                height: 54px;
+                width: 54px;
+                border-radius: 50%;
+            }
             .links-menu{
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
