@@ -28,10 +28,12 @@ body {
         content: url("Assets/icon-fav-sin-contenido-noc.svg");
     }
 }
-.cabeza-grande-tus-gifos-img-noc{
+.cabeza-grande-tus-gifos{
+    .dark &{
     content: url("Assets/icon-mis-gifos-sin-contenido-noc.svg");
-
+    }
 }
+
 .tus-gifos-titulo{
     .dark & {
         color: white;
@@ -784,6 +786,9 @@ footer {
         height: 90px;
         display: flex;
         justify-content: flex-end;
+        .dark & {
+        background-color: $dark-color-background-01;            
+        }
        
         .menu-link{
             display: flex;
@@ -794,12 +799,25 @@ footer {
             position: absolute;
             width: 50%;
             height: 90px;
+            .dark & {
+                background-color: $dark-color-background-01;            
+                }
             .btn-crear-gifo{
                 background: #FFFFFF;
                 border: 1px solid #572EE5;
                 height: 54px;
                 width: 54px;
                 border-radius: 50%;
+                .dark & {
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    background-color: $dark-color-background-01;
+                    img{
+                    content: url("Assets/button-crear-gifo-noc.svg");
+
+                    }
+                }
+                
             }
             .links-menu{
                 font-family: 'Montserrat', sans-serif;
@@ -811,6 +829,9 @@ footer {
                 &:after {
                     content: "";
                     display: none;
+                    }
+                    .dark & {
+                        color: white;
                     }
                 }
             }

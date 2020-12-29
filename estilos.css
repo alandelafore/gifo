@@ -19,7 +19,7 @@ body.dark {
   content: url("Assets/icon-fav-sin-contenido-noc.svg");
 }
 
-.cabeza-grande-tus-gifos-img-noc {
+.dark .cabeza-grande-tus-gifos {
   content: url("Assets/icon-mis-gifos-sin-contenido-noc.svg");
 }
 
@@ -801,6 +801,9 @@ footer {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .dark header .menu {
+    background-color: #37383C;
+  }
   header .menu .menu-link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -815,12 +818,23 @@ footer {
     width: 50%;
     height: 90px;
   }
+  .dark header .menu .menu-link {
+    background-color: #37383C;
+  }
   header .menu .menu-link .btn-crear-gifo {
     background: #FFFFFF;
     border: 1px solid #572EE5;
     height: 54px;
     width: 54px;
     border-radius: 50%;
+  }
+  .dark header .menu .menu-link .btn-crear-gifo {
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #37383C;
+  }
+  .dark header .menu .menu-link .btn-crear-gifo img {
+    content: url("Assets/button-crear-gifo-noc.svg");
   }
   header .menu .menu-link .links-menu {
     font-family: 'Montserrat', sans-serif;
@@ -833,6 +847,9 @@ footer {
   header .menu .menu-link .links-menu:after {
     content: "";
     display: none;
+  }
+  .dark header .menu .menu-link .links-menu {
+    color: white;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
