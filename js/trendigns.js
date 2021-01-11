@@ -21,10 +21,7 @@ next.addEventListener("click", function () {
 });
 
 function saveInLocalStorage(arr_nuevo) {
-  if (
-    localStorage.getItem("favoritos") != null &&
-    localStorage.getItem("favoritos") != "undefined"
-  ) {
+  if (localStorage.getItem("favoritos") != null &&localStorage.getItem("favoritos") != "undefined") {
     let array_viejo = [];
     array_viejo = JSON.parse(localStorage.getItem("favoritos"));
 
