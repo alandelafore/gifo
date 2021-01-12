@@ -7,7 +7,6 @@ var listaFavoritos=[];
 
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");
 
-
 function displayLocalStorageFavorites() {
   let newArray = JSON.parse(localStorage.getItem('favoritos'));
   return newArray;
@@ -156,6 +155,7 @@ function displayFavoritos(info) {
   function fetch_busqueda_favoritos() {
     console.log("mostrame favoritos, ", localStorage.getItem("favoritos"))
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
+      ocultar_corazon_grande_favoritos();
       url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
       fetch(url)
         .then((respuesta) => respuesta.json())
@@ -163,7 +163,6 @@ function displayFavoritos(info) {
           for (let index = 0; index < info.data.length; index++) {
             displayFavoritos(info.data[index]);
             //agrego el boton de ver mas en cada una de las busquedas
-            ocultar_corazon_grande_favoritos()
 
           }
         })
@@ -173,13 +172,12 @@ function displayFavoritos(info) {
 
 function ocultar_corazon_grande_favoritos(){
   favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
-  if(favoritesArray || array_ids !=""){
+   //if(favoritesArray || array_ids !=""){
      var ocultar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
      for (let index = 0; index < ocultar_corazon_grande_favoritos.length; index++) {
        ocultar_corazon_grande_favoritos[index].classList.add("ocultar");
        
-     }
-   }
+      }
+    //}
  }
    
-  

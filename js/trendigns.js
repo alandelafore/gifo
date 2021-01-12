@@ -36,12 +36,17 @@ function saveInLocalStorage(arr_nuevo) {
   }
   
   localStorage.setItem("favoritos", JSON.stringify(arr_nuevo));
+  
+     
 }
+
+
+
+
 
 function getTrendings() {
   url =
-    "https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=3&offset=" +
-    offset;
+    "https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=3&offset=" +offset;
   fetch(url)
     .then(function (response) {
       return (response = response.json());
@@ -154,6 +159,9 @@ function getTrendings() {
            
             fetch_busqueda_favoritos();
           }
+          container.innerHTML = "";
+          getTrendings();
+          
         });
         
 
