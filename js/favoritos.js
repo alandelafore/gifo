@@ -17,7 +17,6 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
     
   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" )
     fetch_busqueda_favoritos();
-  
 })
     
 function eliminarFavoritos(info)
@@ -165,6 +164,7 @@ function displayFavoritos(info) {
             displayFavoritos(info.data[index]);
             //agrego el boton de ver mas en cada una de las busquedas
             ocultar_corazon_grande_favoritos()
+
           }
         })
     }

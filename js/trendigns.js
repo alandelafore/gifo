@@ -29,10 +29,12 @@ function saveInLocalStorage(arr_nuevo) {
 
     for (i = 0; i < array_a_guardar.length; i++) {
       array_viejo.push(array_viejo[i]);
+
     }
     localStorage.setItem("favoritos", JSON.stringify(array_viejo));
+    
   }
-
+  
   localStorage.setItem("favoritos", JSON.stringify(arr_nuevo));
 }
 
@@ -149,6 +151,7 @@ function getTrendings() {
             
           }
           if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+           
             fetch_busqueda_favoritos();
           }
         });

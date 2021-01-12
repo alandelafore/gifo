@@ -15,9 +15,9 @@ document.getElementById("link-modo-nocturno").addEventListener("click",function 
     ev.preventDefault();
     agrega_clase_dark();
     modo_nocturno_modo_diurno();
-  
+ 
    
-  
+
 })
 
 
