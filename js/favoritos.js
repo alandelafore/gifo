@@ -166,6 +166,8 @@ function displayFavoritos(info) {
 
           }
         })
+    }else{
+      mostrar_corazon_grande_favoritos();
     }
   }
   
@@ -176,6 +178,17 @@ function ocultar_corazon_grande_favoritos(){
      var ocultar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
      for (let index = 0; index < ocultar_corazon_grande_favoritos.length; index++) {
        ocultar_corazon_grande_favoritos[index].classList.add("ocultar");
+       
+      }
+    //}
+ }
+   
+function mostrar_corazon_grande_favoritos(){
+  favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
+   //if(favoritesArray || array_ids !=""){
+     var mostrar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
+     for (let index = 0; index < mostrar_corazon_grande_favoritos.length; index++) {
+       mostrar_corazon_grande_favoritos[index].classList.remove("ocultar");
        
       }
     //}
