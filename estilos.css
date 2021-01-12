@@ -863,5 +863,33 @@ footer {
     grid-gap: 28px 29px;
     padding: 10px;
   }
+  .footer-pc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .footer-pc .compartir-en-padding {
+    padding-bottom: 52px;
+    padding-left: 152px;
+  }
+  .footer-pc .gifos-derechos-reservados-padding {
+    padding-bottom: 52px;
+    padding-right: 158px;
+    -webkit-transform: translate(143%, 0px);
+            transform: translate(143%, 0px);
+  }
+  .footer-pc .contenedor2 {
+    width: 200px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

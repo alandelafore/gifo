@@ -845,4 +845,25 @@ footer {
             grid-gap: 28px 29px;
             padding: 10px;
         }
+        .footer-pc{
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            .compartir-en-padding{
+                padding-bottom: 52px;
+                padding-left: 152px;
+
+            }
+            .gifos-derechos-reservados-padding{
+                padding-bottom: 52px;
+                padding-right: 158px;
+                transform: translate(143%, 0px);
+            }
+           
+            .contenedor2{
+                width: 200px;
+               
+            }
+        }
 }
