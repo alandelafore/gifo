@@ -3,6 +3,7 @@
 
 var favoritesArray=[];
 var listaFavoritos=[];
+var container = document.getElementById("trend_container");
 
 
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");
@@ -33,6 +34,16 @@ function eliminarFavoritos(info)
      }
    }
    saveInLocalStorage(arr_localStorage);
+  container.innerHTML ="";
+  setTimeout(() => {
+    getTrendings();
+    if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
+      ocultar_corazon_grande_favoritos();
+    }
+    else{
+      mostrar_corazon_grande_favoritos();
+    }
+  }, 200);
 }
 
 function borrarCorazonTrendings(id){
@@ -155,6 +166,7 @@ function displayFavoritos(info) {
   function fetch_busqueda_favoritos() {
     console.log("mostrame favoritos, ", localStorage.getItem("favoritos"))
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
+      document.getElementById("favoritos").innerHTML ="";
       ocultar_corazon_grande_favoritos();
       url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
       fetch(url)
@@ -167,6 +179,7 @@ function displayFavoritos(info) {
           }
         })
     }else{
+     
       mostrar_corazon_grande_favoritos();
     }
   }
