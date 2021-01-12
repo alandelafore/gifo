@@ -108,6 +108,45 @@ footer {
     .dark & {
         background-color: $dark-color-background-02;
     }
+    .btn-next-previous{
+        outline: none;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $color-violeta;
+        &:hover{
+            background-color:$color-violeta;
+            .btn-next-img{
+                content: url("Assets/button-right-hover.svg");
+            }
+            .btn-previous-img{
+                content: url("Assets/button-left-hover.svg");
+            }
+        } 
+    }
+    .dark &{
+        .btn-next-previous{
+        outline: none;
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        background-color: transparent;
+        .btn-next-img{
+            content: url("Assets/button-right-hover.svg");
+        }
+        .btn-previous-img{
+            content: url("Assets/button-left-hover.svg");
+            }
+            &:hover{
+                background-color: white;
+                .btn-next-img{
+                    content: url("Assets/button-right-noc.svg");
+                }
+                .btn-previous-img{
+                    content: url("Assets/button-left-noc.svg");
+                    }
+            }
+        }
+    }
 }
 .compartir-en {
     .dark & {
@@ -741,6 +780,7 @@ footer {
     flex-flow: row;
     justify-content: center;
     align-items: center;
+    
 }
 
 /////////////////////////////////////

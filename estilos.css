@@ -78,6 +78,53 @@ body.dark {
   background-color: #222326;
 }
 
+.trendigns-section-estilos .btn-next-previous {
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #572EE5;
+}
+
+.trendigns-section-estilos .btn-next-previous:hover {
+  background-color: #572EE5;
+}
+
+.trendigns-section-estilos .btn-next-previous:hover .btn-next-img {
+  content: url("Assets/button-right-hover.svg");
+}
+
+.trendigns-section-estilos .btn-next-previous:hover .btn-previous-img {
+  content: url("Assets/button-left-hover.svg");
+}
+
+.dark .trendigns-section-estilos .btn-next-previous {
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.dark .trendigns-section-estilos .btn-next-previous .btn-next-img {
+  content: url("Assets/button-right-hover.svg");
+}
+
+.dark .trendigns-section-estilos .btn-next-previous .btn-previous-img {
+  content: url("Assets/button-left-hover.svg");
+}
+
+.dark .trendigns-section-estilos .btn-next-previous:hover {
+  background-color: white;
+}
+
+.dark .trendigns-section-estilos .btn-next-previous:hover .btn-next-img {
+  content: url("Assets/button-right-noc.svg");
+}
+
+.dark .trendigns-section-estilos .btn-next-previous:hover .btn-previous-img {
+  content: url("Assets/button-left-noc.svg");
+}
+
 .dark .compartir-en {
   color: #FFFFFF;
 }
