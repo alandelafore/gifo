@@ -190,6 +190,7 @@ function getTrendings() {
         btn_descarga.id = "btn-descarga";
         btn_descarga.appendChild(imagen_btn_descarga);
         btn_descarga.addEventListener("click", function () {
+          
           async function prueba(img) {
             var blob = await fetch(img).then((r) => r.blob());
             invokeSaveAsDialog(blob);

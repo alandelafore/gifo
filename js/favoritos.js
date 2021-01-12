@@ -137,6 +137,15 @@ function displayFavoritos(info) {
     btn_descarga.classList.add("boton-descarga");
     btn_descarga.id = "btn-descarga";
     btn_descarga.appendChild(imagen_btn_descarga);
+    btn_descarga.addEventListener("click", function () {
+          
+      async function prueba(img) {
+        var blob = await fetch(img).then((r) => r.blob());
+        invokeSaveAsDialog(blob);
+      }
+      prueba(info.images.downsized_large.url);
+    });
+
     imagen_btn_descarga.setAttribute("src", "Assets/icon-download.svg")
     /* FIN BOTON DE DESCARGA */
   
@@ -156,6 +165,11 @@ function displayFavoritos(info) {
     ctn.classList.add("contenedor-gift");
     ctn.id = info.id;
     listaFavoritos.push(info.id);
+
+    async function prueba(url) {
+      var response = await fetch(url);
+      file = await response.blob();
+    }
   }
 
   listaFavoritos = JSON.parse(localStorage.getItem('favoritos'));
