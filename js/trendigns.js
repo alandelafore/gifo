@@ -1,7 +1,8 @@
+
 var array_ids = [];
 var arr_obj_gift = [];
 var offset = 0;
-var container = document.getElementById("trend_container");
+
 let previous = document.getElementById("previous");
 let next = document.getElementById("next");
 var file = {};
@@ -159,9 +160,21 @@ function getTrendings() {
            
             fetch_busqueda_favoritos();
           }
-          container.innerHTML = "";
-          getTrendings();
           
+          let Promesa1 = new Promise((resolve,reject)=>{
+            document.getElementById("trend_container").innerHTML = "";
+            resolve("primer promesa");
+          })
+          let Promesa2 = new Promise((resolve,reject)=>{
+          getTrendings();
+          resolve("segunda promesa");
+
+          })
+          Promise.all([Promesa1,Promesa2])
+          .then((values)=>{
+            console.log("estos son los valores",values);
+
+          })
         });
         
 
