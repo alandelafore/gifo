@@ -41,7 +41,7 @@ function saveInLocalStorage(arr_nuevo) {
      
 }
 
-
+ 
 
 
 
@@ -90,10 +90,7 @@ function getTrendings() {
         imagen_btn_corazon.classList.add("boton-corazon-hover");
         imagen_btn_corazon.id = "boton-corazon-blanco";
         imagen_btn_corazon.classList.add("corazon-blanco");
-        imagen_btn_corazon_violeta.setAttribute(
-          "src",
-          "Assets/icon-fav-active.svg"
-        );
+        imagen_btn_corazon_violeta.setAttribute("src","Assets/icon-fav-active.svg");
         imagen_btn_corazon_violeta.classList.add("boton-corazon-hover");
         imagen_btn_corazon_violeta.classList.add("corazon-violeta");
         
