@@ -7,6 +7,7 @@ var bt_switch = false;
 var arr_local_storage = [];
 var ver_mas = document.getElementById("mi-boton");
 
+
 var numero_gift = 12; //Esta variable la uso para dar la cantidad de gift
 
 //con este Envento hago la busqueda
@@ -48,6 +49,7 @@ document.getElementById("btn-borrar").addEventListener("click", () => {
 
 //Creo los div Y les doy sus respectivos tamaños a las imagenes traidas de giphy
 function addtoDOM(info) {
+  
   //creo un div
   let ctn = document.createElement("div");
   //CREO UNA IMAGEN gift
@@ -101,10 +103,26 @@ function addtoDOM(info) {
   imagen_btn_corazon_violeta.id = "boton-corazon-violeta";
   imagen_btn_corazon.id = "boton-corazon-blanco";
   //ACA HAGO EL CAMBIO DEL BOTON
+
+  if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined"){
+    array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
+      if (array_botones_favoritos.includes(info.id)) {
+        imagen_btn_corazon.classList.add("ocultar");
+      }
+      
+      else{
+        imagen_btn_corazon_violeta.classList.add("ocultar");
+      }
+  }
+  
+  else{
+    imagen_btn_corazon_violeta.classList.add("ocultar");
+  }
+
   btn_corazon.addEventListener("click", (ev) => {
 
     //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
-    if (bt_switch == false) {
+    /* if (bt_switch == false) {
       imagen_btn_corazon_violeta.classList.remove("ocultar")
       //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
       imagen_btn_corazon.classList.add("ocultar");
@@ -126,8 +144,67 @@ function addtoDOM(info) {
       ctn.classList.add("no-activo")
       ctn.classList.remove("activo");
       bt_switch = false;
-    }
+    } */
+   
+if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && localStorage.getItem("favoritos") != "") {
+            array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
+                if (array_botones_favoritos.includes(info.id)) {
+                  imagen_btn_corazon_violeta.classList.add("ocultar");
+                  imagen_btn_corazon.classList.remove("ocultar");
+                  
+                    eliminarFavoritos(info);
+                } else {
+                  imagen_btn_corazon.classList.add("ocultar");
+                  imagen_btn_corazon_violeta.classList.remove("ocultar");
+                  
+                  ctn.classList.add("activo");
+                  ctn.classList.remove("no-activo");
+                  ctn.classList.add(info.id);
+                  
+                //  if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+                    array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
+                    array_ids_favoritos.push(info.id);
+                  //}
+    
+                  // else{
+                  // array_ids_favoritos = [];
+                  // array_ids_favoritos.push(info.data[index].id);
+                  // }
+                  
+                  saveInLocalStorage(array_ids_favoritos);
+                }
+            }
+          else
+          {
+            imagen_btn_corazon_violeta.classList.add("ocultar");
+            
+            ctn.classList.add("activo");
+            ctn.classList.remove("no-activo");
+            ctn.classList.add(info.data[index].id);
+            array_ids_favoritos.push(info.data[index].id);
+              
+            saveInLocalStorage(array_ids_favoritos);
+            
+          }
+          if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
+           
+            fetch_busqueda_favoritos();
+          }
+          
+      /*     let Promesa1 = new Promise((resolve,reject)=>{
+            document.getElementById("trend_container").innerHTML = "";
+            resolve("primer promesa");
+          })
+          let Promesa2 = new Promise((resolve,reject)=>{
+          getTrendings();
+          resolve("segunda promesa");
 
+          })
+          Promise.all([Promesa1,Promesa2])
+          .then((values)=>{
+            console.log("estos son los valores",values);
+
+          }) */
 
 
 

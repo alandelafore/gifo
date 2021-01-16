@@ -97,7 +97,6 @@ function getTrendings() {
         
         if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined"){
           array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
-          
             if (array_botones_favoritos.includes(info.data[index].id)) {
               imagen_btn_corazon.classList.add("ocultar");
             }
