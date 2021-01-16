@@ -113,6 +113,8 @@ function getTrendings() {
 
 
         btn_corazon.addEventListener("click",()=>{
+          
+         
           if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && localStorage.getItem("favoritos") != "") {
             array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
                 if (array_botones_favoritos.includes(info.data[index].id)) {
@@ -158,7 +160,7 @@ function getTrendings() {
             fetch_busqueda_favoritos();
           }
           
-          let Promesa1 = new Promise((resolve,reject)=>{
+      /*     let Promesa1 = new Promise((resolve,reject)=>{
             document.getElementById("trend_container").innerHTML = "";
             resolve("primer promesa");
           })
@@ -171,7 +173,7 @@ function getTrendings() {
           .then((values)=>{
             console.log("estos son los valores",values);
 
-          })
+          }) */
         });
         
 

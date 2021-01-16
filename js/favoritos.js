@@ -34,7 +34,8 @@ function eliminarFavoritos(info)
      }
    }
    saveInLocalStorage(arr_localStorage);
-  container.innerHTML ="";
+
+   container.innerHTML ="";
   setTimeout(() => {
     getTrendings();
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
@@ -43,7 +44,7 @@ function eliminarFavoritos(info)
     else{
       mostrar_corazon_grande_favoritos();
     }
-  }, 200);
+  }, 900);
 }
 
 function borrarCorazonTrendings(id){
