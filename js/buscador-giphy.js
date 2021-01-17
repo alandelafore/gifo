@@ -73,11 +73,7 @@ function addtoDOM(info) {
   //aca agrago una imagen la pagina te devuelve un array de imagenes el i (indice es el indice del while que esta afuera)
   img.setAttribute("src", info.images.downsized_large.url);
 
-  //tamaño de las imagenes que se traen de giphy
-  /* img.style.width = "243px"
-  img.style.height = "187px" */
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  /* BOTON DE FAVORITOS */
+ 
   ctn.appendChild(btn_corazon);
   btn_corazon.classList.add("boton-favoritos-corazon-activo");
   ctn.classList.add("no-activo");
@@ -124,30 +120,6 @@ function addtoDOM(info) {
 
   btn_corazon.addEventListener("click", (ev) => {
 
-    //ACA REMUEVO LA CLASE OCULTAR AL BOTON VIOLETA PARA QUE SE MUESTRE
-    /* if (bt_switch == false) {
-      imagen_btn_corazon_violeta.classList.remove("ocultar")
-      //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
-      imagen_btn_corazon.classList.add("ocultar");
-      ctn.classList.add("activo")
-      ctn.classList.remove("no-activo")
-      ctn.classList.add(info.id);
-
-      arrayFavoritos.push(info.id);
-
-      saveInLocalStorage(arrayFavoritos);
-      if ((localStorage.getItem('favoritos')) != null && (localStorage.getItem("favoritos")) != "undefined")
-        fetch_busqueda_favoritos();
-      bt_switch = true;
-    }
-    else {
-      //Y ACA SIMPLEMENTE ES LO CONTRARIO PARA QUE PUEDA HACER UN LOOP DE CLICKS
-      imagen_btn_corazon.classList.remove("ocultar")
-      imagen_btn_corazon_violeta.classList.add("ocultar")
-      ctn.classList.add("no-activo")
-      ctn.classList.remove("activo");
-      bt_switch = false;
-    } */
    
 if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && localStorage.getItem("favoritos") != "") {
             array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
@@ -164,15 +136,9 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
                   ctn.classList.remove("no-activo");
                   ctn.classList.add(info.id);
                   
-                //  if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined") {
                     array_ids_favoritos = JSON.parse(localStorage.getItem('favoritos'));
                     array_ids_favoritos.push(info.id);
-                  //}
-    
-                  // else{
-                  // array_ids_favoritos = [];
-                  // array_ids_favoritos.push(info.data[index].id);
-                  // }
+                 
                   
                   saveInLocalStorage(array_ids_favoritos);
                 }
@@ -193,23 +159,7 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
            
             fetch_busqueda_favoritos();
           }
-          
-      /*     let Promesa1 = new Promise((resolve,reject)=>{
-            document.getElementById("trend_container").innerHTML = "";
-            resolve("primer promesa");
-          })
-          let Promesa2 = new Promise((resolve,reject)=>{
-          getTrendings();
-          resolve("segunda promesa");
-
-          })
-          Promise.all([Promesa1,Promesa2])
-          .then((values)=>{
-            console.log("estos son los valores",values);
-
-          }) */
-
-
+     
 
   })
 
