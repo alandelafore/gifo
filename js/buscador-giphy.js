@@ -106,18 +106,21 @@ function addtoDOM(info) {
 
   if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined"){
     array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
+
+    
+    console.log("arr", array_botones_favoritos);
+
+
       if (array_botones_favoritos.includes(info.id)) {
         imagen_btn_corazon.classList.add("ocultar");
       }
       
-      else{
-        imagen_btn_corazon_violeta.classList.add("ocultar");
+       if(array_botones_favoritos.includes(info.id)){
+        imagen_btn_corazon_violeta.classList.remove("ocultar");
       }
   }
   
-  else{
-    imagen_btn_corazon_violeta.classList.add("ocultar");
-  }
+ 
 
   btn_corazon.addEventListener("click", (ev) => {
 
@@ -180,8 +183,8 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
             
             ctn.classList.add("activo");
             ctn.classList.remove("no-activo");
-            ctn.classList.add(info.data[index].id);
-            array_ids_favoritos.push(info.data[index].id);
+            ctn.classList.add(info.id);
+            array_ids_favoritos.push(info.id);
               
             saveInLocalStorage(array_ids_favoritos);
             
