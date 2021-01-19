@@ -2,11 +2,12 @@
 var array_ids = [];
 var arr_obj_gift = [];
 var offset = 0;
-
+var limit;
 let previous = document.getElementById("previous");
 let next = document.getElementById("next");
 var file = {};
 var array_ids_favoritos = [];
+var url;
 
 previous.addEventListener("click", function () {
   if (offset != 0) {
@@ -46,8 +47,16 @@ function saveInLocalStorage(arr_nuevo) {
 
 
 function getTrendings() {
-  url =
+  
+  if(window.innerWidth <768){
+    limit =1;
+    
+    url=`https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=${limit}&offset=${offset}`
+  }else{
+    url =
     "https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=3&offset=" +offset;
+  }
+ 
   fetch(url)
     .then(function (response) {
       return (response = response.json());

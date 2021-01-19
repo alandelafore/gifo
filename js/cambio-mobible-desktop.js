@@ -1,12 +1,12 @@
 function mobible_desktop(media_q) {
     if (media_q.matches) {
-      ocultar_hamburgurza();
+      ocultar_hamburgursa();
       mostrar_menu();
       btn_crear_gifo_mostrar();
 
       
     } else {
-     mostrar_hamburgueza();
+     mostrar_hamburguesa();
      ocultar_menu();
      btn_crear_gifo_ocultar();
     }
@@ -18,11 +18,11 @@ function mobible_desktop(media_q) {
 
 
 
-  function ocultar_hamburgurza() {
+  function ocultar_hamburgursa() {
       document.getElementById("mi-boton-menu").classList.add("ocultar");
       
   }
-  function mostrar_hamburgueza(params) {
+  function mostrar_hamburguesa(params) {
     document.getElementById("mi-boton-menu").classList.remove("ocultar");
       
   }
