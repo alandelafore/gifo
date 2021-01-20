@@ -889,12 +889,38 @@ i:hover {
     width: 54px;
     border-radius: 50%;
   }
+  header .menu .menu-link .btn-crear-gifo:hover {
+    background-color: #572EE5;
+  }
+  header .menu .menu-link .btn-crear-gifo:hover img {
+    content: url("Assets/button-crear-gifo-noc.svg");
+  }
+  header .menu .menu-link .btn-crear-gifo:hover:active {
+    background-color: #9CAFC3;
+    border: solid #9CAFC3 1px;
+  }
+  header .menu .menu-link .btn-crear-gifo:hover:active img {
+    content: url("Assets/button-crear-gifo-noc.svg");
+  }
   .dark header .menu .menu-link .btn-crear-gifo {
     border: 1px solid white;
     border-radius: 50%;
     background-color: #37383C;
   }
   .dark header .menu .menu-link .btn-crear-gifo img {
+    content: url("Assets/button-crear-gifo-noc.svg");
+  }
+  .dark header .menu .menu-link .btn-crear-gifo:hover {
+    background-color: white;
+  }
+  .dark header .menu .menu-link .btn-crear-gifo:hover img {
+    content: url("Assets/button-crear-gifo-noc-hover.svg");
+  }
+  .dark header .menu .menu-link .btn-crear-gifo:active {
+    background-color: #9CAFC3;
+    border: solid #9CAFC3 1px;
+  }
+  .dark header .menu .menu-link .btn-crear-gifo:active img {
     content: url("Assets/button-crear-gifo-noc.svg");
   }
   header .menu .menu-link .links-menu {

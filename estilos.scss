@@ -862,6 +862,23 @@ i{
                 height: 54px;
                 width: 54px;
                 border-radius: 50%;
+                
+                &:hover{
+                  background-color:   #572EE5;
+                  img{
+                    content: url("Assets/button-crear-gifo-noc.svg");
+
+                  }
+                  &:active{
+                    background-color: #9CAFC3;
+                    border: solid #9CAFC3 1px ;
+                    img{
+                        content: url("Assets/button-crear-gifo-noc.svg");
+    
+                        }
+                }
+
+                }
                 .dark & {
                     border: 1px solid white;
                     border-radius: 50%;
@@ -869,6 +886,24 @@ i{
                     img{
                     content: url("Assets/button-crear-gifo-noc.svg");
 
+                    }
+                    &:hover{
+                        background-color: white;
+                        img
+                        {
+                             content: url("Assets/button-crear-gifo-noc-hover.svg");
+
+                        }
+
+
+                    }
+                    &:active{
+                        background-color: #9CAFC3;
+                        border: solid #9CAFC3 1px ;
+                        img{
+                            content: url("Assets/button-crear-gifo-noc.svg");
+        
+                            }
                     }
                 }
                 
