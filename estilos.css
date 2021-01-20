@@ -79,6 +79,7 @@ body.dark {
 }
 
 .trendigns-section-estilos .btn-next-previous {
+  background-color: white;
   position: absolute;
   outline: none;
   width: 40px;
