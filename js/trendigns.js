@@ -8,7 +8,7 @@ let next = document.getElementById("next");
 var file = {};
 var array_ids_favoritos = [];
 var url;
-var document.getElementById("trend_container");
+var container=document.getElementById("trend_container");
 
 previous.addEventListener("click", function () {
   if (offset != 0) {
