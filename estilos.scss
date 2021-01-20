@@ -4,6 +4,7 @@
     padding: 0;
     border: 0;
 }
+
 //tipografias importadas
 //monserrat
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
@@ -789,6 +790,11 @@ footer {
     justify-content: center;
     align-items: center;
     
+}
+i{
+    &:hover{
+        color: $color-violeta;
+    }
 }
 
 /////////////////////////////////////

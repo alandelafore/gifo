@@ -809,6 +809,10 @@ footer {
           align-items: center;
 }
 
+i:hover {
+  color: #572EE5;
+}
+
 @-webkit-keyframes alto-menu {
   from {
     height: 40%;
