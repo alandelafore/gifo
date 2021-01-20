@@ -227,27 +227,27 @@ getTrendings();
 
 
 
-//tengo que fijarme bien este evento
-window.addEventListener("resize", function(event){
+var media_q = window.matchMedia("(min-width: 768px)")
+
   
 
 
-  if(window.innerWidth <768){
+function cambio_desktop_mobible(media_q) {
+  if(media_q.matches){
+    document.body.style.backgroundColor ="red"
     container.innerHTML ="";
-    setTimeout(() => {
     getTrendings();
-      
-    }, 900);
-
+    next.classList.remove("ocultar");
+    previous.classList.remove("ocultar");
   }else{
-    container.innerHTML =""
-    setTimeout(() => {
+    document.body.style.backgroundColor ="blue"
+    container.innerHTML ="";
     getTrendings();
-      
-    }, 900);
+    next.classList.add("ocultar");
+    previous.classList.add("ocultar");
+
   }
   
-
-
   
-});
+}
+media_q.addListener(cambio_desktop_mobible);
