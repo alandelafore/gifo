@@ -43,9 +43,6 @@ function saveInLocalStorage(arr_nuevo) {
      
 }
 
- 
-
-
 
 function getTrendings() {
   
@@ -226,3 +223,31 @@ async function prueba(url) {
 }
 
 getTrendings();
+
+
+
+
+//tengo que fijarme bien este evento
+window.addEventListener("resize", function(event){
+  
+
+
+  if(window.innerWidth <768){
+    container.innerHTML ="";
+    setTimeout(() => {
+    getTrendings();
+      
+    }, 900);
+
+  }else{
+    container.innerHTML =""
+    setTimeout(() => {
+    getTrendings();
+      
+    }, 900);
+  }
+  
+
+
+  
+});
