@@ -10,7 +10,7 @@ var array_ids_favoritos = [];
 var url;
 var container=document.getElementById("trend_container");
 var inicio_toqueX;
-var cambio;
+var diferencia;
 var toque;
 
 previous.addEventListener("click", function () {
@@ -270,18 +270,20 @@ function touch_start(event) {
       console.log("donde hago el primer click  : ",inicio_toqueX);
   
 }
-
+//funcion para cuando se mueve el mouse
 function touch_move(event) {
   toque =event.touches[0];
 
-  cambio = inicio_toqueX - toque.clientX;
+  diferencia = inicio_toqueX - toque.clientX;
   console.log(inicio_toqueX);
-  console.log("diferencia touch move cojn toque en x ",cambio);
+  console.log("diferencia ",diferencia);
 
   
 }
+
+//funcion para cuando se levanta el mouse
 function mouse_end() {
-  if(cambio<=-6){
+  if(diferencia<=-6){
     offset += 1;
   container.innerHTML = "";
   getTrendings();
@@ -289,7 +291,7 @@ function mouse_end() {
     
 
 }
-if (offset != 0 &&cambio>=6) {
+if (offset != 0 &&diferencia>=6) {
   offset -= 1;
   container.innerHTML = "";
   getTrendings();
