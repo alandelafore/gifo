@@ -246,8 +246,33 @@ function cambio_desktop_mobible(media_q) {
     next.classList.add("ocultar");
     previous.classList.add("ocultar");
 
+    document.getElementById("trend_container").addEventListener("touchstart", touch_start)
+    document.getElementById("trend_container").addEventListener("touchmove",touch_move)
+
+
+
   }
   
   
 }
 media_q.addListener(cambio_desktop_mobible);
+
+var inicio_toqueX;
+
+
+  function touch_start(event) {
+      inicio_toqueX =event.touches[0].clientX;
+      console.log("donde hago el primer click  : ",inicio_toqueX);
+  
+}
+
+function touch_move(event) {
+  var toque;
+  var cambio;
+  toque =event.touches[0];
+
+  cambio = inicio_toqueX - toque.clientX;
+  console.log(inicio_toqueX);
+  console.log("diferencia touch move cojn toque en x ",cambio)
+  
+}
