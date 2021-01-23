@@ -65,6 +65,8 @@ function getTrendings() {
     .then(function (info) {
       for (let index = 0; index < info.data.length; index++) {
         img = info.data[index].images.downsized_large.url;
+      console.log(info);
+        
 
         /* CREO LOS BOTONES */
         let btn_corazon = document.createElement("button");
@@ -90,6 +92,16 @@ function getTrendings() {
         //Ha ese div le agrego la clase
         ctn.classList.add("contenedor-gift-trending");
         ctn.classList.add("no-activo");
+
+
+        //TITULO DEL GIF
+      let titulo = document.createElement("p");
+      titulo.innerHTML =info.data[index].title;
+      titulo.setAttribute("class","titulos-gifs")
+      ctn.appendChild(titulo);
+      
+
+     
 
         /* BOTON DE FAVORITOS */
         ctn.appendChild(btn_corazon);
@@ -217,6 +229,10 @@ function getTrendings() {
         btn_agrandar.appendChild(imagen_btn_agrandar);
         imagen_btn_agrandar.setAttribute("src", "Assets/icon-max.svg");
         /* FIN BOTON DE AGRANDAR */
+        
+        
+       
+
       }
     });
 }
