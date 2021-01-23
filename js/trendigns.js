@@ -9,6 +9,9 @@ var file = {};
 var array_ids_favoritos = [];
 var url;
 var container=document.getElementById("trend_container");
+var inicio_toqueX;
+var cambio;
+var toque;
 
 previous.addEventListener("click", function () {
   if (offset != 0) {
@@ -239,15 +242,18 @@ function cambio_desktop_mobible(media_q) {
     getTrendings();
     next.classList.remove("ocultar");
     previous.classList.remove("ocultar");
+   
   }else{
     document.body.style.backgroundColor ="blue"
     container.innerHTML ="";
     getTrendings();
     next.classList.add("ocultar");
     previous.classList.add("ocultar");
-
     document.getElementById("trend_container").addEventListener("touchstart", touch_start)
     document.getElementById("trend_container").addEventListener("touchmove",touch_move)
+    document.getElementById("trend_container").addEventListener("touchend",mouse_end)
+    
+
 
 
 
@@ -257,22 +263,36 @@ function cambio_desktop_mobible(media_q) {
 }
 media_q.addListener(cambio_desktop_mobible);
 
-var inicio_toqueX;
 
 
-  function touch_start(event) {
+function touch_start(event) {
       inicio_toqueX =event.touches[0].clientX;
       console.log("donde hago el primer click  : ",inicio_toqueX);
   
 }
 
 function touch_move(event) {
-  var toque;
-  var cambio;
   toque =event.touches[0];
 
   cambio = inicio_toqueX - toque.clientX;
   console.log(inicio_toqueX);
-  console.log("diferencia touch move cojn toque en x ",cambio)
+  console.log("diferencia touch move cojn toque en x ",cambio);
+
+  
+}
+function mouse_end() {
+  if(cambio<=-6){
+    offset += 1;
+  container.innerHTML = "";
+  getTrendings();
+
+    
+
+}
+if (offset != 0 &&cambio>=6) {
+  offset -= 1;
+  container.innerHTML = "";
+  getTrendings();
+}
   
 }
