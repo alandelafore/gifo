@@ -1,3 +1,7 @@
+//TODO: tengo que terminear la colocacion del user en trendings despues tengo que agregarlo en favoritos y en el buscador
+//TODO: Tengo que afinar algunas cosas de css del modo de escritorio tamaños
+//TODO: Tengo que agregar los titulo trendings y ver que me llevan al gif en cuestion
+//TODO: Tengo que agregar La seccion de Creacion de GIFOS, los gif que agregue enviarlos a lasccion mis gifos
 @import "variables";
 * {
     margin: 0;
@@ -16,17 +20,34 @@ body {
         background-color: $dark-color-background-01;
     }
 }
-.titulos-gifs{
-    z-index: 2000;
-    position: relative;
-    width: 50%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    align-self: flex-end;
+.contenedor-gift-trending{
+
+    .user-gifs{
+        z-index: 2000;
+        position: relative;
+        width: 10%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: red;
+        text-align: center;
+        align-self: flex-end;
+
+    }
+    .titulos-gifs{
+        z-index: 2000;
+        position: relative;
+        width: 50%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        align-self: flex-end;
+    }
+
 }
+
 .contenedor-gift{
     .boton-favoritos-corazon-activo{
         transform: translate(120px, 0px);
@@ -54,6 +75,19 @@ body {
         -ms-flex-item-align: end;
         align-self: flex-end;
     
+    }
+    .user-gifs{
+        z-index: 2000;
+        position: relative;
+        width: 10%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: red;
+        text-align: center;
+       
+
+
     }
 
 }

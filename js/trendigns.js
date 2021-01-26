@@ -66,6 +66,7 @@ function getTrendings() {
       for (let index = 0; index < info.data.length; index++) {
         img = info.data[index].images.downsized_large.url;
         
+        console.log(info, "esto es lo que trae infoooo")
 
         /* CREO LOS BOTONES */
         let btn_corazon = document.createElement("button");
@@ -98,6 +99,11 @@ function getTrendings() {
       titulo.innerHTML =info.data[index].title;
       titulo.setAttribute("class","titulos-gifs")
       ctn.appendChild(titulo);
+
+      let user = document.createElement("p");
+      user.innerHTML =info.data[index].username;
+      user.setAttribute("class","user-gifs")
+      ctn.appendChild(user);
       
         //OCULTO LOS BOTONES
    
@@ -232,18 +238,20 @@ function getTrendings() {
 
         imagen.classList.add("mi-imagen");
         titulo.classList.add("ocultar");
+        user.classList.add("ocultar");
         btn_corazon.classList.add("ocultar");
         btn_descarga.classList.add("ocultar");
         btn_agrandar.classList.add("ocultar");
 
         ctn.addEventListener("mouseout",function (ev) {
+        user.classList.add("ocultar");
         titulo.classList.add("ocultar");
         btn_corazon.classList.add("ocultar");
         btn_descarga.classList.add("ocultar");
         btn_agrandar.classList.add("ocultar");
         })
         ctn.addEventListener("mouseover",function (ev) {
-       
+        user.classList.remove("ocultar");
          titulo.classList.remove("ocultar");
          btn_corazon.classList.remove("ocultar");
          btn_descarga.classList.remove("ocultar");

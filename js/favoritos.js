@@ -172,21 +172,28 @@ function displayFavoritos(info) {
       titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
       ctn.appendChild(titulo);
 
+      let user = document.createElement("p");
+      user.innerHTML =info.username;
+      user.setAttribute("class","user-gifs")
+      ctn.appendChild(user);
+
 
       img.classList.add("mi-imagen");
       titulo.classList.add("ocultar");
         btn_corazon.classList.add("ocultar");
         btn_descarga.classList.add("ocultar");
         btn_agrandar.classList.add("ocultar");
+        user.classList.add("ocultar");
 
         ctn.addEventListener("mouseout",function (ev) {
         titulo.classList.add("ocultar");
         btn_corazon.classList.add("ocultar");
         btn_descarga.classList.add("ocultar");
         btn_agrandar.classList.add("ocultar");
+        user.classList.add("ocultar");
         })
         ctn.addEventListener("mouseover",function (ev) {
-       
+          user.classList.remove("ocultar");
          titulo.classList.remove("ocultar");
          btn_corazon.classList.remove("ocultar");
          btn_descarga.classList.remove("ocultar");
