@@ -172,6 +172,8 @@ function displayFavoritos(info) {
       titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
       ctn.appendChild(titulo);
 
+
+      img.classList.add("mi-imagen");
       titulo.classList.add("ocultar");
         btn_corazon.classList.add("ocultar");
         btn_descarga.classList.add("ocultar");

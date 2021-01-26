@@ -195,18 +195,18 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
       titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
       ctn.appendChild(titulo);
 
+          img.classList.add("mi-imagen");
+          titulo.classList.add("ocultar");
+          btn_corazon.classList.add("ocultar");
+          btn_descarga.classList.add("ocultar");
+          btn_agrandar.classList.add("ocultar");
 
-      titulo.classList.add("ocultar");
-        btn_corazon.classList.add("ocultar");
-        btn_descarga.classList.add("ocultar");
-        btn_agrandar.classList.add("ocultar");
-
-        ctn.addEventListener("mouseout",function (ev) {
-        titulo.classList.add("ocultar");
-        btn_corazon.classList.add("ocultar");
-        btn_descarga.classList.add("ocultar");
-        btn_agrandar.classList.add("ocultar");
-        })
+          ctn.addEventListener("mouseout",function (ev) {
+          titulo.classList.add("ocultar");
+          btn_corazon.classList.add("ocultar");
+          btn_descarga.classList.add("ocultar");
+          btn_agrandar.classList.add("ocultar");
+          })
         ctn.addEventListener("mouseover",function (ev) {
        
          titulo.classList.remove("ocultar");

@@ -230,7 +230,7 @@ function getTrendings() {
         /* FIN BOTON DE AGRANDAR */
         
 
-
+        imagen.classList.add("mi-imagen");
         titulo.classList.add("ocultar");
         btn_corazon.classList.add("ocultar");
         btn_descarga.classList.add("ocultar");
