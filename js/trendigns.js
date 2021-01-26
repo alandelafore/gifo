@@ -1,4 +1,3 @@
-const { Console } = require("console");
 
 var array_ids = [];
 var arr_obj_gift = [];
@@ -67,6 +66,16 @@ function getTrendings() {
         img = info.data[index].images.downsized_large.url;
         
         console.log(info, "esto es lo que trae infoooo")
+        let div_contenedor_botones_textos = document.createElement("div");
+        let div_contenedor_botones = document.createElement("div");
+        let div_contenedor_texto = document.createElement("div");
+
+        div_contenedor_botones_textos.setAttribute("class","div-contenedor-botones-textos");
+        div_contenedor_botones.setAttribute("class","div-contenedor-botones");
+        div_contenedor_texto.setAttribute("class","div_contenedor_texto");
+
+
+
 
         /* CREO LOS BOTONES */
         let btn_corazon = document.createElement("button");
@@ -120,7 +129,13 @@ function getTrendings() {
         imagen_btn_corazon_violeta.setAttribute("src","Assets/icon-fav-active.svg");
         imagen_btn_corazon_violeta.classList.add("boton-corazon-hover");
         imagen_btn_corazon_violeta.classList.add("corazon-violeta");
+
         
+
+       
+
+        
+
         
         if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined"){
           array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
@@ -259,7 +274,19 @@ function getTrendings() {
       
        })
 
+       //TODO: PONER DEPUES EN LOS DISTINTOS LUGARES FAV Y BUSCADOR
+       div_contenedor_botones_textos.appendChild(div_contenedor_botones);
+       div_contenedor_botones_textos.appendChild(div_contenedor_texto);
+       ctn.appendChild(div_contenedor_botones_textos);
+       
+       div_contenedor_botones.appendChild(btn_agrandar);
+       div_contenedor_botones.appendChild(btn_descarga);
+       div_contenedor_botones.appendChild(btn_corazon);
+       div_contenedor_texto.appendChild(titulo);
+       div_contenedor_texto.appendChild(user);
+
       }
+
     });
 }
 async function prueba(url) {
