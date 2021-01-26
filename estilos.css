@@ -48,7 +48,12 @@ body.dark {
   border: none;
   border: 1px solid white;
   color: white;
-  background-color: #222326;
+  background-color: #37383C;
+}
+
+.dark .mi-boton:hover {
+  background-color: white;
+  color: black;
 }
 
 .dark .boton-busqueda {
@@ -625,6 +630,11 @@ header {
   outline: none;
   margin-top: 78px;
   margin-bottom: 79px;
+}
+
+.mi-boton:hover {
+  background-color: #572EE5;
+  color: white;
 }
 
 .autocompletar-busquedas {
