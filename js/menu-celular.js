@@ -69,4 +69,6 @@ function cambiar_menu_de_estado(){
 
 }
 
-//por probar quokka
+
+
+

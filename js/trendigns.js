@@ -1,3 +1,4 @@
+const { Console } = require("console");
 
 var array_ids = [];
 var arr_obj_gift = [];
@@ -12,7 +13,6 @@ var container=document.getElementById("trend_container");
 var inicio_toqueX;
 var diferencia;
 var toque;
-
 previous.addEventListener("click", function () {
   if (offset != 0) {
     offset -= 1;
