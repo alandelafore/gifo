@@ -65,7 +65,6 @@ function getTrendings() {
     .then(function (info) {
       for (let index = 0; index < info.data.length; index++) {
         img = info.data[index].images.downsized_large.url;
-      console.log(info);
         
 
         /* CREO LOS BOTONES */
@@ -100,8 +99,8 @@ function getTrendings() {
       titulo.setAttribute("class","titulos-gifs")
       ctn.appendChild(titulo);
       
-
-     
+        //OCULTO LOS BOTONES
+   
 
         /* BOTON DE FAVORITOS */
         ctn.appendChild(btn_corazon);
@@ -230,8 +229,27 @@ function getTrendings() {
         imagen_btn_agrandar.setAttribute("src", "Assets/icon-max.svg");
         /* FIN BOTON DE AGRANDAR */
         
-        
+
+
+        titulo.classList.add("ocultar");
+        btn_corazon.classList.add("ocultar");
+        btn_descarga.classList.add("ocultar");
+        btn_agrandar.classList.add("ocultar");
+
+        ctn.addEventListener("mouseout",function (ev) {
+        titulo.classList.add("ocultar");
+        btn_corazon.classList.add("ocultar");
+        btn_descarga.classList.add("ocultar");
+        btn_agrandar.classList.add("ocultar");
+        })
+        ctn.addEventListener("mouseover",function (ev) {
        
+         titulo.classList.remove("ocultar");
+         btn_corazon.classList.remove("ocultar");
+         btn_descarga.classList.remove("ocultar");
+         btn_agrandar.classList.remove("ocultar");
+      
+       })
 
       }
     });

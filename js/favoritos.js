@@ -172,6 +172,27 @@ function displayFavoritos(info) {
       titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
       ctn.appendChild(titulo);
 
+      titulo.classList.add("ocultar");
+        btn_corazon.classList.add("ocultar");
+        btn_descarga.classList.add("ocultar");
+        btn_agrandar.classList.add("ocultar");
+
+        ctn.addEventListener("mouseout",function (ev) {
+        titulo.classList.add("ocultar");
+        btn_corazon.classList.add("ocultar");
+        btn_descarga.classList.add("ocultar");
+        btn_agrandar.classList.add("ocultar");
+        })
+        ctn.addEventListener("mouseover",function (ev) {
+       
+         titulo.classList.remove("ocultar");
+         btn_corazon.classList.remove("ocultar");
+         btn_descarga.classList.remove("ocultar");
+         btn_agrandar.classList.remove("ocultar");
+      
+       })
+
+
     async function prueba(url) {
       var response = await fetch(url);
       file = await response.blob();
