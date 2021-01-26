@@ -68,3 +68,5 @@ function cambiar_menu_de_estado(){
     //document.getElementById("menu-link").classList.add("ocultar");
 
 }
+
+//por probar quokka
