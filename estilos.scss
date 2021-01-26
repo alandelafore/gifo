@@ -27,6 +27,37 @@ body {
     text-align: center;
     align-self: flex-end;
 }
+.contenedor-gift{
+    .boton-favoritos-corazon-activo{
+        transform: translate(120px, 0px);
+
+    }
+    .boton-descarga{
+        transform: translate(120px, 0px);
+
+    }
+    .boton-agrandar{
+        transform: translate(120px, 0px);
+
+    }
+    .titulos-gifs-buscador-favoritos{
+        z-index: 2000;
+        position: relative;
+        width: 50%;
+        /* float: left; */
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: blue;
+        text-align: center;
+        transform: translate(-112px, 0px);
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    
+    }
+
+}
+
 // cuando no hay nada para buscar o la busqueda es erronea
 .ouch{
     img{

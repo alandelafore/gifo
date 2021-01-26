@@ -167,6 +167,11 @@ function displayFavoritos(info) {
     ctn.id = info.id;
     listaFavoritos.push(info.id);
 
+    let titulo = document.createElement("p");
+      titulo.innerHTML =info.title;
+      titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
+      ctn.appendChild(titulo);
+
     async function prueba(url) {
       var response = await fetch(url);
       file = await response.blob();

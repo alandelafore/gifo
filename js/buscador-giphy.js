@@ -190,6 +190,11 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
   gifts.appendChild(ctn);
   ctn.classList.add("contenedor-gift");
 
+  let titulo = document.createElement("p");
+      titulo.innerHTML =info.title;
+      titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
+      ctn.appendChild(titulo);
+
 }
 // esta funcion pide como parametro el valor que usuario escribe en el input
 function texto_tipo_busqueda(info_texto) {
@@ -408,3 +413,5 @@ function seccion_no_encontrados_02() {
 
   busqueda_fallida.classList.add("ocultar");
 }
+
+

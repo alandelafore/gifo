@@ -24,6 +24,37 @@ body.dark {
       align-self: flex-end;
 }
 
+.contenedor-gift .boton-favoritos-corazon-activo {
+  -webkit-transform: translate(120px, 0px);
+          transform: translate(120px, 0px);
+}
+
+.contenedor-gift .boton-descarga {
+  -webkit-transform: translate(120px, 0px);
+          transform: translate(120px, 0px);
+}
+
+.contenedor-gift .boton-agrandar {
+  -webkit-transform: translate(120px, 0px);
+          transform: translate(120px, 0px);
+}
+
+.contenedor-gift .titulos-gifs-buscador-favoritos {
+  z-index: 2000;
+  position: relative;
+  width: 50%;
+  /* float: left; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: blue;
+  text-align: center;
+  -webkit-transform: translate(-112px, 0px);
+          transform: translate(-112px, 0px);
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
 .dark .ouch img {
   content: url("/Assets/icon-busqueda-sin-resultado-noc.svg");
 }
