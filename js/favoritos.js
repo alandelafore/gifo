@@ -55,8 +55,14 @@ function borrarCorazonTrendings(id){
 
 function displayFavoritos(info) {
 
+  let div_contenedor_botones_textos = document.createElement("div");
+        let div_contenedor_botones = document.createElement("div");
+        let div_contenedor_texto = document.createElement("div");
 
-   // if(!listaFavoritos.includes(info.id)){
+        div_contenedor_botones_textos.setAttribute("class","div-contenedor-botones-textos");
+        div_contenedor_botones.setAttribute("class","div-contenedor-botones");
+        div_contenedor_texto.setAttribute("class","div_contenedor_texto");  
+     
     //creo un div
     let ctn = document.createElement("div");
     //CREO UNA IMAGEN gift
@@ -169,7 +175,7 @@ function displayFavoritos(info) {
 
     let titulo = document.createElement("p");
       titulo.innerHTML =info.title;
-      titulo.setAttribute("class","titulos-gifs-buscador-favoritos")
+      titulo.setAttribute("class","titulos-gifs")
       ctn.appendChild(titulo);
 
       let user = document.createElement("p");
@@ -200,7 +206,15 @@ function displayFavoritos(info) {
          btn_agrandar.classList.remove("ocultar");
       
        })
+       div_contenedor_botones_textos.appendChild(div_contenedor_botones);
+       div_contenedor_botones_textos.appendChild(div_contenedor_texto);
+       ctn.appendChild(div_contenedor_botones_textos);
 
+       div_contenedor_botones.appendChild(btn_corazon);
+       div_contenedor_botones.appendChild(btn_agrandar);
+       div_contenedor_botones.appendChild(btn_descarga);
+       div_contenedor_texto.appendChild(user);
+       div_contenedor_texto.appendChild(titulo);
 
     async function prueba(url) {
       var response = await fetch(url);

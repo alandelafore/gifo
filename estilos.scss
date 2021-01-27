@@ -29,8 +29,35 @@ body {
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         font-size: 16px;
-        color: red;
-        background-color: yellow;
+        display: flex;
+        color: white;
+        align-self: flex-start;
+        margin-bottom: 5px;
+        
+
+    }
+    .titulos-gifs{
+        z-index: 2000;
+        position: relative;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+    }
+
+}
+
+.contenedor-gift{
+
+    .user-gifs{
+        z-index: 2000;
+        position: relative;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
         display: flex;
         align-self: flex-start;
         margin-bottom: 5px;
@@ -45,55 +72,9 @@ body {
         font-weight: 700;
         font-size: 16px;
         color: white;
-        background-color: yellowgreen;
     }
 
 }
-
-.contenedor-gift{
-    .boton-favoritos-corazon-activo{
-        transform: translate(120px, 0px);
-
-    }
-    .boton-descarga{
-        transform: translate(120px, 0px);
-
-    }
-    .boton-agrandar{
-        transform: translate(120px, 0px);
-
-    }
-    .titulos-gifs-buscador-favoritos{
-        z-index: 2000;
-        position: relative;
-        width: 50%;
-        /* float: left; */
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        transform: translate(-112px, 0px);
-        -ms-flex-item-align: end;
-        align-self: flex-end;
-    
-    }
-    .user-gifs{
-        z-index: 2000;
-        position: relative;
-        width: 10%;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        color: red;
-        text-align: center;
-       
-
-
-    }
-
-}
-
 // cuando no hay nada para buscar o la busqueda es erronea
 .ouch{
     img{
@@ -864,6 +845,30 @@ footer {
                 
             
     }
+
+    .div-contenedor-botones-textos{
+        width: 100%;
+        height: 187px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+
+        .div-contenedor-botones{
+            width: 100%;
+           display: flex;
+           justify-content: flex-end;
+            order: 1;
+
+        }
+        .div_contenedor_texto{
+            width: 100%;
+            order: 0;
+            align-self: flex-end;
+            
+            
+        }
+    }
+    
 }
 .contenedor-gift-trending {
     width: 100%;
@@ -890,7 +895,6 @@ footer {
     .div-contenedor-botones-textos{
         width: 100%;
         height: 187px;
-        background-color: red;
         display: grid;
         grid-template-columns: 1fr 1fr;
         
@@ -899,13 +903,11 @@ footer {
             width: 100%;
            display: flex;
            justify-content: flex-end;
-            background-color: saddlebrown;
             order: 1;
 
         }
         .div_contenedor_texto{
             width: 100%;
-            background-color: seagreen;
             order: 0;
             align-self: flex-end;
             
@@ -1058,7 +1060,7 @@ i{
         }
     }
         .contenedor5 {
-            width: 98%;
+            width: 100%;
             justify-content: center;
             display: grid;
             grid-template-columns: 243px 243px 243px 243px;
@@ -1084,6 +1086,14 @@ i{
             .contenedor2{
                 width: 200px;
                
+            }
+        }
+        .contenedor-gift{
+            width: 260px;
+            height: 200px;
+            .mi-imagen{
+                width: 260px;
+                height: 200px;
             }
         }
 }
