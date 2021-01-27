@@ -278,12 +278,12 @@ function getTrendings() {
        div_contenedor_botones_textos.appendChild(div_contenedor_botones);
        div_contenedor_botones_textos.appendChild(div_contenedor_texto);
        ctn.appendChild(div_contenedor_botones_textos);
-       
+
+       div_contenedor_botones.appendChild(btn_corazon);
        div_contenedor_botones.appendChild(btn_agrandar);
        div_contenedor_botones.appendChild(btn_descarga);
-       div_contenedor_botones.appendChild(btn_corazon);
-       div_contenedor_texto.appendChild(titulo);
        div_contenedor_texto.appendChild(user);
+       div_contenedor_texto.appendChild(titulo);
 
       }
 

@@ -884,6 +884,30 @@ footer {
                 
             
     }
+
+    .div-contenedor-botones-textos{
+        width: 100%;
+        background-color: red;
+        flex-flow: row;
+        display: flex;
+        
+
+        .div-contenedor-botones{
+            width: 100%;
+           display: flex;
+           justify-content: flex-end;
+            background-color: saddlebrown;
+            order: 1;
+
+        }
+        .div_contenedor_texto{
+            width: 100%;
+            background-color: seagreen;
+            height: 150px;
+            order: 0;
+            
+        }
+    }
     
 }
 .contenedor6 {
