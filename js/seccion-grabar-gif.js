@@ -1,7 +1,6 @@
 let form_data = new FormData();
-
 const url_up = 'https://upload.giphy.com/v1/gifs';
-const api_key = '2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ';
+const api_key = 'PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT';
 
 
 
@@ -308,6 +307,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
         div_contenedor.classList.remove("ocultar");
         
     }
+   
    //fetch para subir
 
     async function fetch_subir() {
@@ -323,9 +323,11 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
                 // console.log(`Resultado:${result}`);
                 res = result;
                 console.log(res);
-                console.log(res['data']['id']);
+                //console.log(res['data']['id']);
                if(res == result){
                 gifo_subido_con_exito();
+                let urls_gif =`https://api.giphy.com/v1/gifs/${res.data.id}?api_key=${api_key}`;
+                console.log(url_b, "esta es la url del gif");
                }
 
             })
