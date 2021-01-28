@@ -51,10 +51,10 @@ function getTrendings() {
   if(window.innerWidth <768){
     limit =1;
     
-    url=`https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=${limit}&offset=${offset}`
+    url=`https://api.giphy.com/v1/gifs/trending?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&limit=${limit}&offset=${offset}`
   }else{
     url =
-    "https://api.giphy.com/v1/gifs/trending?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=3&offset=" +offset;
+    "https://api.giphy.com/v1/gifs/trending?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&limit=3&offset=" +offset;
   }
  
   fetch(url)

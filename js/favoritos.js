@@ -232,7 +232,7 @@ function displayFavoritos(info) {
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
       document.getElementById("favoritos").innerHTML ="";
       ocultar_corazon_grande_favoritos();
-      url = "https://api.giphy.com/v1/gifs?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&ids="+displayLocalStorageFavorites();
+      url = "https://api.giphy.com/v1/gifs?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&ids="+displayLocalStorageFavorites();
       fetch(url)
         .then((respuesta) => respuesta.json())
         .then((info) => {

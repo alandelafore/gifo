@@ -259,7 +259,7 @@ function mostrar_boton() {
 
 
 function fetch_busqueda() {
-  url = "https://api.giphy.com/v1/gifs/search?api_key=2QRBa2w3k34LbUKfXGoNpuL3Mj6sHAEQ&limit=12&offset=" + offset + "&q=" + busqueda;
+  url = "https://api.giphy.com/v1/gifs/search?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&limit=12&offset=" + offset + "&q=" + busqueda;
 
   fetch(url)
     .then((respuesta) => respuesta.json())
