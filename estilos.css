@@ -452,6 +452,24 @@ header {
   position: relative;
 }
 
+.menu .menu-link .links-menu:hover:before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #5ED7C6;
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+
+.menu .menu-link .links-menu:active {
+  color: #9CAFC3;
+}
+
+.dark .menu .menu-link .links-menu:active {
+  color: #9CAFC3;
+}
+
 .links-menu:after {
   content: "";
   height: 1px;

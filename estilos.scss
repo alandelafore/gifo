@@ -1,9 +1,12 @@
+//TODO: TENGO QUE HACER EL MODO OSCURO DEL MENU CREAR GIFOS, TENGO QUE HACERLO APARECER Y DESAPARECER CUANDO CLICKEO EL BTN
+//TODO: TENGO QUE CREAR LA SECCION MIS GIFOS Y DARLE EL MISMO FUNCIONAMIENTO QUE A FAVORITOS EXCEPTO QUE TENGO QUE PODER BORRARLOS
+
+
 
 //TODO: TENGO QUE JUSTAR TRENDINGS AL TAMAÑO DE DESKTOP
 //TODO: TENGO QUE MEJORAR LAS FLECHAS PREVEOUS Y NEXT POR QUE CUANDO ACHICO LA PANTALLA DESAPARECEN
 //TODO: Tengo que afinar algunas cosas de css del modo de escritorio tamaños
-//TODO: Tengo que agregar los titulo trendings y ver que me llevan al gif en cuestion
-//TODO: Tengo que agregar La seccion de Creacion de GIFOS, los gif que agregue enviarlos a lasccion mis gifos
+//TODO: Tengo que agregar los titulo trendings y ver que me lleven al gif en cuestion
 @import "variables";
 * {
     margin: 0;
@@ -439,6 +442,7 @@ header {
         border-top: 5px solid #000000;
     }
 }
+
 //fin header
 
 //Menu de navegacion (Celular y Desktop)// logo
@@ -459,6 +463,7 @@ header {
     animation-fill-mode: forwards;
     .dark & {
         background-color: #000000;
+        
     }
     .menu-link {
         li {
@@ -471,8 +476,33 @@ header {
             text-align: center;
             line-height: 60px;
             text-decoration: none;
-            position: relative; //aca pongo posicion relativa para que despues se dibuje la linea
+            position: relative;
+             //aca pongo posicion relativa para que despues se dibuje la linea
+            &:hover{
+                &:before {
+                    //esto lo utilizo para dibujar la linea correspondiente al texto pongo una posicion absoluta
+                    //dibujo la linea a los elentos que tengan la ckase links-menu
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                    background: #5ED7C6;
+                    position: absolute; //le pongo posicion absoluta para que luego internamente se fije quien es el primer elemento con relative
+                    //de esta forma al ser los links le pone el contenido por debajo
+                    left:0;
+                    top: 18px;
+                }
+            }
+            &:active{
+                color:#9CAFC3;
+            }
+            .dark &{
+                &:active{
+                    color:#9CAFC3;
+                }
+            }
         }
+        
+       
     }
 }
 
