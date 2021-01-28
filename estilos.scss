@@ -761,7 +761,251 @@ header {
     padding-right: 19px;
     text-align: center;
 }
+.crear-gifos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 
+    .cronometro{
+        width: 200px;
+        position: absolute;
+        transform: translate(314px, 5px);
+      h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 22px;
+        font-weight: 700;
+        
+      }
+
+    }
+    .repetir-captura{
+        transform: translate(280px,10px);
+        position: absolute;
+        h2{
+            font-size: 13px;
+            color: #572EE5;
+            letter-spacing: 0;
+            text-align: center;
+            font-family:  Montserrat, sans-serif;
+           &::before{
+               content: "";
+               width: 122px;
+               height: 2PX;
+            border-bottom: 2px solid #5ED7C6;
+            position: absolute;
+            transform: translate(6px, 14px);
+
+           }
+        }
+       
+
+    }
+
+    .gradiante{
+        width: 90px;
+        height: 151px;
+        width: 91px;
+        height: 151px;
+        background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 10%, #50E3C2 200%);
+        clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 66%);
+        position: absolute;
+        -webkit-transform: translate(124px, 0px);
+        transform: translate(124px, 0px);
+        
+        
+    }
+
+    .camara{
+        position: absolute;
+       
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        -webkit-transform: translateY(-100px);
+        transform: translate(118px,-100px);
+
+    }
+    .pelicula{
+        position: absolute;
+        transform: translate(477px, 140px);
+
+    }
+.contenedor-botones{
+    display: flex;
+    justify-content: center;
+    width: 688px;
+    margin-top: 24px;
+    margin-bottom: 19px;
+
+    .estilo-de-mis-botones{
+        width: 32px;
+        height: 32px;
+        border: 1px solid #572EE5;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 26px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #572EE5;
+        text-align: center;
+
+    }
+    .estilo-de-mis-botones-click{
+        width: 32px;
+        height: 32px;
+        border: 1px solid #572EE5;
+        background-color: #572EE5;
+        border-radius: 50%;
+        margin-right: 26px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        
+    }
+}
+.borde-violeta-abajo{
+    background: #572EE5;
+    border-radius: 10px; 
+    border: 2px solid #572EE5;
+    width: 795.9px;
+    height: 5px;
+}
+.comenzar-grabar-subir-gifo{
+font-family: 'Montserrat', sans-serif;
+font-size: 13px;
+color: #572EE5;
+font-weight: 700;
+letter-spacing: 0;
+text-align: center;
+height: 50px;
+width: 140px;
+border: 1px solid #572EE5;
+border-radius: 25px;
+border-radius: 25px;
+background-color: white;
+margin-top: 20px;
+margin-bottom: 26px;
+
+}
+.donde-va-foto{
+    width: 688px;
+    height: 390px;
+    border: 1px solid #572EE5;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .cargando-gif{
+        position: absolute;
+        
+        .loader{
+            transform: translate(90px, 0px);
+        }
+
+        .estamos-subiendo-tu-gifo{
+            margin-top: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            color: #FFFFFF;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+
+
+    .div-1{
+        width: 27px;
+        height: 25px;
+        position: absolute;
+        transform: translate(-311px, -159px);
+        border-top: 1px solid #50E3C2;
+        border-left: 1px solid #50E3C2;
+
+    }
+    .div-2{
+        width: 27px;
+        height: 25px;
+        position: absolute;
+        transform: translate(311px, -159px);
+        border-top: 1px solid #50E3C2;
+        border-right: 1px solid #50E3C2;
+
+    }
+    .div-3{
+        width: 27px;
+        height: 25px;
+        transform: translate(-311px, 164px);
+        border-bottom: 1px solid #50E3C2;
+        border-left: 1px solid #50E3C2;
+        position: absolute;
+
+    }
+    .div-4{
+        width: 27px;
+        height: 25px;
+        transform: translate(311px, 164px);
+        border-bottom: 1px solid #50E3C2;
+        border-right: 1px solid #50E3C2;
+        position: absolute;
+
+
+    }
+    .contenedor-imagen-camara{
+        width: 480px;
+        height: 320px;
+        position: absolute;
+      
+        video{
+            width: 480px;
+            height: 320px;
+        }
+        .div-con-filtro{
+            width: 428px;
+            transform: translate(25px, 0px);
+            height: 320px;
+            background-color: #572EE5;
+            position: absolute;
+            opacity: 0.6;
+            
+        }
+    }
+    .contenedor-del-titulo-crear-tus-propios-gifos{
+        width: 100%;
+    .estilo-titulo{
+        font-family:"Montserrat", sans-serif;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 35px;
+        span{
+            color: #50E3C2;
+        }
+
+    }
+        }
+.contenedor-del-texto-crear-tus-propios-gifos{
+    .crea-tu-gifo{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #000000;
+        text-align: center;
+        line-height: 29px;
+        
+
+            }
+        }
+    }
+}
 /*Fin estilos links */
 
 //foter comienzo

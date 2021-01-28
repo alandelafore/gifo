@@ -719,6 +719,278 @@ header {
   text-align: center;
 }
 
+.crear-gifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.crear-gifos .cronometro {
+  width: 200px;
+  position: absolute;
+  -webkit-transform: translate(314px, 5px);
+          transform: translate(314px, 5px);
+}
+
+.crear-gifos .cronometro h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.crear-gifos .repetir-captura {
+  -webkit-transform: translate(280px, 10px);
+          transform: translate(280px, 10px);
+  position: absolute;
+}
+
+.crear-gifos .repetir-captura h2 {
+  font-size: 13px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.crear-gifos .repetir-captura h2::before {
+  content: "";
+  width: 122px;
+  height: 2PX;
+  border-bottom: 2px solid #5ED7C6;
+  position: absolute;
+  -webkit-transform: translate(6px, 14px);
+          transform: translate(6px, 14px);
+}
+
+.crear-gifos .gradiante {
+  width: 90px;
+  height: 151px;
+  width: 91px;
+  height: 151px;
+  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 10%, #50E3C2 200%);
+  -webkit-clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 66%);
+          clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 66%);
+  position: absolute;
+  -webkit-transform: translate(124px, 0px);
+  transform: translate(124px, 0px);
+}
+
+.crear-gifos .camara {
+  position: absolute;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-transform: translateY(-100px);
+  transform: translate(118px, -100px);
+}
+
+.crear-gifos .pelicula {
+  position: absolute;
+  -webkit-transform: translate(477px, 140px);
+          transform: translate(477px, 140px);
+}
+
+.crear-gifos .contenedor-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 688px;
+  margin-top: 24px;
+  margin-bottom: 19px;
+}
+
+.crear-gifos .contenedor-botones .estilo-de-mis-botones {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #572EE5;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 26px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #572EE5;
+  text-align: center;
+}
+
+.crear-gifos .contenedor-botones .estilo-de-mis-botones-click {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #572EE5;
+  background-color: #572EE5;
+  border-radius: 50%;
+  margin-right: 26px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+
+.crear-gifos .borde-violeta-abajo {
+  background: #572EE5;
+  border-radius: 10px;
+  border: 2px solid #572EE5;
+  width: 795.9px;
+  height: 5px;
+}
+
+.crear-gifos .comenzar-grabar-subir-gifo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #572EE5;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  height: 50px;
+  width: 140px;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.crear-gifos .donde-va-foto {
+  width: 688px;
+  height: 390px;
+  border: 1px solid #572EE5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crear-gifos .donde-va-foto .cargando-gif {
+  position: absolute;
+}
+
+.crear-gifos .donde-va-foto .cargando-gif .loader {
+  -webkit-transform: translate(90px, 0px);
+          transform: translate(90px, 0px);
+}
+
+.crear-gifos .donde-va-foto .cargando-gif .estamos-subiendo-tu-gifo {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 700;
+}
+
+.crear-gifos .donde-va-foto .div-1 {
+  width: 27px;
+  height: 25px;
+  position: absolute;
+  -webkit-transform: translate(-311px, -159px);
+          transform: translate(-311px, -159px);
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+}
+
+.crear-gifos .donde-va-foto .div-2 {
+  width: 27px;
+  height: 25px;
+  position: absolute;
+  -webkit-transform: translate(311px, -159px);
+          transform: translate(311px, -159px);
+  border-top: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+}
+
+.crear-gifos .donde-va-foto .div-3 {
+  width: 27px;
+  height: 25px;
+  -webkit-transform: translate(-311px, 164px);
+          transform: translate(-311px, 164px);
+  border-bottom: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  position: absolute;
+}
+
+.crear-gifos .donde-va-foto .div-4 {
+  width: 27px;
+  height: 25px;
+  -webkit-transform: translate(311px, 164px);
+          transform: translate(311px, 164px);
+  border-bottom: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+  position: absolute;
+}
+
+.crear-gifos .donde-va-foto .contenedor-imagen-camara {
+  width: 480px;
+  height: 320px;
+  position: absolute;
+}
+
+.crear-gifos .donde-va-foto .contenedor-imagen-camara video {
+  width: 480px;
+  height: 320px;
+}
+
+.crear-gifos .donde-va-foto .contenedor-imagen-camara .div-con-filtro {
+  width: 428px;
+  -webkit-transform: translate(25px, 0px);
+          transform: translate(25px, 0px);
+  height: 320px;
+  background-color: #572EE5;
+  position: absolute;
+  opacity: 0.6;
+}
+
+.crear-gifos .donde-va-foto .contenedor-del-titulo-crear-tus-propios-gifos {
+  width: 100%;
+}
+
+.crear-gifos .donde-va-foto .contenedor-del-titulo-crear-tus-propios-gifos .estilo-titulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 35px;
+}
+
+.crear-gifos .donde-va-foto .contenedor-del-titulo-crear-tus-propios-gifos .estilo-titulo span {
+  color: #50E3C2;
+}
+
+.crear-gifos .donde-va-foto .contenedor-del-texto-crear-tus-propios-gifos .crea-tu-gifo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 29px;
+}
+
 /*Fin estilos links */
 footer {
   height: 196px;
