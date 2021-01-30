@@ -7,6 +7,10 @@ var seccion_favoritos = document.getElementById("seccion-favoritos");
 //esta es la seccion de mis gifos
 var seccion_tus_gifos = document.getElementById("seccion-tus-gifos");
 
+var seccion_crear_gif = document.getElementById("seccion-crear-gif");
+
+var cont_trendings = document.getElementById("trendings");
+
 
 
 //Oculto todas las secciones menos la de menu favoritos
@@ -16,15 +20,24 @@ document.getElementById("link-favoritos").addEventListener("click", function (ev
   //oculto la seccion entera
   home_section.classList.add("ocultar")
   seccion_favoritos.classList.remove("ocultar");
-  //oculto el menu cuando doy click a la seccion favoritos
-  document.getElementById("menu").classList.add("ocultar");
+
   //muestro el menu hamburgueza
   document.getElementById("hamburguesa").classList.remove("ocultar");
   //oculto la cruz
   document.getElementById("cruz-menu").classList.add("ocultar");
   seccion_tus_gifos.classList.add("ocultar");
+  cont_trendings.classList.remove("ocultar");
 
-  cambiar_menu_de_estado();
+
+
+  if (window.innerWidth < 768) {
+    document.getElementById("menu").classList.add("ocultar");
+
+  }
+
+
+
+
 
 });
 //obtengo el logo oculto todas las secciones menos la del logo  
@@ -33,21 +46,62 @@ document.getElementById("logo").addEventListener("click", (ev) => {
   home_section.classList.remove("ocultar");
   seccion_favoritos.classList.add("ocultar");
   seccion_tus_gifos.classList.add("ocultar");
+  cont_trendings.classList.remove("ocultar");
+  //muestro el menu hamburgueza
+  document.getElementById("hamburguesa").classList.remove("ocultar");
+  //oculto la cruz
+  document.getElementById("cruz-menu").classList.add("ocultar");
 
+  if (window.innerWidth < 768) {
+
+    document.getElementById("menu").classList.add("ocultar");
+  }
 
 
 
 
 })
- 
+
 //oculto todas las secciones menos la de mis gifos 
-document.getElementById("link-mis-gifos").addEventListener("click",function (ev){
+document.getElementById("link-mis-gifos").addEventListener("click", function (ev) {
   ev.preventDefault();
   home_section.classList.add("ocultar");
   seccion_favoritos.classList.add("ocultar");
   seccion_tus_gifos.classList.remove("ocultar");
-  cambiar_menu_de_estado();
+  cont_trendings.classList.remove("ocultar");
+  //muestro el menu hamburgueza
+  document.getElementById("hamburguesa").classList.remove("ocultar");
+  //oculto la cruz
+  document.getElementById("cruz-menu").classList.add("ocultar");
+
+  if (window.innerWidth < 768) {
+
+    document.getElementById("menu").classList.add("ocultar");
+  }
+
 
 })
+
+
+document.getElementById("btn-crear-gifo").addEventListener("click", function (ev) {
+  //Pongo el prevent default para que no se comporte como habitualmente.
+  ev.preventDefault();
+  //oculto la seccion entera
+  home_section.classList.add("ocultar")
+  seccion_favoritos.classList.add("ocultar");
+  //oculto el menu cuando doy click a la seccion favoritos
+  document.getElementById("menu").classList.add("ocultar");
+  //muestro el menu hamburgueza
+  document.getElementById("hamburguesa").classList.remove("ocultar");
+  //oculto la cruz
+  document.getElementById("cruz-menu").classList.add("ocultar");
+  seccion_tus_gifos.classList.add("ocultar");
+  seccion_crear_gif.classList.remove("ocultar");
+  cont_trendings.classList.add("ocultar");
+
+
+
+})
+
 
 
