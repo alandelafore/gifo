@@ -452,16 +452,6 @@ header {
   position: relative;
 }
 
-.menu .menu-link .links-menu:hover:before {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: #5ED7C6;
-  position: absolute;
-  left: 0;
-  top: 18px;
-}
-
 .menu .menu-link .links-menu:active {
   color: #9CAFC3;
 }
@@ -1276,6 +1266,10 @@ i:hover {
   }
   header .contenedor3 .logo {
     z-index: 10000;
+    content: url("Assets/logo-desktop.svg");
+  }
+  .dark header .contenedor3 .logo {
+    content: url("Assets/logo-desktop-noc.svg");
   }
   header .menu {
     background-color: white;
@@ -1357,9 +1351,14 @@ i:hover {
     letter-spacing: 0;
     text-align: center;
   }
-  header .menu .menu-link .links-menu:after {
+  header .menu .menu-link .links-menu:hover:after {
     content: "";
-    display: none;
+    height: 2px;
+    width: 100%;
+    background: #5ED7C6;
+    position: absolute;
+    left: 0;
+    top: 20px;
   }
   .dark header .menu .menu-link .links-menu {
     color: white;

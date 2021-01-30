@@ -478,20 +478,7 @@ header {
             text-decoration: none;
             position: relative;
              //aca pongo posicion relativa para que despues se dibuje la linea
-            &:hover{
-                &:before {
-                    //esto lo utilizo para dibujar la linea correspondiente al texto pongo una posicion absoluta
-                    //dibujo la linea a los elentos que tengan la ckase links-menu
-                    content: "";
-                    height: 2px;
-                    width: 100%;
-                    background: #5ED7C6;
-                    position: absolute; //le pongo posicion absoluta para que luego internamente se fije quien es el primer elemento con relative
-                    //de esta forma al ser los links le pone el contenido por debajo
-                    left:0;
-                    top: 18px;
-                }
-            }
+        
             &:active{
                 color:#9CAFC3;
             }
@@ -1206,6 +1193,10 @@ i{
     }
 }
 
+
+
+
+
 /////////////////////////////////////
 //Fin contenedores Flex
 
@@ -1240,7 +1231,12 @@ i{
         position: absolute;
         .logo{
             z-index: 10000;
+            content: url("Assets/logo-desktop.svg");
+             .dark & {
+            content: url("Assets/logo-desktop-noc.svg");
         }
+        }
+       
     }
 
     .menu{
@@ -1324,10 +1320,20 @@ i{
                 color: #572EE5;
                 letter-spacing: 0;
                 text-align: center;
-                &:after {
-                    content: "";
-                    display: none;
-                    }
+                &:hover{
+                    &:after {
+                        content: "";
+                         height: 2px;
+                        width: 100%;
+                        background: $color-verde;
+                        position: absolute; //le pongo posicion absoluta para que luego internamente se fije quien es el primer elemento con relative
+                        //de esta forma al ser los links le pone el contenido por debajo
+                        left:0 ;
+                        top: 20px;
+                        }
+                    
+                }
+                
                     .dark & {
                         color: white;
                     }
