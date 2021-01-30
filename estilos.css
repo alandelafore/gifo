@@ -1365,6 +1365,7 @@ i:hover {
     color: #572EE5;
     letter-spacing: 0;
     text-align: center;
+    text-transform: uppercase;
   }
   header .menu .menu-link .links-menu:hover:after {
     content: "";
