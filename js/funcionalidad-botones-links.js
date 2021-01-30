@@ -17,6 +17,7 @@ var cont_trendings = document.getElementById("trendings");
 document.getElementById("link-favoritos").addEventListener("click", function (ev) {
   //Pongo el prevent default para que no se comporte como habitualmente.
   ev.preventDefault();
+  seccion_crear_gif.classList.add("ocultar");
   //oculto la seccion entera
   home_section.classList.add("ocultar")
   seccion_favoritos.classList.remove("ocultar");
@@ -43,6 +44,8 @@ document.getElementById("link-favoritos").addEventListener("click", function (ev
 //obtengo el logo oculto todas las secciones menos la del logo  
 document.getElementById("logo").addEventListener("click", (ev) => {
   ev.preventDefault();
+  seccion_crear_gif.classList.add("ocultar");
+
   home_section.classList.remove("ocultar");
   seccion_favoritos.classList.add("ocultar");
   seccion_tus_gifos.classList.add("ocultar");
@@ -65,10 +68,13 @@ document.getElementById("logo").addEventListener("click", (ev) => {
 //oculto todas las secciones menos la de mis gifos 
 document.getElementById("link-mis-gifos").addEventListener("click", function (ev) {
   ev.preventDefault();
+  seccion_crear_gif.classList.add("ocultar");
+
   home_section.classList.add("ocultar");
   seccion_favoritos.classList.add("ocultar");
   seccion_tus_gifos.classList.remove("ocultar");
   cont_trendings.classList.remove("ocultar");
+  
   //muestro el menu hamburgueza
   document.getElementById("hamburguesa").classList.remove("ocultar");
   //oculto la cruz
@@ -86,17 +92,17 @@ document.getElementById("link-mis-gifos").addEventListener("click", function (ev
 document.getElementById("btn-crear-gifo").addEventListener("click", function (ev) {
   //Pongo el prevent default para que no se comporte como habitualmente.
   ev.preventDefault();
+  
   //oculto la seccion entera
   home_section.classList.add("ocultar")
   seccion_favoritos.classList.add("ocultar");
-  //oculto el menu cuando doy click a la seccion favoritos
-  document.getElementById("menu").classList.add("ocultar");
   //muestro el menu hamburgueza
   document.getElementById("hamburguesa").classList.remove("ocultar");
   //oculto la cruz
   document.getElementById("cruz-menu").classList.add("ocultar");
   seccion_tus_gifos.classList.add("ocultar");
   seccion_crear_gif.classList.remove("ocultar");
+  
   cont_trendings.classList.add("ocultar");
 
 
