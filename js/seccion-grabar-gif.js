@@ -320,14 +320,12 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
         })
             .then(response => response.json())
             .then(result => {
-                // console.log(`Resultado:${result}`);
                 res = result;
                 console.log(res);
-                //console.log(res['data']['id']);
                if(res == result){
                 gifo_subido_con_exito();
                 let urls_gif =`https://api.giphy.com/v1/gifs/${res.data.id}?api_key=${api_key}`;
-                console.log(url_b, "esta es la url del gif");
+                console.log(res.data.id);
                }
 
             })
