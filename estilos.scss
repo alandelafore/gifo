@@ -60,12 +60,13 @@ body {
         position: relative;
         width: 100%;
         font-family: 'Roboto', sans-serif;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 16px;
         color: white;
         display: flex;
         align-self: flex-start;
-        margin-bottom: 5px;
+        padding-bottom: 4px;
+        padding-left: 13px;
         
 
     }
@@ -77,6 +78,8 @@ body {
         font-weight: 700;
         font-size: 16px;
         color: white;
+        padding-left: 13px;
+
     }
 
 }
@@ -1163,6 +1166,7 @@ footer {
         
 
         .div-contenedor-botones{
+            
             width: 100%;
            display: flex;
            justify-content: flex-end;
@@ -1173,6 +1177,17 @@ footer {
             width: 100%;
             order: 0;
             align-self: flex-end;
+            .user-gifs{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                padding-left: 13px;
+                padding-bottom: 4px;
+            }
+            .titulos-gifs{
+                padding-left: 13px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+            }
             
             
         }
@@ -1331,7 +1346,6 @@ i{
                         left:0 ;
                         top: 20px;
                         }
-                    //dasdh
                 }
                 
                     .dark & {

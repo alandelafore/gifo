@@ -42,7 +42,7 @@ body.dark {
   position: relative;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   color: white;
   display: -webkit-box;
@@ -50,7 +50,8 @@ body.dark {
   display: flex;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-bottom: 5px;
+  padding-bottom: 4px;
+  padding-left: 13px;
 }
 
 .contenedor-gift .titulos-gifs {
@@ -61,6 +62,7 @@ body.dark {
   font-weight: 700;
   font-size: 16px;
   color: white;
+  padding-left: 13px;
 }
 
 .dark .ouch img {
@@ -1206,6 +1208,19 @@ footer {
           order: 0;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.contenedor-gift-trending .div-contenedor-botones-textos .div_contenedor_texto .user-gifs {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding-left: 13px;
+  padding-bottom: 4px;
+}
+
+.contenedor-gift-trending .div-contenedor-botones-textos .div_contenedor_texto .titulos-gifs {
+  padding-left: 13px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 .contenedor6 {
