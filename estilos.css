@@ -7,6 +7,13 @@
   border: 0;
 }
 
+.imagen-agrandada-desktop {
+  width: 695px;
+  height: 305px;
+  z-index: 10000;
+  position: absolute;
+}
+
 body.dark {
   background-color: #37383C;
 }

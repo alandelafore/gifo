@@ -73,6 +73,7 @@ function getTrendings() {
         div_contenedor_botones_textos.setAttribute("class","div-contenedor-botones-textos");
         div_contenedor_botones.setAttribute("class","div-contenedor-botones");
         div_contenedor_texto.setAttribute("class","div_contenedor_texto");
+        
 
 
 
@@ -88,6 +89,8 @@ function getTrendings() {
         let btn_agrandar = document.createElement("button");
         let imagen_btn_agrandar = document.createElement("img");
 
+
+       
         /* CREO EL DIV */
         let ctn = document.createElement("div");
         let imagen = document.createElement("img");
@@ -101,6 +104,29 @@ function getTrendings() {
         //Ha ese div le agrego la clase
         ctn.classList.add("contenedor-gift-trending");
         ctn.classList.add("no-activo");
+
+
+        //TODO: AGREGAR EN LAS OTRAS PARTES DEL CODIGO TRENDINGS Y FAVORITOS
+        ctn.id=`para-agrandar-${index}`;
+
+         //TODO: AGREGAR EN LAS OTRAS PARTES DEL CODIGO TRENDINGS Y FAVORITOS
+         btn_agrandar.addEventListener("click",function (ev) {
+          const contenedor_gif_agrandar=document.getElementById(`para-agrandar-${index}`);
+          console.log(info);
+
+              imagen.classList.remove("gift-posicion");
+              imagen.classList.add("imagen-agrandada-desktop");
+
+            
+        
+
+
+
+          
+
+        })
+
+
 
 
         //TITULO DEL GIF
@@ -274,7 +300,7 @@ function getTrendings() {
       
        })
 
-       //TODO: PONER DEPUES EN LOS DISTINTOS LUGARES FAV Y BUSCADOR
+       
        div_contenedor_botones_textos.appendChild(div_contenedor_botones);
        div_contenedor_botones_textos.appendChild(div_contenedor_texto);
        ctn.appendChild(div_contenedor_botones_textos);
@@ -286,7 +312,6 @@ function getTrendings() {
        div_contenedor_texto.appendChild(titulo);
 
       }
-
     });
 }
 async function prueba(url) {
