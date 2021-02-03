@@ -148,6 +148,16 @@ function getTrendings() {
             btn_cruz.id="cruz-agrandar";
             btn_cruz.classList.add("cruz-agrandar");
 
+            btn_descarga.style.border= "1px solid  #CED7E1" ;
+            btn_corazon.style.border= "1px solid #CED7E1" ;
+
+            btn_corazon.style.opacity= "1" ;
+            btn_descarga.style.opacity= "1" ;
+
+            
+            
+            
+
 
 
             
@@ -160,6 +170,11 @@ function getTrendings() {
               btn_cruz.classList.add("ocultar");
               
               btn_agrandar.style.display ="block";
+              btn_descarga.style.border= "none" ;
+              btn_corazon.style.border= "none" ;
+              btn_corazon.style.opacity= "0.6" ;
+              btn_descarga.style.opacity= "0.6" ;
+              
 
 
 
