@@ -79,6 +79,9 @@ function getTrendings() {
 
 
         /* CREO LOS BOTONES */
+       
+       
+        
         let btn_corazon = document.createElement("button");
         let imagen_btn_corazon = document.createElement("img");
         let imagen_btn_corazon_violeta = document.createElement("img");
@@ -106,28 +109,18 @@ function getTrendings() {
         ctn.classList.add("no-activo");
 
 
+
         //TODO: AGREGAR EN LAS OTRAS PARTES DEL CODIGO TRENDINGS Y FAVORITOS
         ctn.id=`para-agrandar-${index}`;
 
          //TODO: AGREGAR EN LAS OTRAS PARTES DEL CODIGO TRENDINGS Y FAVORITOS
-         btn_agrandar.addEventListener("click",function (ev) {
-          const contenedor_gif_agrandar=document.getElementById(`para-agrandar-${index}`);
-          console.log(info);
-
-              imagen.classList.remove("gift-posicion");
-              imagen.classList.add("imagen-agrandada-desktop");
-
-            
-        
+       
 
 
-
-          
-
-        })
-
-
-
+        //btn Cruz
+        let btn_cruz = document.createElement("div");
+        ctn.appendChild(btn_cruz);
+        div_contenedor_botones.appendChild(btn_cruz);
 
         //TITULO DEL GIF
       let titulo = document.createElement("p");
@@ -135,15 +128,52 @@ function getTrendings() {
       titulo.setAttribute("class","titulos-gifs")
       ctn.appendChild(titulo);
 
+        //Usuario
       let user = document.createElement("p");
       user.innerHTML =info.data[index].username;
       user.setAttribute("class","user-gifs")
       ctn.appendChild(user);
       
-        //OCULTO LOS BOTONES
+
+      btn_agrandar.addEventListener("click",function (ev) {
+        const contenedor_gif_agrandar=document.getElementById(`para-agrandar-${index}`);
+        console.log(info);
+
+            imagen.classList.remove("gift-posicion");
+            imagen.classList.add("imagen-agrandada-desktop");
+            ctn.classList.add("al-agrandar");
+            ctn.classList.remove("contenedor-gift-trending");
+            btn_cruz.classList.remove("ocultar");
+            btn_agrandar.style.display ="none";
+            btn_cruz.id="cruz-agrandar";
+            btn_cruz.classList.add("cruz-agrandar");
+
+
+
+            
+
+             btn_cruz.addEventListener("click",function (ev) {
+              imagen.classList.add("gift-posicion");
+              imagen.classList.remove("imagen-agrandada-desktop");
+              ctn.classList.remove("al-agrandar");
+              ctn.classList.add("contenedor-gift-trending");
+              btn_cruz.classList.add("ocultar");
+              
+              btn_agrandar.style.display ="block";
+
+
+
+
+              
+               
+               
+             })
+
+      })
    
 
-        /* BOTON DE FAVORITOS */
+        
+
         ctn.appendChild(btn_corazon);
         btn_corazon.classList.add("boton-favoritos-corazon-activo");
         btn_corazon.id = "btn-favoritos";
