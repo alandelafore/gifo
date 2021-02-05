@@ -27,11 +27,13 @@
 
 }
 .al-agrandar{
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 100001;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
