@@ -566,6 +566,10 @@ header {
   color: #FFFFFF;
 }
 
+.trending-texto li {
+  display: inline;
+}
+
 .treding {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;

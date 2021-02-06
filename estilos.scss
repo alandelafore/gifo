@@ -603,6 +603,9 @@ header {
     .dark & {
         color: $dark-color-texto-01;
     }
+    li{
+        display: inline;
+    }
 }
 .treding {
     font-family: "Montserrat", sans-serif;
