@@ -65,7 +65,6 @@ function getTrendings() {
       for (let index = 0; index < info.data.length; index++) {
         img = info.data[index].images.downsized_large.url;
         
-        console.log(info, "esto es lo que trae infoooo")
         let div_contenedor_botones_textos = document.createElement("div");
         let div_contenedor_botones = document.createElement("div");
         let div_contenedor_texto = document.createElement("div");

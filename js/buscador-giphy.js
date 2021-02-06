@@ -238,6 +238,15 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
        div_contenedor_botones.appendChild(btn_descarga);
        div_contenedor_texto.appendChild(user);
        div_contenedor_texto.appendChild(titulo);
+       
+       btn_descarga.addEventListener("click", function () {
+          
+        async function prueba(img) {
+          var blob = await fetch(img).then((r) => r.blob());
+          invokeSaveAsDialog(blob);
+        }
+        prueba(info.images.downsized_large.url);
+      });
 
 
 }
