@@ -6,9 +6,9 @@ var artists       =document.getElementById("Artists");
 
 document.getElementById("link-modo-nocturno").onclick =function () {
   fetch_busqueda2();
+  document.getElementById("lupa-derecha").classList.add("ocultar"); 
+  document.getElementById("btn-borrar").classList.remove("ocultar");
   
-  //url=`https://api.giphy.com/v1/gifs/categories?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT`
-  //img = info.data[index].gif.images.downsized_large.url;
 }
 
 
@@ -161,7 +161,14 @@ function fetch_busqueda2() {
              
               fetch_busqueda_favoritos();
             }
-       
+            btn_descarga.addEventListener("click", function () {
+          
+              async function prueba(img) {
+                var blob = await fetch(img).then((r) => r.blob());
+                invokeSaveAsDialog(blob);
+              }
+              prueba(info.images.downsized_large.url);
+            });
   
     })
   
@@ -234,6 +241,14 @@ function fetch_busqueda2() {
          div_contenedor_botones.appendChild(btn_descarga);
          div_contenedor_texto.appendChild(user);
          div_contenedor_texto.appendChild(titulo);
+         btn_descarga.addEventListener("click", function () {
+          
+          async function prueba(img) {
+            var blob = await fetch(img).then((r) => r.blob());
+            invokeSaveAsDialog(blob);
+          }
+          prueba(info.images.downsized_large.url);
+        });
   
   
   }
