@@ -3,7 +3,7 @@ var entetainment  =document.getElementById("Entertainment");
 var sports        =document.getElementById("Sports");
 var stickers      =document.getElementById("Stickers");
 var artists       =document.getElementById("Artists");
-
+//terminar
 document.getElementById("link-modo-nocturno").onclick =function () {
   fetch_busqueda2();
   document.getElementById("lupa-derecha").classList.add("ocultar"); 
