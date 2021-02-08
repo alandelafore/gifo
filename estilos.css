@@ -1426,6 +1426,15 @@ i:hover {
     text-align: center;
     text-transform: uppercase;
   }
+  header .menu .menu-link .links-menu:after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 20px;
+  }
   header .menu .menu-link .links-menu:hover:after {
     content: "";
     height: 2px;

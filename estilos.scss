@@ -1390,6 +1390,16 @@ i{
                 letter-spacing: 0;
                 text-align: center;
                 text-transform: uppercase;
+                &:after {
+                    content: "";
+                     height: 2px;
+                    width: 100%;
+                    background: transparent;
+                    position: absolute; //le pongo posicion absoluta para que luego internamente se fije quien es el primer elemento con relative
+                    //de esta forma al ser los links le pone el contenido por debajo
+                    left:0 ;
+                    top: 20px;
+                    }
                 &:hover{
                     &:after {
                         content: "";
