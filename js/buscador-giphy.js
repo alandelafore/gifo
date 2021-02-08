@@ -273,6 +273,7 @@ function fetch_busqueda() {
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((info) => {
+      console.log(info.data[0])
       if (info.data == "") {
         seccion_no_encontrados()
         
@@ -281,6 +282,7 @@ function fetch_busqueda() {
       }
       
       for (let index = 0; index < info.data.length; index++) {
+        
         addtoDOM(info.data[index]);
 
         //agrego el boton de ver mas en cada una de las busquedas

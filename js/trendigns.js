@@ -64,6 +64,7 @@ function getTrendings() {
     .then(function (info) {
       for (let index = 0; index < info.data.length; index++) {
         img = info.data[index].images.downsized_large.url;
+
         
         let div_contenedor_botones_textos = document.createElement("div");
         let div_contenedor_botones = document.createElement("div");
