@@ -1,36 +1,63 @@
 
-var trend_01   =document.getElementById("trend-01");
-var trend_02   =document.getElementById("trend-02");
-var trend_03   =document.getElementById("trend-03");
-var trend_04   =document.getElementById("trend-04");
-var trend_05   =document.getElementById("trend-05");
+var trend_01    =document.getElementById("trend-01");
+var trend_02    =document.getElementById("trend-02");
+var trend_03    =document.getElementById("trend-03");
+var trend_04    =document.getElementById("trend-04");
+var trend_05    =document.getElementById("trend-05");
+let cruz_buscar = document.getElementById("btn-borrar");
+let lupas        = document.getElementById("lupa-derecha");
 
 
 trend_01.addEventListener("click",function (ev) {
-  alert(trend_01.textContent);
- busqueda=document.getElementById("busqueda").value =trend_01.textContent;
+  let texto = trend_01.textContent;
+  let resultado = texto.split(",",1);
+ busqueda=document.getElementById("busqueda").value =resultado;
  fetch_busqueda();
+ cruz_buscar.classList.remove("ocultar");
+ lupas.classList.add("ocultar");
   
 })
 trend_02.addEventListener("click",function (ev) {
-  busqueda=document.getElementById("busqueda").value =trend_02.textContent;
- fetch_busqueda();
+  let texto = trend_02.textContent;
+  let resultado = texto.split(",",1);
+  busqueda=document.getElementById("busqueda").value =resultado;
+ lupas.classList.add("ocultar");
+
+  
+  fetch_busqueda();
+ cruz_buscar.classList.remove("ocultar");
+
   
 })
 trend_03.addEventListener("click",function (ev) {
-  busqueda=document.getElementById("busqueda").value =trend_03.textContent;
+  let texto = trend_03.textContent;
+  let resultado = texto.split(",",1);
+ busqueda=document.getElementById("busqueda").value =resultado;
  fetch_busqueda();
+ cruz_buscar.classList.remove("ocultar");
+ lupas.classList.add("ocultar");
+
   
 })
 trend_04.addEventListener("click",function (ev) {
-  busqueda=document.getElementById("busqueda").value =trend_04.textContent;
+  let texto = trend_04.textContent;
+  let resultado = texto.split(",",1);
+ busqueda=document.getElementById("busqueda").value =resultado;
  fetch_busqueda();
-  
+ cruz_buscar.classList.remove("ocultar");
+ lupas.classList.add("ocultar");
+
+
 })
 trend_05.addEventListener("click",function (ev) {
-  busqueda=document.getElementById("busqueda").value =trend_05.textContent;
+  let texto = trend_05.textContent;
+  let resultado = texto.split(",",1);
+ busqueda=document.getElementById("busqueda").value =resultado;
  fetch_busqueda();
-  
+ cruz_buscar.classList.remove("ocultar");
+ lupas.classList.add("ocultar");
+
+
 })
 
 
