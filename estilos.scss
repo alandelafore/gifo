@@ -992,9 +992,11 @@ border-radius: 25px;
 background-color: white;
 margin-top: 20px;
 margin-bottom: 26px;
+outline: none;
 &:hover{
     background-color: #572EE5;
     color: white;
+    outline: none;
 }
 .dark &{
     border: 1px solid white;
@@ -1002,6 +1004,7 @@ margin-bottom: 26px;
     background-color: #37383C;
     &:hover{
     background-color: white;
+    outline: none;
     color: black;
     }
     
@@ -1376,15 +1379,20 @@ i{
                 height: 54px;
                 width: 54px;
                 border-radius: 50%;
+                outline: none;
                 
                 &:hover{
-                  background-color:   #572EE5;
+                background-color:   #572EE5;
+                outline: none;
+
                   img{
                     content: url("Assets/button-crear-gifo-noc.svg");
 
                   }
                   &:active{
                     background-color: #9CAFC3;
+                    outline: none;
+
                     border: solid #9CAFC3 1px ;
                     img{
                         content: url("Assets/button-crear-gifo-noc.svg");

@@ -959,11 +959,13 @@ header {
   background-color: white;
   margin-top: 20px;
   margin-bottom: 26px;
+  outline: none;
 }
 
 .crear-gifos .comenzar-grabar-subir-gifo:hover {
   background-color: #572EE5;
   color: white;
+  outline: none;
 }
 
 .dark .crear-gifos .comenzar-grabar-subir-gifo {
@@ -974,6 +976,7 @@ header {
 
 .dark .crear-gifos .comenzar-grabar-subir-gifo:hover {
   background-color: white;
+  outline: none;
   color: black;
 }
 
@@ -1422,15 +1425,18 @@ i:hover {
     height: 54px;
     width: 54px;
     border-radius: 50%;
+    outline: none;
   }
   header .menu .menu-link .btn-crear-gifo:hover {
     background-color: #572EE5;
+    outline: none;
   }
   header .menu .menu-link .btn-crear-gifo:hover img {
     content: url("Assets/button-crear-gifo-noc.svg");
   }
   header .menu .menu-link .btn-crear-gifo:hover:active {
     background-color: #9CAFC3;
+    outline: none;
     border: solid #9CAFC3 1px;
   }
   header .menu .menu-link .btn-crear-gifo:hover:active img {
