@@ -1,7 +1,10 @@
 //este es el btn ver mas de favoritos, lo muestro cuando hay gif y lo quito cuando no hay
 var btn_ver_mas_f            =  document.getElementById("mi-boton-ocultar-f");
 var contenedores_gifs        =[];
- contenedores_gifs           = document.getElementsByClassName("contenedor-gift");
+//obtengo contendores gif todos los gif de la seccion favoritos;
+var contenedores_gifs        = document.getElementsByClassName("contenedor-gift");
+//declaro el a apartir del once este va ser el indice en el que se va comenzar a ejecutar
+var a                       =11;
 
 var favoritesArray           =[];
 var listaFavoritos           =[];
@@ -9,15 +12,21 @@ var container                = document.getElementById("trend_container");
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");  
  
 document.getElementById("mi-boton-ocultar-f").addEventListener("click",function (ev) {
-  
-  contenedores_gifs           = document.getElementsByClassName("contenedor-gift");
-  for (let index = 0; index < contenedores_gifs.length; index++) {
-    if(index>=11){
-      contenedores_gifs[index].style.backgroundColor ="red";
-    }
-    
+
+contenedores_gifs         = document.getElementsByClassName("contenedor-gift");
+
+//simplemente hago doce veces esta funcion
+  for (let index = 0; index < 12; index++) {
+  //A VALE ONCE EN EL PIMER MOMENTO 
+  //CUANDO LE SUMO UNO 12 
+  a ++ ;
+
+    contenedores_gifs[a].style.display ="block"
+
   }
- 
+  
+
+  
 
  });
 
@@ -29,9 +38,23 @@ function displayLocalStorageFavorites() {
 }
 
 document.getElementById("link-favoritos").addEventListener("click", function () {
+ 
     
-  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" )
+  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" ){
     fetch_busqueda_favoritos();
+
+
+  }
+    setTimeout(() => {
+        //desaparezco los div a partir del indice 12;
+
+      for (let index = 12; index < contenedores_gifs.length; index++) {
+  
+        contenedores_gifs[index].style.display ="none"
+        }
+      
+    }, 1000);
+ 
     
 })
     
