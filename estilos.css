@@ -866,10 +866,18 @@ header {
   transform: translate(118px, -100px);
 }
 
+.dark .crear-gifos .camara .camara-img {
+  content: url("Assets/camara-modo-noc.svg");
+}
+
 .crear-gifos .pelicula {
   position: absolute;
   -webkit-transform: translate(477px, 140px);
           transform: translate(477px, 140px);
+}
+
+.dark .crear-gifos .pelicula .pelicula-img {
+  content: url("Assets/pelicula-modo-noc.svg");
 }
 
 .crear-gifos .contenedor-botones {
