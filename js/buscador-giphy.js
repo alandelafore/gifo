@@ -254,7 +254,7 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
 function texto_tipo_busqueda(info_texto) {
   let h2_texto = document.getElementById("tipo-de-busqueda-titulo");
   h2_texto.textContent = info_texto;
-  h2_texto.classList.remove("ocultar")
+  h2_texto.classList.remove("ocultar");
 
 
 }

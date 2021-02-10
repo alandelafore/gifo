@@ -9,10 +9,14 @@ let lupas       = document.getElementById("lupa-derecha");
 
 
 trend_01.addEventListener("click", function (ev) {
-  let texto     = trend_01.textContent;
+  let texto = trend_01.textContent;
   let resultado = texto.split(",", 1);
 
-  busqueda      = document.getElementById("busqueda").value = resultado;
+  texto_tipo_busqueda(resultado);
+  mostrar_boton();
+
+
+  busqueda = document.getElementById("busqueda").value = resultado;
 
   fetch_busqueda();
 
@@ -22,28 +26,32 @@ trend_01.addEventListener("click", function (ev) {
 
 })
 trend_02.addEventListener("click", function (ev) {
-  let texto     = trend_02.textContent;
-  
+  let texto = trend_02.textContent;
+
   let resultado = texto.split(",", 1);
-  
-  busqueda      = document.getElementById("busqueda").value = resultado;
-  
+
+  busqueda = document.getElementById("busqueda").value = resultado;
+
   lupas.classList.add("ocultar");
 
+  texto_tipo_busqueda(resultado);
 
   fetch_busqueda();
   cruz_buscar.classList.remove("ocultar");
+  mostrar_boton();
 
 
 })
 trend_03.addEventListener("click", function (ev) {
-  let texto     = trend_03.textContent;
+  let texto = trend_03.textContent;
   let resultado = texto.split(",", 1);
-  busqueda     = document.getElementById("busqueda").value = resultado;
+  busqueda = document.getElementById("busqueda").value = resultado;
   fetch_busqueda();
   cruz_buscar.classList.remove("ocultar");
   lupas.classList.add("ocultar");
 
+  texto_tipo_busqueda(resultado);
+  mostrar_boton();
 
 })
 trend_04.addEventListener("click", function (ev) {
@@ -53,6 +61,9 @@ trend_04.addEventListener("click", function (ev) {
   fetch_busqueda();
   cruz_buscar.classList.remove("ocultar");
   lupas.classList.add("ocultar");
+  texto_tipo_busqueda(resultado);
+  mostrar_boton();
+
 
 
 })
@@ -63,6 +74,9 @@ trend_05.addEventListener("click", function (ev) {
   fetch_busqueda();
   cruz_buscar.classList.remove("ocultar");
   lupas.classList.add("ocultar");
+
+  texto_tipo_busqueda(resultado);
+  mostrar_boton();
 
 
 })
