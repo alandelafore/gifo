@@ -1,5 +1,5 @@
-
-
+//este es el btn ver mas de favoritos, lo muestro cuando hay gif y lo quito cuando no hay
+var btn_ver_mas_f=  document.getElementById("mi-boton-ocultar-f");
 
 var favoritesArray=[];
 var listaFavoritos=[];
@@ -232,10 +232,15 @@ function displayFavoritos(info) {
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
       document.getElementById("favoritos").innerHTML ="";
       ocultar_corazon_grande_favoritos();
+    
+
+
       url = "https://api.giphy.com/v1/gifs?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&ids="+displayLocalStorageFavorites();
       fetch(url)
         .then((respuesta) => respuesta.json())
         .then((info) => {
+        btn_ver_mas_f.classList.remove("ocultar");
+
           for (let index = 0; index < info.data.length; index++) {
             displayFavoritos(info.data[index]);
             //agrego el boton de ver mas en cada una de las busquedas
@@ -262,12 +267,15 @@ function ocultar_corazon_grande_favoritos(){
    
 function mostrar_corazon_grande_favoritos(){
   favoritesArray = JSON.parse(localStorage.getItem('favoritos'));
-   //if(favoritesArray || array_ids !=""){
-     var mostrar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar")
+    var mostrar_corazon_grande_favoritos=document.getElementsByClassName("corazon-grande-favoritos-ocultar");
+        
+
      for (let index = 0; index < mostrar_corazon_grande_favoritos.length; index++) {
        mostrar_corazon_grande_favoritos[index].classList.remove("ocultar");
+        btn_ver_mas_f.classList.add("ocultar");
+
+
        
       }
-    //}
  }
    

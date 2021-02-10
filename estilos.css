@@ -906,6 +906,12 @@ header {
   text-align: center;
 }
 
+.dark .crear-gifos .contenedor-botones .estilo-de-mis-botones {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
 .crear-gifos .contenedor-botones .estilo-de-mis-botones-click {
   width: 32px;
   height: 32px;
@@ -918,6 +924,11 @@ header {
   font-size: 18px;
   color: white;
   text-align: center;
+}
+
+.dark .crear-gifos .contenedor-botones .estilo-de-mis-botones-click {
+  background-color: white;
+  color: black;
 }
 
 .crear-gifos .borde-violeta-abajo {
@@ -943,6 +954,22 @@ header {
   background-color: white;
   margin-top: 20px;
   margin-bottom: 26px;
+}
+
+.crear-gifos .comenzar-grabar-subir-gifo:hover {
+  background-color: #572EE5;
+  color: white;
+}
+
+.dark .crear-gifos .comenzar-grabar-subir-gifo {
+  border: 1px solid white;
+  color: white;
+  background-color: #37383C;
+}
+
+.dark .crear-gifos .comenzar-grabar-subir-gifo:hover {
+  background-color: white;
+  color: black;
 }
 
 .crear-gifos .donde-va-foto {

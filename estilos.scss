@@ -939,6 +939,11 @@ header {
         font-size: 18px;
         color: #572EE5;
         text-align: center;
+        .dark &{
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
 
     }
     .estilo-de-mis-botones-click{
@@ -953,6 +958,10 @@ header {
         font-size: 18px;
         color: white;
         text-align: center;
+        .dark &{
+            background-color: white;
+            color: black;
+        }
         
     }
 }
@@ -962,6 +971,7 @@ header {
     border: 2px solid #572EE5;
     width: 795.9px;
     height: 5px;
+    
 }
 .comenzar-grabar-subir-gifo{
 font-family: 'Montserrat', sans-serif;
@@ -978,6 +988,20 @@ border-radius: 25px;
 background-color: white;
 margin-top: 20px;
 margin-bottom: 26px;
+&:hover{
+    background-color: #572EE5;
+    color: white;
+}
+.dark &{
+    border: 1px solid white;
+    color: white;
+    background-color: #37383C;
+    &:hover{
+    background-color: white;
+    color: black;
+    }
+    
+}
 
 }
 .donde-va-foto{
