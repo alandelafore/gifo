@@ -939,6 +939,11 @@ header {
   height: 5px;
 }
 
+.dark .crear-gifos .borde-violeta-abajo {
+  border: 2px solid black;
+  background-color: black;
+}
+
 .crear-gifos .comenzar-grabar-subir-gifo {
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
