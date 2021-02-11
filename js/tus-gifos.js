@@ -188,25 +188,25 @@ document.body.addEventListener("click",function (ev) {
         
 
 
-    function saveInLocalStorage_02(arr_nuevo) {
-      if (localStorage.getItem("tus_gifos") != null &&localStorage.getItem("tus_gifos") != "undefined") {
-        let array_viejo = [];
-        //obtengo el array del local storage
-        array_viejo = JSON.parse(localStorage.getItem("tus_gifos"));
-        //tomo el array que viene por parametro y lo asigno a una variable que va ser el array a guardar
-        var array_a_guardar = arr_nuevo;
     
-        for (i = 0; i < array_a_guardar.length; i++) {
-          
-          array_viejo.push(array_viejo[i]);
-    
-        }
-        localStorage.setItem("tus_gifos", JSON.stringify(array_viejo));
+  }
+
+  function saveInLocalStorage_02(arr_nuevo) {
+    if (localStorage.getItem("tus_gifos") != null &&localStorage.getItem("tus_gifos") != "undefined") {
+      let array_viejo = [];
+      //obtengo el array del local storage
+      array_viejo = JSON.parse(localStorage.getItem("tus_gifos"));
+  
+      for (i = 0; i < arr_nuevo.length; i++) {
         
+        array_viejo.push(arr_nuevo[i]);
+  
       }
+     // localStorage.setItem("tus_gifos", JSON.stringify(array_viejo));
       
-      localStorage.setItem("tus_gifos", JSON.stringify(arr_nuevo));
-      
-         
     }
+    
+   localStorage.setItem("tus_gifos", JSON.stringify(arr_nuevo));
+    
+       
   }
