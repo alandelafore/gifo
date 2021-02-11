@@ -1,10 +1,8 @@
+var arr_ids_tus_gifos=[]
+
 let form_data = new FormData();
 const url_up = 'https://upload.giphy.com/v1/gifs';
 const api_key = 'PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT';
-
-
-
-
 
 document.getElementById("btn-comenzar").addEventListener("click",function(){
 btn_comenzar();
@@ -226,7 +224,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
        /*  const sleep = m => new Promise(r => setTimeout(r, m));
         await sleep(3000); */
             
-        }
+    }
     async function darle_stop_a_grabar_subir() {
 
         recorder.stopRecording( async function() {
@@ -239,7 +237,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
 
             });
             
-        }
+    }
     function repetir_captura() {
         console.log("tocaste el btn repetir captura");
         let subir_gifo=document.getElementById("btn-subir-gifo");
@@ -250,7 +248,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
         dar_acceso_camara();
         despintar_btn_3();
             
-        }
+    }
 
     //Pongo en stop el video, y muestro el filtro
     function video_poner_stop_filtro() {
@@ -296,7 +294,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
         estamos_subiendo_tu_gifo_texto .innerHTML ="GIFO subido con éxito";
         //muestro el contenedor
         mostrar_loader();
-        }
+    }
     function ocultar_loader() {
         let div_contenedor = document.getElementById("cargando-gif");
         div_contenedor.classList.add("ocultar");
@@ -325,11 +323,32 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
                if(res == result){
                 gifo_subido_con_exito();
                 let urls_gif =`https://api.giphy.com/v1/gifs/${res.data.id}?api_key=${api_key}`;
-                console.log(res.data.id);
-               }
 
+                    //PRIMERO MANDO EL ID QUE VIENE DE LA RESPUESTA
+               arr_ids_tus_gifos.push(res.data.id);
+
+                    //en esta condicion checkeo que el local Storage no esta vacio
+                   if (localStorage.getItem('tus_gifos') != null && localStorage.getItem('tus_gifos') != "undefined") {
+                   //OBTENGO EL NUEVO ARRAY
+                    arr_ids_tus_gifos = JSON.parse(localStorage.getItem('tus_gifos'));
+                    arr_ids_tus_gifos.push(res.data.id);
+                  }
+    
+
+
+              saveInLocalStorage_02(arr_ids_tus_gifos);
+              console.log(arr_ids_tus_gifos);
+               
+               
+                
+               }
+               
             })
             .catch(err => {
                 console.log(err);
             });
     }
+
+
+
+
