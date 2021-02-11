@@ -229,7 +229,7 @@ footer {
         background-color: $dark-color-background-02;
     }
     .btn-next-previous{
-        background-color: white;
+        background-color: #F3F5F8;
         position: absolute;
         outline: none;
         width: 40px;
@@ -1294,6 +1294,10 @@ footer {
     flex-flow: row;
     justify-content: center;
     align-items: center;
+    background-color: #F3F5F8;
+    .dark &{
+        background-color:  #222326;
+    }
     
 }
 i{

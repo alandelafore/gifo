@@ -11,14 +11,11 @@ var listaFavoritos           =[];
 var container                = document.getElementById("trend_container");
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");  
  
-document.getElementById("mi-boton-ocultar-f").addEventListener("click",function (ev) {
+/* document.getElementById("mi-boton-ocultar-f").addEventListener("click",function (ev) {
 
 contenedores_gifs         = document.getElementsByClassName("contenedor-gift");
 
-//simplemente hago doce veces esta funcion
   for (let index = 0; index < 12; index++) {
-  //A VALE ONCE EN EL PIMER MOMENTO 
-  //CUANDO LE SUMO UNO 12 
   a ++ ;
 
     contenedores_gifs[a].style.display ="block"
@@ -30,14 +27,9 @@ contenedores_gifs         = document.getElementsByClassName("contenedor-gift");
 
  });
 
-  
+   */
 
-function displayLocalStorageFavorites() {
-  let newArray = JSON.parse(localStorage.getItem('favoritos'));
-  return newArray;
-}
-
-document.getElementById("link-favoritos").addEventListener("click", function () {
+/* document.getElementById("link-favoritos").addEventListener("click", function () {
  
     
   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" ){
@@ -57,6 +49,39 @@ document.getElementById("link-favoritos").addEventListener("click", function () 
  
     
 })
+ */
+
+
+
+
+document.getElementById("link-favoritos").addEventListener("click", function (ev) {
+ 
+    
+  if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" ){
+    fetch_busqueda_favoritos();
+    console.log("evento de click en el btn fav",ev);
+
+
+  }
+  
+    
+    
+})
+
+
+ function displayLocalStorageFavorites() {
+  let newArray = JSON.parse(localStorage.getItem('favoritos'));
+  //si el arr es mayor a 12 muestra el btn;
+  if(newArray.length>=12){
+    btn_ver_mas_f.classList.remove("ocultar");
+
+  }else{
+    btn_ver_mas_f.classList.add("ocultar");
+  }
+  return newArray;
+}
+
+
     
 function eliminarFavoritos(info)
 {
@@ -278,11 +303,10 @@ function displayFavoritos(info) {
       fetch(url)
         .then((respuesta) => respuesta.json())
         .then((info) => {
-        btn_ver_mas_f.classList.remove("ocultar");
+        
 
           for (let index = 0; index < info.data.length; index++) {
             displayFavoritos(info.data[index]);
-            //agrego el boton de ver mas en cada una de las busquedas
 
           }
         })

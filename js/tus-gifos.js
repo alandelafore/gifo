@@ -1,8 +1,5 @@
 var resultado =[];
-document.body.addEventListener("click",function (ev) {
-  fetch_busqueda_tus_gifos();
-  
-})
+
   
   function displayTusGifos(info) {
 
