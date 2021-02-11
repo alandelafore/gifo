@@ -376,14 +376,12 @@ var media_q = window.matchMedia("(min-width: 768px)")
 
 function cambio_desktop_mobible(media_q) {
   if(media_q.matches){
-    document.body.style.backgroundColor ="red"
     container.innerHTML ="";
     getTrendings();
     next.classList.remove("ocultar");
     previous.classList.remove("ocultar");
    
   }else{
-    document.body.style.backgroundColor ="blue"
     container.innerHTML ="";
     getTrendings();
     next.classList.add("ocultar");
