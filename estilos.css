@@ -1598,6 +1598,16 @@ i:hover {
     mix-blend-mode: normal;
     opacity: 0.4;
   }
+  .autocompletar-busquedas {
+    position: relative;
+    opacity: 0.5;
+    border-top: 1px solid #9cafc3;
+    z-index: 99;
+    float: 0;
+    right: 0;
+    padding-top: 14px;
+    width: 470px;
+  }
   .contenedor5 {
     width: 100%;
     -webkit-box-pack: center;
