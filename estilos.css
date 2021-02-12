@@ -88,7 +88,7 @@ body.dark {
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   color: white;
 }
 
@@ -631,6 +631,7 @@ header {
   color: #572EE5;
   text-align: center;
   line-height: 30px;
+  margin-top: 80px;
 }
 
 .dark .treding-gifos {
@@ -742,7 +743,6 @@ header {
   cursor: pointer;
   outline: none;
   margin-top: 78px;
-  margin-bottom: 79px;
 }
 
 .mi-boton:hover {
@@ -1520,7 +1520,7 @@ i:hover {
   }
   .fieldset-busqueda .boton-busqueda {
     border: none;
-    background-color: white;
+    background-color: transparent;
     outline: none;
     -webkit-transform: translate(1100%, 0px);
             transform: translate(1100%, 0px);
@@ -1619,6 +1619,15 @@ i:hover {
         grid-template-columns: 243px 243px 243px 243px;
     grid-gap: 28px 29px;
     padding: 10px;
+  }
+  .treding-gifos {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 80px;
   }
   .footer-pc {
     display: -webkit-box;

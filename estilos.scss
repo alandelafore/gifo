@@ -89,7 +89,7 @@ body {
         width: 100%;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 15px;
         color: white;
     }
 }
@@ -641,6 +641,8 @@ header {
     color: $color-violeta;
     text-align: center;
     line-height: 30px;
+    margin-top: 80px;
+
     .dark & {
         color: $dark-color-texto-01;
     }
@@ -759,7 +761,7 @@ header {
     cursor: pointer;
     outline: none;
     margin-top: 78px;
-    margin-bottom: 79px;
+   // margin-bottom: 79px;
     &:hover {
         background-color: #572ee5;
         color: white;
@@ -1407,7 +1409,7 @@ i {
 
         .boton-busqueda{
             border: none;
-            background-color: white;
+            background-color: transparent;
             outline: none;
             transform: translate(1100%, 0px);
             cursor: pointer;
@@ -1498,6 +1500,16 @@ i {
         grid-template-columns: 243px 243px 243px 243px;
         grid-gap: 28px 29px;
         padding: 10px;
+    }
+
+    .treding-gifos {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: $color-violeta;
+        text-align: center;
+        line-height: 30px;
+        margin-top: 80px;
     }
     .footer-pc {
         display: flex;
