@@ -1450,10 +1450,10 @@ i {
     }
     .trendigns-section-estilos {
         #previous {
-            left: 170px;
+            left: 40px;
         }
         #next {
-            right: 170px;
+            right: 40px;
         }
         .contenedor-gift-trending {
             width: 100%;
@@ -1461,7 +1461,7 @@ i {
             justify-content: flex-end;
             align-items: flex-start;
             flex-flow: row;
-            width: 257px;
+            width: 357px;
             height: 275px;
             margin-bottom: 131px;
             margin-top: 32px;
@@ -1470,7 +1470,7 @@ i {
             background-color: $color-violeta;
             .gift-posicion {
                 position: absolute;
-                width: 257px;
+                width: 357px;
                 height: 275px;
             }
             &:hover {

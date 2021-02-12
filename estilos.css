@@ -1561,10 +1561,10 @@ i:hover {
             transform: translate(500%, 0px);
   }
   .trendigns-section-estilos #previous {
-    left: 170px;
+    left: 40px;
   }
   .trendigns-section-estilos #next {
-    right: 170px;
+    right: 40px;
   }
   .trendigns-section-estilos .contenedor-gift-trending {
     width: 100%;
@@ -1581,7 +1581,7 @@ i:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    width: 257px;
+    width: 357px;
     height: 275px;
     margin-bottom: 131px;
     margin-top: 32px;
@@ -1591,7 +1591,7 @@ i:hover {
   }
   .trendigns-section-estilos .contenedor-gift-trending .gift-posicion {
     position: absolute;
-    width: 257px;
+    width: 357px;
     height: 275px;
   }
   .trendigns-section-estilos .contenedor-gift-trending:hover .mi-imagen {
