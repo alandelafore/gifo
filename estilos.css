@@ -1503,6 +1503,33 @@ i:hover {
   .dark header .menu .menu-link .links-menu {
     color: white;
   }
+  .fieldset-busqueda {
+    border-radius: 40px;
+    border: solid 1px;
+    border-color: #572EE5;
+    font-family: ProximaNova-Regular;
+    font-size: 16px;
+    text-align: left;
+    width: 551px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fieldset-busqueda .boton-busqueda {
+    border: none;
+    background-color: white;
+    outline: none;
+    -webkit-transform: translate(1100%, 0px);
+            transform: translate(1100%, 0px);
+    cursor: pointer;
+  }
+  .fieldset-busqueda .boton-busqueda .btn-borrar {
+    -webkit-transform: translate(500%, 0px);
+            transform: translate(500%, 0px);
+  }
   .tipografia-home-padding br {
     display: inline-block;
   }
