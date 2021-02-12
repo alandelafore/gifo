@@ -370,6 +370,7 @@ body.dark {
 }
 
 .tipografia-home-padding {
+  margin-top: 50px;
   padding-top: 7px;
   padding-left: 45px;
   padding-right: 44px;
@@ -1502,7 +1503,10 @@ i:hover {
   .dark header .menu .menu-link .links-menu {
     color: white;
   }
-  .fieldset-busqueda {
+  .tipografia-home-padding br {
+    display: inline-block;
+  }
+  .tipografia-home-padding .fieldset-busqueda {
     border-radius: 40px;
     border: solid 1px;
     border-color: #572EE5;
@@ -1517,7 +1521,7 @@ i:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .fieldset-busqueda .boton-busqueda {
+  .tipografia-home-padding .fieldset-busqueda .boton-busqueda {
     border: none;
     background-color: white;
     outline: none;
@@ -1525,7 +1529,7 @@ i:hover {
             transform: translate(1100%, 0px);
     cursor: pointer;
   }
-  .fieldset-busqueda .boton-busqueda .btn-borrar {
+  .tipografia-home-padding .fieldset-busqueda .boton-busqueda .btn-borrar {
     -webkit-transform: translate(500%, 0px);
             transform: translate(500%, 0px);
   }

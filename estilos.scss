@@ -411,12 +411,14 @@ input {
     padding-bottom: 34px;
 }
 .tipografia-home-padding {
+    margin-top: 50px;
     padding-top: 7px;
     padding-left: 45px;
     padding-right: 44px;
     br{
         display: none;
     }
+    
 }
 .imagen-central-padding {
     padding-top: 31px;
@@ -1477,6 +1479,11 @@ i{
             }
         }
     }
+        .tipografia-home-padding{
+            br{
+                display: inline-block;
+            }
+
     .fieldset-busqueda {
         border-radius: 40px;
         border: solid 1px;
@@ -1501,6 +1508,7 @@ i{
             }
         }
     }
+}
 
     
 
