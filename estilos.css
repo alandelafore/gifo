@@ -43,7 +43,7 @@
   font-size: 16px;
   color: #000000;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   padding-bottom: 7px;
 }
@@ -70,7 +70,7 @@ body.dark {
   z-index: 2000;
   position: relative;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   display: -webkit-box;
@@ -86,7 +86,7 @@ body.dark {
   z-index: 2000;
   position: relative;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: white;
@@ -96,7 +96,7 @@ body.dark {
   z-index: 2000;
   position: relative;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: white;
@@ -113,7 +113,7 @@ body.dark {
   z-index: 2000;
   position: relative;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: white;
@@ -193,7 +193,7 @@ body.dark {
 }
 
 .trendigns-section-estilos .btn-next-previous {
-  background-color: #F3F5F8;
+  background-color: #f3f5f8;
   position: absolute;
   outline: none;
   width: 40px;
@@ -515,11 +515,11 @@ header {
 }
 
 .menu .menu-link .links-menu:active {
-  color: #9CAFC3;
+  color: #9cafc3;
 }
 
 .dark .menu .menu-link .links-menu:active {
-  color: #9CAFC3;
+  color: #9cafc3;
 }
 
 .links-menu:after {
@@ -746,7 +746,7 @@ header {
 }
 
 .mi-boton:hover {
-  background-color: #572EE5;
+  background-color: #572ee5;
   color: white;
 }
 
@@ -817,9 +817,9 @@ header {
 }
 
 .crear-gifos .cronometro h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  color: #572EE5;
+  color: #572ee5;
   letter-spacing: 0;
   text-align: center;
   line-height: 22px;
@@ -834,7 +834,7 @@ header {
 
 .crear-gifos .repetir-captura h2 {
   font-size: 13px;
-  color: #572EE5;
+  color: #572ee5;
   letter-spacing: 0;
   text-align: center;
   font-family: Montserrat, sans-serif;
@@ -843,8 +843,8 @@ header {
 .crear-gifos .repetir-captura h2::before {
   content: "";
   width: 122px;
-  height: 2PX;
-  border-bottom: 2px solid #5ED7C6;
+  height: 2px;
+  border-bottom: 2px solid #5ed7c6;
   position: absolute;
   -webkit-transform: translate(6px, 14px);
           transform: translate(6px, 14px);
@@ -855,7 +855,7 @@ header {
   height: 151px;
   width: 91px;
   height: 151px;
-  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 10%, #50E3C2 200%);
+  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 10%, #50e3c2 200%);
   -webkit-clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 66%);
           clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 66%);
   position: absolute;
@@ -900,14 +900,14 @@ header {
 .crear-gifos .contenedor-botones .estilo-de-mis-botones {
   width: 32px;
   height: 32px;
-  border: 1px solid #572EE5;
+  border: 1px solid #572ee5;
   background-color: white;
   border-radius: 50%;
   margin-right: 26px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: #572EE5;
+  color: #572ee5;
   text-align: center;
 }
 
@@ -920,11 +920,11 @@ header {
 .crear-gifos .contenedor-botones .estilo-de-mis-botones-click {
   width: 32px;
   height: 32px;
-  border: 1px solid #572EE5;
-  background-color: #572EE5;
+  border: 1px solid #572ee5;
+  background-color: #572ee5;
   border-radius: 50%;
   margin-right: 26px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: white;
@@ -937,9 +937,9 @@ header {
 }
 
 .crear-gifos .borde-violeta-abajo {
-  background: #572EE5;
+  background: #572ee5;
   border-radius: 10px;
-  border: 2px solid #572EE5;
+  border: 2px solid #572ee5;
   width: 795.9px;
   height: 5px;
 }
@@ -950,15 +950,15 @@ header {
 }
 
 .crear-gifos .comenzar-grabar-subir-gifo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
-  color: #572EE5;
+  color: #572ee5;
   font-weight: 700;
   letter-spacing: 0;
   text-align: center;
   height: 50px;
   width: 140px;
-  border: 1px solid #572EE5;
+  border: 1px solid #572ee5;
   border-radius: 25px;
   border-radius: 25px;
   background-color: white;
@@ -968,7 +968,7 @@ header {
 }
 
 .crear-gifos .comenzar-grabar-subir-gifo:hover {
-  background-color: #572EE5;
+  background-color: #572ee5;
   color: white;
   outline: none;
 }
@@ -976,7 +976,7 @@ header {
 .dark .crear-gifos .comenzar-grabar-subir-gifo {
   border: 1px solid white;
   color: white;
-  background-color: #37383C;
+  background-color: #37383c;
 }
 
 .dark .crear-gifos .comenzar-grabar-subir-gifo:hover {
@@ -988,7 +988,7 @@ header {
 .crear-gifos .donde-va-foto {
   width: 688px;
   height: 390px;
-  border: 1px solid #572EE5;
+  border: 1px solid #572ee5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1017,7 +1017,7 @@ header {
   margin-top: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   font-weight: 700;
 }
@@ -1028,8 +1028,8 @@ header {
   position: absolute;
   -webkit-transform: translate(-311px, -159px);
           transform: translate(-311px, -159px);
-  border-top: 1px solid #50E3C2;
-  border-left: 1px solid #50E3C2;
+  border-top: 1px solid #50e3c2;
+  border-left: 1px solid #50e3c2;
 }
 
 .crear-gifos .donde-va-foto .div-2 {
@@ -1038,8 +1038,8 @@ header {
   position: absolute;
   -webkit-transform: translate(311px, -159px);
           transform: translate(311px, -159px);
-  border-top: 1px solid #50E3C2;
-  border-right: 1px solid #50E3C2;
+  border-top: 1px solid #50e3c2;
+  border-right: 1px solid #50e3c2;
 }
 
 .crear-gifos .donde-va-foto .div-3 {
@@ -1047,8 +1047,8 @@ header {
   height: 25px;
   -webkit-transform: translate(-311px, 164px);
           transform: translate(-311px, 164px);
-  border-bottom: 1px solid #50E3C2;
-  border-left: 1px solid #50E3C2;
+  border-bottom: 1px solid #50e3c2;
+  border-left: 1px solid #50e3c2;
   position: absolute;
 }
 
@@ -1057,8 +1057,8 @@ header {
   height: 25px;
   -webkit-transform: translate(311px, 164px);
           transform: translate(311px, 164px);
-  border-bottom: 1px solid #50E3C2;
-  border-right: 1px solid #50E3C2;
+  border-bottom: 1px solid #50e3c2;
+  border-right: 1px solid #50e3c2;
   position: absolute;
 }
 
@@ -1078,7 +1078,7 @@ header {
   -webkit-transform: translate(25px, 0px);
           transform: translate(25px, 0px);
   height: 320px;
-  background-color: #572EE5;
+  background-color: #572ee5;
   position: absolute;
   opacity: 0.6;
 }
@@ -1090,17 +1090,17 @@ header {
 .crear-gifos .donde-va-foto .contenedor-del-titulo-crear-tus-propios-gifos .estilo-titulo {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  color: #572EE5;
+  color: #572ee5;
   text-align: center;
   line-height: 35px;
 }
 
 .crear-gifos .donde-va-foto .contenedor-del-titulo-crear-tus-propios-gifos .estilo-titulo span {
-  color: #50E3C2;
+  color: #50e3c2;
 }
 
 .crear-gifos .donde-va-foto .contenedor-del-texto-crear-tus-propios-gifos .crea-tu-gifo {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #000000;
@@ -1318,7 +1318,7 @@ footer {
 }
 
 .contenedor-gift-trending .div-contenedor-botones-textos .div_contenedor_texto .user-gifs {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   padding-left: 13px;
   padding-bottom: 4px;
@@ -1326,7 +1326,7 @@ footer {
 
 .contenedor-gift-trending .div-contenedor-botones-textos .div_contenedor_texto .titulos-gifs {
   padding-left: 13px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
@@ -1345,7 +1345,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #F3F5F8;
+  background-color: #f3f5f8;
 }
 
 .dark .contenedor6 {
@@ -1430,24 +1430,24 @@ i:hover {
     background-color: #37383C;
   }
   header .menu .menu-link .btn-crear-gifo {
-    background: #FFFFFF;
-    border: 1px solid #572EE5;
+    background: #ffffff;
+    border: 1px solid #572ee5;
     height: 54px;
     width: 54px;
     border-radius: 50%;
     outline: none;
   }
   header .menu .menu-link .btn-crear-gifo:hover {
-    background-color: #572EE5;
+    background-color: #572ee5;
     outline: none;
   }
   header .menu .menu-link .btn-crear-gifo:hover img {
     content: url("Assets/button-crear-gifo-noc.svg");
   }
   header .menu .menu-link .btn-crear-gifo:hover:active {
-    background-color: #9CAFC3;
+    background-color: #9cafc3;
     outline: none;
-    border: solid #9CAFC3 1px;
+    border: solid #9cafc3 1px;
   }
   header .menu .menu-link .btn-crear-gifo:hover:active img {
     content: url("Assets/button-crear-gifo-noc.svg");
@@ -1467,17 +1467,17 @@ i:hover {
     content: url("Assets/button-crear-gifo-noc-hover.svg");
   }
   .dark header .menu .menu-link .btn-crear-gifo:active {
-    background-color: #9CAFC3;
-    border: solid #9CAFC3 1px;
+    background-color: #9cafc3;
+    border: solid #9cafc3 1px;
   }
   .dark header .menu .menu-link .btn-crear-gifo:active img {
     content: url("Assets/button-crear-gifo-noc.svg");
   }
   header .menu .menu-link .links-menu {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 13px;
-    color: #572EE5;
+    color: #572ee5;
     letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
@@ -1509,7 +1509,7 @@ i:hover {
   .tipografia-home-padding .fieldset-busqueda {
     border-radius: 40px;
     border: solid 1px;
-    border-color: #572EE5;
+    border-color: #572ee5;
     font-family: ProximaNova-Regular;
     font-size: 16px;
     text-align: left;
@@ -1532,6 +1532,44 @@ i:hover {
   .tipografia-home-padding .fieldset-busqueda .boton-busqueda .btn-borrar {
     -webkit-transform: translate(500%, 0px);
             transform: translate(500%, 0px);
+  }
+  .trendigns-section-estilos #previous {
+    left: 170px;
+  }
+  .trendigns-section-estilos #next {
+    right: 170px;
+  }
+  .trendigns-section-estilos .contenedor-gift-trending {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    width: 257px;
+    height: 275px;
+    margin-bottom: 131px;
+    margin-top: 32px;
+    margin-left: 22px;
+    margin-right: 22px;
+    background-color: #572EE5;
+  }
+  .trendigns-section-estilos .contenedor-gift-trending .gift-posicion {
+    position: absolute;
+    width: 257px;
+    height: 275px;
+  }
+  .trendigns-section-estilos .contenedor-gift-trending:hover .mi-imagen {
+    mix-blend-mode: normal;
+    opacity: 0.4;
   }
   .contenedor5 {
     width: 100%;
