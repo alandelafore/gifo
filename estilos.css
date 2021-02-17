@@ -188,6 +188,12 @@ body.dark {
   background-color: #37383C;
 }
 
+@media only screen and (max-width: 1270px) {
+  .trendigns-section-estilos .btn-next-previous {
+    display: none;
+  }
+}
+
 .dark .trendigns-section-estilos {
   background-color: #222326;
 }
@@ -1561,10 +1567,10 @@ i:hover {
             transform: translate(500%, 0px);
   }
   .trendigns-section-estilos #previous {
-    left: 40px;
+    left: 10px;
   }
   .trendigns-section-estilos #next {
-    right: 40px;
+    right: 10px;
   }
   .trendigns-section-estilos .contenedor-gift-trending {
     width: 100%;

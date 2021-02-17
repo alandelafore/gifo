@@ -207,6 +207,15 @@ footer {
         background-color: $dark-color-background-01;
     }
 }
+@media only screen and (max-width: 1270px){
+    .trendigns-section-estilos{
+        .btn-next-previous{
+            display: none;
+        }
+    }
+
+
+}
 .trendigns-section-estilos {
     .dark & {
         background-color: $dark-color-background-02;
@@ -1452,10 +1461,10 @@ i {
     }
     .trendigns-section-estilos {
         #previous {
-            left: 40px;
+            left: 10px;
         }
         #next {
-            right: 40px;
+            right: 10px;
         }
         .contenedor-gift-trending {
             width: 100%;
