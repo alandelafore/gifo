@@ -1,6 +1,4 @@
 //TODO: TENGO QUE CREAR LA SECCION MIS GIFOS Y DARLE EL MISMO FUNCIONAMIENTO QUE A FAVORITOS EXCEPTO QUE TENGO QUE PODER BORRARLOS
-//TODO: TENGO QUE Ajustar TRENDINGS AL TAMAÑO DE DESKTOP
-//TODO: TENGO QUE ACOPLAR A LOS TAMAÑOS CORRESPONDIENTES EL DOMINGO
 //TODO: TENGO QUE TERMINAR GIFFOS MAÑANA
 
 //FIXME:Tengo que arregar la funcion de desplegado de ver mas de la seccion de favoritos
@@ -17,12 +15,13 @@
     outline: none;
     border: none;
     border-radius: 6px;
-    width: 26px;
-    height: 26px;
+    width: 15.2px;
+    height: 15.2px;
     margin-top: 10px;
     margin-right: 11px;
     z-index: 100;
     content: url("Assets/button-close.svg");
+    cursor: pointer;
 }
 .al-agrandar {
     background-color: rgba(255, 255, 255, 0.9);
@@ -52,10 +51,10 @@
     }
 
     .imagen-agrandada-desktop {
-        width: 695px;
+        width:  740px;
         height: 305px;
         z-index: 20000;
-        position: relative;
+        position: fixed;
     }
 }
 
@@ -228,6 +227,7 @@ footer {
         height: 40px;
         border: 1px solid $color-violeta;
         &:hover {
+            cursor: pointer;
             background-color: $color-violeta;
             .btn-next-img {
                 content: url("Assets/button-right-hover.svg");
@@ -1145,6 +1145,67 @@ footer {
     display: flex;
     align-items: center;
     flex-flow: column;
+}
+
+.agrandar-div-cont-btn-txt{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    justify-content: space-around;
+    background-color: transparent;
+    z-index: 9000000;
+    margin-bottom: 0;
+    align-self: flex-end;
+        
+    .div_contenedor_texto{
+    background-color: transparent;
+    width: 100%;
+        display: grid;
+        grid-template-rows:repeat(18,1fr);
+        .user-gifs{
+            grid-row: 16;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            color: #000000;
+            text-align: center;
+        }
+        .titulos-gifs{
+            grid-row: 17;
+            text-align: center;
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            font-weight: 700;
+
+
+        }
+        
+    }   
+    .div-contenedor-botones{
+        display: grid;
+        background-color: transparent;
+
+        grid-template-rows:repeat(10,1fr);
+        grid-template-columns:repeat(10,1fr);
+        width: 50%;
+        .boton-favoritos-corazon-activo {
+            grid-column: 2;
+            grid-row: 9;
+        }
+        .boton-descarga{
+            grid-column: 3;
+            grid-row: 9;
+        }
+        .cruz-agrandar{
+            grid-column: 8;
+            grid-row: 2;
+
+        }
+    } 
 }
 
 .contenedor5 {

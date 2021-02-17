@@ -154,39 +154,38 @@ function getTrendings() {
             btn_corazon.style.opacity= "1" ;
             btn_descarga.style.opacity= "1" ;
 
-            
-            
-            
+            div_contenedor_botones_textos.classList.remove("div-contenedor-botones-textos");
+            div_contenedor_botones_textos.classList.add("agrandar-div-cont-btn-txt");
 
-
-
-            
-
-             btn_cruz.addEventListener("click",function (ev) {
-              imagen.classList.add("gift-posicion");
-              imagen.classList.remove("imagen-agrandada-desktop");
-              ctn.classList.remove("al-agrandar");
-              ctn.classList.add("contenedor-gift-trending");
-              btn_cruz.classList.add("ocultar");
-              
-              btn_agrandar.style.display ="block";
-              btn_descarga.style.border= "none" ;
-              btn_corazon.style.border= "none" ;
-              btn_corazon.style.opacity= "0.6" ;
-              btn_descarga.style.opacity= "0.6" ;
-              
-
-
-
-
-              
-               
-               
-             })
+          
 
       })
    
+      btn_cruz.addEventListener("click",function (ev) {
+        imagen.classList.add("gift-posicion");
+        imagen.classList.remove("imagen-agrandada-desktop");
+        ctn.classList.remove("al-agrandar");
+        ctn.classList.add("contenedor-gift-trending");
+        btn_cruz.classList.add("ocultar");
+        
+        btn_agrandar.style.display ="block";
+        btn_descarga.style.border= "none" ;
+        btn_corazon.style.border= "none" ;
+        btn_corazon.style.opacity= "0.6" ;
+        btn_descarga.style.opacity= "0.6" ;
 
+        div_contenedor_botones_textos.classList.add("div-contenedor-botones-textos");
+        div_contenedor_botones_textos.classList.remove("agrandar-div-cont-btn-txt");
+
+        
+
+
+
+
+        
+         
+         
+       })
         
 
         ctn.appendChild(btn_corazon);
