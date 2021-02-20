@@ -119,7 +119,7 @@ function borrarCorazonTrendings(id){
 
 function displayFavoritos(info) {
 
-  let div_contenedor_botones_textos = document.createElement("div");
+        let div_contenedor_botones_textos = document.createElement("div");
         let div_contenedor_botones = document.createElement("div");
         let div_contenedor_texto = document.createElement("div");
 
@@ -187,6 +187,11 @@ function displayFavoritos(info) {
       //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
       //imagen_btn_corazon.classList.add("ocultar");
       eliminarFavoritos(info);
+      document.getElementById("favoritos").innerHTML =""
+              
+      setTimeout(() => {
+        fetch_busqueda_favoritos();
+      }, 1000);  
       bt_switch = true;
     }
     else {

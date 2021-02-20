@@ -1,4 +1,33 @@
-var resultado =[];
+var resultado                       =[];
+const mi_boton_ocultar_tus_gifos      = document.getElementById("mi-boton-ocultar-tus-gifos"); 
+const link_mis_gifos                =document.getElementById("link-mis-gifos");
+const cabeza_grande_tus_gifos_img   = document.getElementById("cabeza-grande-tus-gifos");
+const texto_seccion_cabeza_grande   = document.getElementById("texto-seccion-cabeza-grande");
+
+link_mis_gifos.addEventListener("click",function (ev) {
+  console.log(ev);
+
+
+  if((localStorage.getItem('tus_gifos'))!= null && (localStorage.getItem("tus_gifos")) != "undefined" ){
+      fetch_busqueda_tus_gifos();
+  }
+  
+})
+
+
+function eliminar_tus_gifos(info)
+{
+ let arr_localStorage_mis_gifos= JSON.parse(localStorage.getItem('tus_gifos'));
+   for(i =0; i< arr_localStorage_mis_gifos.length; i++){
+     if(info.id == arr_localStorage_mis_gifos[i]){
+      arr_localStorage_mis_gifos.splice(i,1);
+      if (document.getElementById(info.id) != null)
+      document.getElementById(info.id).style.display = "none";
+     }
+   }
+  saveInLocalStorage_02(arr_localStorage_mis_gifos);
+
+}
 
   
   function displayTusGifos(info) {
@@ -38,16 +67,17 @@ var resultado =[];
           btn_corazon.classList.add("boton-favoritos-corazon-activo");
           btn_corazon.id = "btn-favoritos";
           btn_corazon.appendChild(imagen_btn_corazon);
-          imagen_btn_corazon.setAttribute("src", "Assets/icon-fav-hover.svg")
+          imagen_btn_corazon.setAttribute("src", "Assets/icon_trash.svg")
           imagen_btn_corazon.classList.add("boton-corazon-hover");
           imagen_btn_corazon.classList.add("corazon-blanco");
           imagen_btn_corazon.classList.add("ocultar");
         
         
         
+     
         
          
-          imagen_btn_corazon_violeta.setAttribute("src","Assets/icon-fav-active.svg")
+          imagen_btn_corazon_violeta.setAttribute("src","Assets/icon_trash.svg");
           imagen_btn_corazon_violeta.classList.add("boton-corazon-hover");
           imagen_btn_corazon_violeta.classList.add("corazon-violeta");
           //imagen_btn_corazon_violeta.classList.add("ocultar");
@@ -65,7 +95,12 @@ var resultado =[];
             imagen_btn_corazon_violeta.classList.add("ocultar");
             //ACA AGREGO LA CLASE OCULTAR AL BOTON CORAZON BLANCO PARA QUE SE OCULTE
             //imagen_btn_corazon.classList.add("ocultar");
-            eliminarFavoritos(info);
+            eliminar_tus_gifos(info);
+              document.getElementById("mis-gifos").innerHTML =""
+              
+              setTimeout(() => {
+                fetch_busqueda_tus_gifos();
+              }, 1000);            
             bt_switch = true;
           }
           else {
@@ -167,12 +202,24 @@ var resultado =[];
 
     function displayLocalStorageTusGifos() {
         let newArray = JSON.parse(localStorage.getItem("tus_gifos"));
+        if(newArray.length>=12){
+          mi_boton_ocultar_tus_gifos.classList.remove("ocultar");
+      
+        }else{
+          mi_boton_ocultar_tus_gifos.classList.add("ocultar");
+        }
         return newArray;
     }
 
 
     function fetch_busqueda_tus_gifos() {
-          url = "https://api.giphy.com/v1/gifs?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&ids="+displayLocalStorageTusGifos();
+      if (localStorage.getItem("tus_gifos") != null && localStorage.getItem("tus_gifos") != "undefined" && JSON.parse(localStorage.getItem("tus_gifos")) != "") {
+          
+        
+        document.getElementById("mis-gifos").innerHTML ="";
+        animate_a_crear_tu_primer_gifo_ocultar();
+        
+        url = "https://api.giphy.com/v1/gifs?api_key=PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT&ids="+displayLocalStorageTusGifos();
           fetch(url)
             .then((respuesta) => respuesta.json())
             .then((info) => {
@@ -181,14 +228,19 @@ var resultado =[];
                 displayTusGifos(info.data[index]);
     
               }
+           
             })
-        
 
+        
+          }else{
+            animate_a_crear_tu_primer_gifo_mostrar();
+
+          }
 
     
-  }
+    }
 
-  function saveInLocalStorage_02(arr_nuevo) {
+    function saveInLocalStorage_02(arr_nuevo) {
     if (localStorage.getItem("tus_gifos") != null &&localStorage.getItem("tus_gifos") != "undefined") {
       let array_viejo = [];
       //obtengo el array del local storage
@@ -206,4 +258,20 @@ var resultado =[];
    localStorage.setItem("tus_gifos", JSON.stringify(arr_nuevo));
     
        
-  }
+    }
+
+  //oculta cebza grande 
+
+  function animate_a_crear_tu_primer_gifo_mostrar() {
+      
+      cabeza_grande_tus_gifos_img.classList.remove("ocultar");
+      texto_seccion_cabeza_grande.classList.remove("ocultar");
+    }
+   
+    function animate_a_crear_tu_primer_gifo_ocultar() {
+      
+      cabeza_grande_tus_gifos_img.classList.add("ocultar");
+      texto_seccion_cabeza_grande.classList.add("ocultar");
+    }
+   
+    
