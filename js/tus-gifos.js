@@ -149,17 +149,81 @@ function eliminar_tus_gifos(info)
           gifts.appendChild(ctn);
           ctn.classList.add("contenedor-gift");
           ctn.id = info.id;
+
+          
+          let btn_cruz = document.createElement("div");
+          ctn.appendChild(btn_cruz);
+          div_contenedor_botones.appendChild(btn_cruz);
       
           let titulo = document.createElement("p");
             titulo.innerHTML =info.title;
             titulo.setAttribute("class","titulos-gifs")
             ctn.appendChild(titulo);
+
+
+
+            
       
             let user = document.createElement("p");
             user.innerHTML =info.username;
             user.setAttribute("class","user-gifs")
             ctn.appendChild(user);
       
+            btn_agrandar.addEventListener("click",function (ev) {
+              const contenedor_gif_agrandar=document.getElementById(`para-agrandar`);
+              console.log(info);
+      
+                  img.classList.remove("gift-posicion");
+                  img.classList.add("imagen-agrandada-desktop");
+                  ctn.classList.add("al-agrandar");
+                  ctn.classList.remove("contenedor-gift");
+                  btn_cruz.classList.remove("ocultar");
+                  btn_agrandar.style.display ="none";
+                  btn_cruz.id="cruz-agrandar";
+                  btn_cruz.classList.add("cruz-agrandar");
+      
+                  btn_descarga.style.border= "1px solid  #CED7E1" ;
+                  btn_corazon.style.border= "1px solid #CED7E1" ;
+      
+                  btn_corazon.style.opacity= "1" ;
+                  btn_descarga.style.opacity= "1" ;
+      
+                  div_contenedor_botones_textos.classList.remove("div-contenedor-botones-textos");
+                  div_contenedor_botones_textos.classList.add("agrandar-div-cont-btn-txt");
+      
+                
+      
+            })
+         
+            btn_cruz.addEventListener("click",function (ev) {
+              img.classList.add("gift-posicion");
+              img.classList.remove("imagen-agrandada-desktop");
+              ctn.classList.remove("al-agrandar");
+              ctn.classList.add("contenedor-gift");
+              btn_cruz.classList.add("ocultar");
+              
+              btn_agrandar.style.display ="block";
+              btn_descarga.style.border= "none" ;
+              btn_corazon.style.border= "none" ;
+              btn_corazon.style.opacity= "0.6" ;
+              btn_descarga.style.opacity= "0.6" ;
+      
+              div_contenedor_botones_textos.classList.add("div-contenedor-botones-textos");
+              div_contenedor_botones_textos.classList.remove("agrandar-div-cont-btn-txt");
+      
+              
+      
+      
+      
+      
+              
+               
+               
+             })
+
+
+
+            
       
             img.classList.add("mi-imagen");
             titulo.classList.add("ocultar");
