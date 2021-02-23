@@ -1,8 +1,7 @@
-//TODO: TENGO QUE HACER LOS DOS BOTONES EN LA SECCION DE CREAR GIFOS EL DEL LINK DE GIF Y EL DE DESCARGA GUSTO DESPUES DE CREAR EL GIF
 //TODO: TENGO QUE HACER EL AGRANDAR EN MENU MOBIBLE
-//TODO: TENGO QUE AGREGAR EL AGRANDAR EN EN LA SECCION DE BUSQUEDA 
+//FIXME:Tengo que arreglar la funcion de desplegado de ver mas de la seccion de favoritos
 //TODO: LUEGO DE ESO SOLO TENGO QUE PULIR TAMAÑOS Y YA SE PODRIA ENTREGAR
-//FIXME:Tengo que arregar la funcion de desplegado de ver mas de la seccion de favoritos
+
 
 @import "variables";
 * {
@@ -10,6 +9,39 @@
     padding: 0;
     border: 0;
 }
+
+
+
+
+
+.contenedor-botones-seccion-crear{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .boton-descarga{
+        transform: translate(800%, -580%);
+        position: absolute;
+        z-index: 999;
+
+    }
+    .boton-link{
+        transform: translate(680%, -580%);
+        position: absolute;
+        z-index: 999;
+
+        #link-gif{
+            position: absolute;
+            transform: translate(-80%, -25%);
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            }
+
+    }
+}
+
+
+
 .cruz-agrandar {
     background-color: transparent;
     outline: none;
@@ -344,6 +376,24 @@ input {
     &:hover {
         opacity: 1;
     }
+    
+}
+.boton-link{
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    margin-top: 10px;
+    margin-right: 11px;
+    z-index: 100;
+
+    &:hover {
+        opacity: 1;
+    }
+    
 }
 .boton-agrandar {
     background-color: white;

@@ -1,12 +1,30 @@
-var arr_ids_tus_gifos=[]
 
-let form_data = new FormData();
-const url_up = 'https://upload.giphy.com/v1/gifs';
-const api_key = 'PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT';
+var arr_ids_tus_gifos=[]
+const contenedor_de_botones_descarga_y_link =document.getElementById("contenedor-botones-seccion-crear");
+let form_data                             = new FormData();
+const url_up                              = 'https://upload.giphy.com/v1/gifs';
+const api_key                             = 'PoR3CQt5ZlA0CoMpJi1MK9iCYQG6fgkT';
+var mi_gif_para_descargar;
+var link_del_gifo;
+
+
+
+document.getElementById("descargar").addEventListener("click",function (ev) {
+    invokeSaveAsDialog(mi_gif_para_descargar);
+    
+})
+
+document.getElementById("btn-crear-gifo").addEventListener("click",function (ev) {
+    contenedor_de_botones_descarga_y_link.classList.add("ocultar");
+    
+    
+})
 
 document.getElementById("btn-comenzar").addEventListener("click",function(){
 btn_comenzar();
 pintar_btn_1();
+contenedor_de_botones_descarga_y_link.classList.add("ocultar");
+
 
 setTimeout(function(){
     dar_acceso_camara();
@@ -44,6 +62,8 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
     repetir_captura();
     ocultar_div_filtro();
     ocultar_loader();
+    contenedor_de_botones_descarga_y_link.classList.add("ocultar");
+
 })
 
     function btn_comenzar() {
@@ -212,9 +232,6 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
           
             });
        
-
-       
-       
        
     }
     //
@@ -234,7 +251,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
                 //esta linea es para descargar el gif
                 //invokeSaveAsDialog(blob);
                 fetch_subir()
-
+                mi_gif_para_descargar = blob;
             });
             
     }
@@ -294,6 +311,8 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
         estamos_subiendo_tu_gifo_texto .innerHTML ="GIFO subido con éxito";
         //muestro el contenedor
         mostrar_loader();
+    contenedor_de_botones_descarga_y_link.classList.remove("ocultar");
+        
     }
     function ocultar_loader() {
         let div_contenedor = document.getElementById("cargando-gif");
@@ -332,6 +351,16 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
                    //OBTENGO EL NUEVO ARRAY
                     arr_ids_tus_gifos = JSON.parse(localStorage.getItem('tus_gifos'));
                     arr_ids_tus_gifos.push(res.data.id);
+
+                    document.getElementById("boton-link").addEventListener("click",function (ev) {
+                    link_del_gifo= `https://media4.giphy.com/media/${res.data.id}/giphy.gif?`;
+                    console.log(link_del_gifo);
+                    //le doy el link del link del gif
+                    var link;
+                    link= document.getElementById("link-gif").setAttribute("href",link_del_gifo);
+                    
+                    })
+                   
                   }
     
 
@@ -350,5 +379,6 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
     }
 
 
+    
 
 
