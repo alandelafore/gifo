@@ -3,6 +3,41 @@ const mi_boton_ocultar_tus_gifos      = document.getElementById("mi-boton-oculta
 const link_mis_gifos                =document.getElementById("link-mis-gifos");
 const cabeza_grande_tus_gifos_img   = document.getElementById("cabeza-grande-tus-gifos");
 const texto_seccion_cabeza_grande   = document.getElementById("texto-seccion-cabeza-grande");
+const todos_los_gif                 = document.getElementsByClassName("contenedor-gift");
+
+
+
+
+document.getElementById("mi-boton-ocultar-tus-gifos").addEventListener("click",function (ev) {
+
+
+  
+  var arr_gif_none_tus_gifo =[];
+  for (let index = 0; index < todos_los_gif.length; index++) {
+
+    if(todos_los_gif[index].style.display == "none"){
+      arr_gif_none_tus_gifo.push(contenedores_gifs[index]);
+    }
+    
+  }
+
+
+  if(arr_gif_none_tus_gifo.length >12){
+
+    for (let index = 0; index < 12; index++) {
+
+      arr_gif_none_tus_gifo[index].style.display ="block"
+    }
+  }else{
+    for (let index = 0; index < arr_gif_none_tus_gifo.length; index++) {
+
+      arr_gif_none_tus_gifo[index].style.display ="block";
+    }
+  }
+
+ });
+
+
 
 link_mis_gifos.addEventListener("click",function (ev) {
 
@@ -10,7 +45,15 @@ link_mis_gifos.addEventListener("click",function (ev) {
   if((localStorage.getItem('tus_gifos'))!= null && (localStorage.getItem("tus_gifos")) != "undefined" ){
       fetch_busqueda_tus_gifos();
   }
+  setTimeout(() => {
+    //desaparezco los div a partir del indice 12;
+
+  for (let index = 12; index < todos_los_gif.length; index++) {
+
+    todos_los_gif[index].style.display ="none"
+    }
   
+}, 500);
 })
 
 
