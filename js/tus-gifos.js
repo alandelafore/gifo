@@ -16,7 +16,7 @@ document.getElementById("mi-boton-ocultar-tus-gifos").addEventListener("click",f
   for (let index = 0; index < todos_los_gif.length; index++) {
 
     if(todos_los_gif[index].style.display == "none"){
-      arr_gif_none_tus_gifo.push(contenedores_gifs[index]);
+      arr_gif_none_tus_gifo.push(todos_los_gif[index]);
     }
     
   }
@@ -306,7 +306,7 @@ function eliminar_tus_gifos(info)
 
     function displayLocalStorageTusGifos() {
         let newArray = JSON.parse(localStorage.getItem("tus_gifos"));
-        if(newArray.length>=12){
+        if(newArray.length>12){
           mi_boton_ocultar_tus_gifos.classList.remove("ocultar");
       
         }else{
