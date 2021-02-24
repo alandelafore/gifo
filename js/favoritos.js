@@ -11,7 +11,6 @@ var container                = document.getElementById("trend_container");
 var contenedor_corazon_verde = document.getElementById("contenedor-corazon-verde");  
  
 document.getElementById("mi-boton-ocultar-f").addEventListener("click",function (ev) {
-console.log(contenedores_gifs.length);
 
 
   
@@ -24,7 +23,6 @@ console.log(contenedores_gifs.length);
     
   }
 
-  console.log(arr_gif_none,"gif none");
 
   if(arr_gif_none.length >12){
 
@@ -48,7 +46,6 @@ document.getElementById("link-favoritos").addEventListener("click", function (ev
     
   if((localStorage.getItem('favoritos'))!= null && (localStorage.getItem("favoritos")) != "undefined" ){
     fetch_busqueda_favoritos();
-    console.log("evento de click en el btn fav",ev);
 
 
   }
@@ -270,7 +267,6 @@ function displayFavoritos(info) {
 
         btn_agrandar.addEventListener("click",function (ev) {
           const contenedor_gif_agrandar=document.getElementById(`para-agrandar`);
-          console.log(info);
   
               img.classList.remove("gift-posicion");
               img.classList.add("imagen-agrandada-desktop");
@@ -357,7 +353,6 @@ function displayFavoritos(info) {
 
 
   function fetch_busqueda_favoritos() {
-    console.log("mostrame favoritos, ", localStorage.getItem("favoritos"))
     if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos") != "undefined" && JSON.parse(localStorage.getItem("favoritos")) != "") {
       document.getElementById("favoritos").innerHTML ="";
       ocultar_corazon_grande_favoritos();

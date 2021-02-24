@@ -256,7 +256,6 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
             
     }
     function repetir_captura() {
-        console.log("tocaste el btn repetir captura");
         let subir_gifo=document.getElementById("btn-subir-gifo");
         subir_gifo.classList.add("ocultar");
         let repetir_captura=document.getElementById("repetir-captura");
@@ -338,7 +337,6 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
             .then(response => response.json())
             .then(result => {
                 res = result;
-                console.log(res);
                if(res == result){
                 gifo_subido_con_exito();
                 let urls_gif =`https://api.giphy.com/v1/gifs/${res.data.id}?api_key=${api_key}`;
@@ -366,7 +364,6 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
 
 
               saveInLocalStorage_02(arr_ids_tus_gifos);
-              console.log(arr_ids_tus_gifos);
                
                
                 
@@ -374,7 +371,6 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
                
             })
             .catch(err => {
-                console.log(err);
             });
     }
 

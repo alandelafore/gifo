@@ -1325,7 +1325,7 @@ footer {
 }
 
 .contenedor5 {
-  width: 98%;
+  width: 97%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1745,7 +1745,7 @@ i:hover {
     width: 470px;
   }
   .contenedor5 {
-    width: 100%;
+    width: 97%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

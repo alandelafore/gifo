@@ -5,7 +5,6 @@ const cabeza_grande_tus_gifos_img   = document.getElementById("cabeza-grande-tus
 const texto_seccion_cabeza_grande   = document.getElementById("texto-seccion-cabeza-grande");
 
 link_mis_gifos.addEventListener("click",function (ev) {
-  console.log(ev);
 
 
   if((localStorage.getItem('tus_gifos'))!= null && (localStorage.getItem("tus_gifos")) != "undefined" ){
@@ -171,7 +170,6 @@ function eliminar_tus_gifos(info)
       
             btn_agrandar.addEventListener("click",function (ev) {
               const contenedor_gif_agrandar=document.getElementById(`para-agrandar`);
-              console.log(info);
       
                   img.classList.remove("gift-posicion");
                   img.classList.add("imagen-agrandada-desktop");

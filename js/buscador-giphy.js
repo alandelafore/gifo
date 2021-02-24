@@ -110,7 +110,6 @@ function addtoDOM(info) {
     array_botones_favoritos = JSON.parse(localStorage.getItem("favoritos"));
 
     
-    console.log("arr", array_botones_favoritos);
 
 
       if (array_botones_favoritos.includes(info.id)) {
@@ -222,7 +221,6 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
 
         btn_agrandar.addEventListener("click",function (ev) {
           const contenedor_gif_agrandar=document.getElementById(`para-agrandar`);
-          console.log(info);
   
               img.classList.remove("gift-posicion");
               img.classList.add("imagen-agrandada-desktop");
@@ -333,7 +331,6 @@ function fetch_busqueda() {
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((info) => {
-      console.log(info.data[0])
       if (info.data == "") {
         seccion_no_encontrados()
         

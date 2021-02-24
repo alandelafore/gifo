@@ -137,7 +137,6 @@ function getTrendings() {
 
       btn_agrandar.addEventListener("click",function (ev) {
         const contenedor_gif_agrandar=document.getElementById(`para-agrandar-${index}`);
-        console.log(info);
 
             imagen.classList.remove("gift-posicion");
             imagen.classList.add("imagen-agrandada-desktop");
@@ -271,20 +270,7 @@ function getTrendings() {
             fetch_busqueda_favoritos();
           }
           
-      /*     let Promesa1 = new Promise((resolve,reject)=>{
-            document.getElementById("trend_container").innerHTML = "";
-            resolve("primer promesa");
-          })
-          let Promesa2 = new Promise((resolve,reject)=>{
-          getTrendings();
-          resolve("segunda promesa");
-
-          })
-          Promise.all([Promesa1,Promesa2])
-          .then((values)=>{
-            console.log("estos son los valores",values);
-
-          }) */
+      
         });
         
 
@@ -403,7 +389,6 @@ media_q.addListener(cambio_desktop_mobible);
 
 function touch_start(event) {
       inicio_toqueX =event.touches[0].clientX;
-      console.log("donde hago el primer click  : ",inicio_toqueX);
   
 }
 //funcion para cuando se mueve el mouse
@@ -411,9 +396,7 @@ function touch_move(event) {
   toque =event.touches[0];
 
   diferencia = inicio_toqueX - toque.clientX;
-  console.log(inicio_toqueX);
-  console.log("diferencia ",diferencia);
-
+  
   
 }
 

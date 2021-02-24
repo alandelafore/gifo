@@ -91,7 +91,6 @@ function fetch_busqueda2() {
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((info) => {
-      console.log(info);
 
       trend_01.innerHTML = `${info.data[0]},`;
       trend_02.innerHTML = `${info.data[2]},`;
