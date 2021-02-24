@@ -41,27 +41,6 @@ console.log(contenedores_gifs.length);
 
  });
 
-   
-
- document.getElementById("link-favoritos").addEventListener("click", function () {
- 
-    
-  
-    setTimeout(() => {
-        //desaparezco los div a partir del indice 12;
-
-      for (let index = 12; index < contenedores_gifs.length; index++) {
-  
-        contenedores_gifs[index].style.display ="none"
-        }
-      
-    }, 500);
- 
-    
-})
- 
-
-
 
 
 document.getElementById("link-favoritos").addEventListener("click", function (ev) {
@@ -74,7 +53,15 @@ document.getElementById("link-favoritos").addEventListener("click", function (ev
 
   }
   
-    
+  setTimeout(() => {
+    //desaparezco los div a partir del indice 12;
+
+  for (let index = 12; index < contenedores_gifs.length; index++) {
+
+    contenedores_gifs[index].style.display ="none"
+    }
+  
+}, 500);
     
 })
 
