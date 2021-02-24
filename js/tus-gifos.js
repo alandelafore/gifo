@@ -1,5 +1,5 @@
 var resultado                       =[];
-const mi_boton_ocultar_tus_gifos      = document.getElementById("mi-boton-ocultar-tus-gifos"); 
+const mi_boton_ocultar_tus_gifos    = document.getElementById("mi-boton-ocultar-tus-gifos"); 
 const link_mis_gifos                =document.getElementById("link-mis-gifos");
 const cabeza_grande_tus_gifos_img   = document.getElementById("cabeza-grande-tus-gifos");
 const texto_seccion_cabeza_grande   = document.getElementById("texto-seccion-cabeza-grande");
@@ -36,7 +36,6 @@ document.getElementById("mi-boton-ocultar-tus-gifos").addEventListener("click",f
   }
 
  });
-
 
 
 link_mis_gifos.addEventListener("click",function (ev) {
