@@ -433,7 +433,9 @@ function mouse_end() {
     offset += 1;
   container.innerHTML = "";
   getTrendings();
-
+setTimeout(() => {
+  diferencia =0;
+}, 500);
     
 
 }
@@ -441,6 +443,9 @@ if (offset != 0 &&diferencia>=6) {
   offset -= 1;
   container.innerHTML = "";
   getTrendings();
+  setTimeout(() => {
+    diferencia =0;
+  }, 500);
 }
   
 }
