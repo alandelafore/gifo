@@ -271,7 +271,9 @@ function eliminar_tus_gifos(info)
               btn_descarga.classList.add("ocultar");
               btn_agrandar.classList.add("ocultar");
               user.classList.add("ocultar");
-      
+
+      if(window.matchMedia("(min-width: 768px)").matches){
+             
               ctn.addEventListener("mouseout",function (ev) {
               titulo.classList.add("ocultar");
               btn_corazon.classList.add("ocultar");
@@ -279,6 +281,9 @@ function eliminar_tus_gifos(info)
               btn_agrandar.classList.add("ocultar");
               user.classList.add("ocultar");
               })
+            }
+      if(window.matchMedia("(min-width: 768px)").matches){
+
               ctn.addEventListener("mouseover",function (ev) {
                 user.classList.remove("ocultar");
                titulo.classList.remove("ocultar");
@@ -287,6 +292,7 @@ function eliminar_tus_gifos(info)
                btn_agrandar.classList.remove("ocultar");
             
              })
+            }
              div_contenedor_botones_textos.appendChild(div_contenedor_botones);
              div_contenedor_botones_textos.appendChild(div_contenedor_texto);
              ctn.appendChild(div_contenedor_botones_textos);

@@ -271,6 +271,7 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
          })
 
         
+      if(window.matchMedia("(min-width: 768px)").matches){
 
         ctn.addEventListener("mouseout",function (ev) {
         titulo.classList.add("ocultar");
@@ -279,6 +280,9 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
         btn_agrandar.classList.add("ocultar");
         user.classList.add("ocultar");
         })
+      }
+      if(window.matchMedia("(min-width: 768px)").matches){
+
         ctn.addEventListener("mouseover",function (ev) {
           user.classList.remove("ocultar");
          titulo.classList.remove("ocultar");
@@ -287,6 +291,7 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
          btn_agrandar.classList.remove("ocultar");
       
        })
+      }
        div_contenedor_botones_textos.appendChild(div_contenedor_botones);
        div_contenedor_botones_textos.appendChild(div_contenedor_texto);
        ctn.appendChild(div_contenedor_botones_textos);

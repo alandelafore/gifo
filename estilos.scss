@@ -1274,12 +1274,12 @@ footer {
     width: 243px;
     height: 187px;
     background-color: $color-violeta;
-    &:hover {
+    /* &:hover {
         .mi-imagen {
             mix-blend-mode: normal;
             opacity: 0.4;
         }
-    }
+    } */
 
     .div-contenedor-botones-textos {
         width: 100%;
@@ -1537,7 +1537,22 @@ i {
             }
         }
     }
-
+    .contenedor-gift {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-flow: row;
+        width: 243px;
+        height: 187px;
+        background-color: $color-violeta;
+        &:hover {
+            .mi-imagen {
+                mix-blend-mode: normal;
+                opacity: 0.4;
+            }
+        }
+    }
 
     
     .tipografia-home-padding {

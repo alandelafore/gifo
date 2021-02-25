@@ -1355,11 +1355,12 @@ footer {
   width: 243px;
   height: 187px;
   background-color: #572EE5;
-}
-
-.contenedor-gift:hover .mi-imagen {
-  mix-blend-mode: normal;
-  opacity: 0.4;
+  /* &:hover {
+        .mi-imagen {
+            mix-blend-mode: normal;
+            opacity: 0.4;
+        }
+    } */
 }
 
 .contenedor-gift .div-contenedor-botones-textos {
@@ -1666,6 +1667,29 @@ i:hover {
   .fieldset-busqueda .boton-busqueda .btn-borrar {
     -webkit-transform: translate(500%, 0px);
             transform: translate(500%, 0px);
+  }
+  .contenedor-gift {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    width: 243px;
+    height: 187px;
+    background-color: #572EE5;
+  }
+  .contenedor-gift:hover .mi-imagen {
+    mix-blend-mode: normal;
+    opacity: 0.4;
   }
   .tipografia-home-padding br {
     display: inline-block;
