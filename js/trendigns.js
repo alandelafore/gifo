@@ -102,6 +102,11 @@ function getTrendings() {
         container.append(ctn);
         //hago hija a la imagen de mi div
         ctn.append(imagen);
+
+
+      
+
+
         //agrego la clase gift posicion
         imagen.classList.add("gift-posicion");
         //Ha ese div le agrego la clase
