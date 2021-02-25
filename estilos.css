@@ -92,6 +92,15 @@
   height: 190px;
 }
 
+#seccion-busqueda-fallida {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body.dark {
   background-color: #37383C;
 }

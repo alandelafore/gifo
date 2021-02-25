@@ -538,6 +538,7 @@ function Remover_clase_ocultar_corazon_violeta() {
 function seccion_no_encontrados() {
   let busqueda_fallida = document.getElementById("seccion-busqueda-fallida");
   let contendor_gifts = document.getElementById("gifts");
+  ver_mas.classList.add("ocultar");
 
 
   contendor_gifts.appendChild(busqueda_fallida);
@@ -555,6 +556,9 @@ function seccion_no_encontrados_02() {
   contendor_gifts.classList.add("contenedor5");
 
   busqueda_fallida.classList.add("ocultar");
+  ver_mas.classList.remove("ocultar");
+
+  
 }
 
 
