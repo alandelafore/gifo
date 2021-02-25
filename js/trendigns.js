@@ -104,7 +104,26 @@ function getTrendings() {
         ctn.append(imagen);
 
 
-      
+      ctn.addEventListener("touchstart",function (ev) {
+        imagen.classList.remove("gift-posicion");
+        imagen.classList.add("imagen-agrandada-desktop");
+        ctn.classList.add("al-agrandar");
+        ctn.classList.remove("contenedor-gift-trending");
+        btn_cruz.classList.remove("ocultar");
+        btn_agrandar.style.display ="none";
+        btn_cruz.id="cruz-agrandar";
+        btn_cruz.classList.add("cruz-agrandar");
+
+        btn_descarga.style.border= "1px solid  #CED7E1" ;
+        btn_corazon.style.border= "1px solid #CED7E1" ;
+
+        btn_corazon.style.opacity= "1" ;
+        btn_descarga.style.opacity= "1" ;
+
+        div_contenedor_botones_textos.classList.remove("div-contenedor-botones-textos");
+        div_contenedor_botones_textos.classList.add("agrandar-div-cont-btn-txt");
+        
+      })
 
 
         //agrego la clase gift posicion

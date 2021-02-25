@@ -217,7 +217,29 @@ if (localStorage.getItem("favoritos") != null && localStorage.getItem("favoritos
         btn_agrandar.classList.add("ocultar");
         user.classList.add("ocultar");
 
+        ctn.addEventListener("touchstart",function (params) {
+          const contenedor_gif_agrandar=document.getElementById(`para-agrandar`);
+  
+          img.classList.remove("gift-posicion");
+          img.classList.add("imagen-agrandada-desktop");
+          ctn.classList.add("al-agrandar");
+          ctn.classList.remove("contenedor-gift");
+          btn_cruz.classList.remove("ocultar");
+          btn_agrandar.style.display ="none";
+          btn_cruz.id="cruz-agrandar";
+          btn_cruz.classList.add("cruz-agrandar");
 
+          btn_descarga.style.border= "1px solid  #CED7E1" ;
+          btn_corazon.style.border= "1px solid #CED7E1" ;
+
+          btn_corazon.style.opacity= "1" ;
+          btn_descarga.style.opacity= "1" ;
+
+          div_contenedor_botones_textos.classList.remove("div-contenedor-botones-textos");
+          div_contenedor_botones_textos.classList.add("agrandar-div-cont-btn-txt");
+
+          
+        })
 
         btn_agrandar.addEventListener("click",function (ev) {
           const contenedor_gif_agrandar=document.getElementById(`para-agrandar`);
