@@ -1415,11 +1415,12 @@ footer {
   margin-left: 22px;
   margin-right: 22px;
   background-color: #572EE5;
-}
-
-.contenedor-gift-trending:hover .mi-imagen {
-  mix-blend-mode: normal;
-  opacity: 0.4;
+  /*  &:hover {
+        .mi-imagen {
+            mix-blend-mode: normal;
+            opacity: 0.4;
+        }
+    } */
 }
 
 .contenedor-gift-trending .div-contenedor-botones-textos {

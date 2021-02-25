@@ -317,6 +317,7 @@ function getTrendings() {
         btn_descarga.classList.add("ocultar");
         btn_agrandar.classList.add("ocultar");
 
+        if(window.matchMedia("(min-width: 768px)").matches){
         ctn.addEventListener("mouseout",function (ev) {
         user.classList.add("ocultar");
         titulo.classList.add("ocultar");
@@ -324,15 +325,18 @@ function getTrendings() {
         btn_descarga.classList.add("ocultar");
         btn_agrandar.classList.add("ocultar");
         })
+      }
+      if(window.matchMedia("(min-width: 768px)").matches){
         ctn.addEventListener("mouseover",function (ev) {
         user.classList.remove("ocultar");
          titulo.classList.remove("ocultar");
          btn_corazon.classList.remove("ocultar");
          btn_descarga.classList.remove("ocultar");
          btn_agrandar.classList.remove("ocultar");
+         
       
        })
-
+      }
        
        div_contenedor_botones_textos.appendChild(div_contenedor_botones);
        div_contenedor_botones_textos.appendChild(div_contenedor_texto);
