@@ -110,10 +110,8 @@ function getTrendings() {
 
 
 
-        //TODO: AGREGAR EN LAS OTRAS PARTES DEL CODIGO TRENDINGS Y FAVORITOS
         ctn.id=`para-agrandar-${index}`;
 
-         //TODO: AGREGAR EN LAS OTRAS PARTES DEL CODIGO TRENDINGS Y FAVORITOS
        
 
 
