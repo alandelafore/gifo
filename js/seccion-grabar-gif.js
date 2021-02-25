@@ -100,7 +100,7 @@ document.getElementById("repetir-captura").addEventListener("click",function () 
         btn_grabar.classList.remove("ocultar");
         
 
-        let imagen_de_la_camara=document.getElementById("contenedor-imagen-camara ocultar");
+        let imagen_de_la_camara=document.getElementById("contenedor-imagen-camara");
         imagen_de_la_camara.classList.remove("ocultar");
         
         let titulo =document.getElementById("estilo-titulo").innerHTML ="";

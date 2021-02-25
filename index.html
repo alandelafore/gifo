@@ -136,7 +136,7 @@
 
        
         <h1 class="tus-gifos-titulo tus-gifos-titulo-padding">Mis GIFOS</h1>
-        <div id="cabeza-grande-tus-gifos" class="cabeza-grande-tus-gifos "><img class="cabeza-grande-tus-gifos-img-noc" src="Assets/icon-mis-gifos-sin-contenido.svg" >
+        <div id="cabeza-grande-tus-gifos" class="cabeza-grande-tus-gifos "><img alt="cabeza grande" class="cabeza-grande-tus-gifos-img-noc" src="Assets/icon-mis-gifos-sin-contenido.svg" >
 
         </div>
         <div id="texto-seccion-cabeza-grande">
@@ -159,7 +159,7 @@
         <!-- aca va la imagen del corazon verde -->
 
        
-        <div class="ouch "><img src="Assets/icon-busqueda-sin-resultado.svg" >
+        <div class="ouch "><img alt="sin resultado" src="Assets/icon-busqueda-sin-resultado.svg" >
 
         </div>
         <div>
@@ -183,14 +183,12 @@
         <!-- ACA PONGO LOS TRENDING GIFT -JS -->
         <div id="trend_container" class="contenedor6">
         </div>
-        <button id="next" class="btn-next-previous"><img class="btn-next-img" src="Assets/button-right.svg" ></button>
+        <button id="next" class="btn-next-previous"><img alt="next" class="btn-next-img" src="Assets/button-right.svg" ></button>
 
-        <button id="previous" class="btn-next-previous" ><img class="btn-previous-img" src="Assets/button-left.svg" ></button>
+        <button id="previous" class="btn-next-previous" ><img alt="previous" class="btn-previous-img" src="Assets/button-left.svg" ></button>
 
-        </div>
       
 
-        </div>
     </section>
 
 
@@ -209,14 +207,14 @@
     
             <div class="contenedor-del-titulo-crear-tus-propios-gifos"><h2 id="estilo-titulo" class="estilo-titulo">Aquí podrás <br> crear tus propios  <span>GIFOS</span> </h2></div>
            <div class="contenedor-del-texto-crear-tus-propios-gifos"> <p id="crea-tu-gifo" class="crea-tu-gifo">¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video)</p></div>
-           <div id="contenedor-imagen-camara ocultar" class="contenedor-imagen-camara ocultar">
+           <div id="contenedor-imagen-camara" class="contenedor-imagen-camara ocultar">
             <div id="div-con-filtro" class="ocultar div-con-filtro"> 
     
             </div>
-            <video id="video"  src=""></video> 
+            <video id="video"></video> 
             </div> 
             <div id="cargando-gif" class="cargando-gif ocultar">
-                <img class="loader" id="loader"  >
+                <img class="loader" id="loader" alt="loader" >
 
                 <h3 class="estamos-subiendo-tu-gifo" id="estamos-subiendo-tu-gifo">Estamos subiendo tu GIFO</h3>
                 <div id="contenedor-botones-seccion-crear" class="contenedor-botones-seccion-crear">
@@ -230,7 +228,7 @@
            <div class="contenedor-botones">
             <button id="btn-1" class="estilo-de-mis-botones">1</button>
             <button id="btn-2" class="estilo-de-mis-botones">2</button>
-            <button id="btn-3"class="estilo-de-mis-botones">3</button>
+            <button id="btn-3" class="estilo-de-mis-botones">3</button>
             <!-- cronometro paso los valores por js-->
             <div class="cronometro ocultar" id="cronometro"> <h2 id="crono">00:00:00</h2></div>
             <div class="repetir-captura ocultar" id="repetir-captura"> <h2 id="repetir">REPETIR CAPTURA</h2></div>
@@ -261,7 +259,7 @@
         <h4 class="compartir-en compartir-en-padding"> Compartir en: </h4>
 
 
-        <ul class="contenedor2">
+        <div class="contenedor2">
             <a class="footer-links" href="https://es-la.facebook.com/">
                 <i class="fa fa-facebook icono-redes"></i>
             </a>
@@ -274,15 +272,14 @@
                 <i class="fa fa-instagram icono-redes"></i>
             </a>
 
-        </ul>
+        </div>
 
 
         <h5 class="gifos-derechos-reservados gifos-derechos-reservados-padding">© GIFOS 2020 All Rights Reserved.</h5>
     </footer>
 
 </body>
-<!-- JAVA SCRIPT IMPORTADOS -->
-<!-- Este es el codigo del menu del celular -->
+
 <script src="js/menu-celular.js"></script>
 <script src="js/buscador-giphy.js"></script>
 <script src="js/trendigns.js"></script>
@@ -294,7 +291,7 @@
 <script src="js/busqueda-tags.js"></script>
 <script src="js/tus-gifos.js"></script>
 
-<!--  FIN JAVA SCRIPT IMPORTADOS -->
+
 
 
 </html>

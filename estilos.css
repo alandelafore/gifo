@@ -88,8 +88,8 @@
 .al-agrandar .imagen-agrandada-desktop {
   z-index: 20000;
   position: fixed;
-  max-width: 318px;
-  max-height: 190px;
+  width: 318px;
+  height: 190px;
 }
 
 body.dark {
@@ -1640,6 +1640,44 @@ i:hover {
   .dark header .menu .menu-link .links-menu {
     color: white;
   }
+  .al-agrandar {
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 100001;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .al-agrandar .user-gifs {
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding-bottom: 7px;
+  }
+  .al-agrandar .titulos-gifs {
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    font-weight: 700;
+  }
+  .al-agrandar .imagen-agrandada-desktop {
+    width: 740px;
+    height: 305px;
+    z-index: 20000;
+    position: fixed;
+  }
   .fieldset-busqueda {
     border-radius: 40px;
     border: solid 1px;
@@ -1689,44 +1727,6 @@ i:hover {
   .contenedor-gift:hover .mi-imagen {
     mix-blend-mode: normal;
     opacity: 0.4;
-  }
-  .al-agrandar {
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 100001;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .al-agrandar .user-gifs {
-    font-size: 16px;
-    color: #000000;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    padding-bottom: 7px;
-  }
-  .al-agrandar .titulos-gifs {
-    font-size: 16px;
-    color: #000000;
-    text-align: center;
-    font-weight: 700;
-  }
-  .al-agrandar .imagen-agrandada-desktop {
-    width: 740px;
-    height: 305px;
-    z-index: 20000;
-    position: fixed;
   }
   .tipografia-home-padding br {
     display: inline-block;
