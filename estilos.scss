@@ -81,8 +81,8 @@
     }
 
     .imagen-agrandada-desktop {
-        width:  740px;
-        height: 305px;
+        width:  318px;
+        height: 245px;
         z-index: 20000;
         position: fixed;
     }
@@ -1554,6 +1554,40 @@ i {
         }
     }
 
+    .al-agrandar {
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 100001;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .user-gifs {
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            padding-bottom: 7px;
+        }
+        .titulos-gifs {
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            font-weight: 700;
+        }
+    
+        .imagen-agrandada-desktop {
+            width:  740px;
+            height: 305px;
+            z-index: 20000;
+            position: fixed;
+        }
+    }
     
     .tipografia-home-padding {
         br {

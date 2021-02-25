@@ -329,7 +329,11 @@ function displayFavoritos(info) {
           div_contenedor_botones_textos.classList.add("div-contenedor-botones-textos");
           div_contenedor_botones_textos.classList.remove("agrandar-div-cont-btn-txt");
   
-          
+          btn_corazon.classList.add("ocultar");
+          btn_descarga.classList.add("ocultar");
+          btn_agrandar.classList.add("ocultar");
+          user.classList.add("ocultar");
+          titulo.classList.add("ocultar");
   
   
   
@@ -338,7 +342,6 @@ function displayFavoritos(info) {
            
            
          })
-      if(window.matchMedia("(min-width: 768px)").matches){
 
         ctn.addEventListener("mouseout",function (ev) {
         titulo.classList.add("ocultar");
@@ -347,8 +350,7 @@ function displayFavoritos(info) {
         btn_agrandar.classList.add("ocultar");
         user.classList.add("ocultar");
         })
-      }
-      if(window.matchMedia("(min-width: 768px)").matches){
+      
 
         ctn.addEventListener("mouseover",function (ev) {
           user.classList.remove("ocultar");
@@ -358,7 +360,7 @@ function displayFavoritos(info) {
          btn_agrandar.classList.remove("ocultar");
       
        })
-      }
+      
        div_contenedor_botones_textos.appendChild(div_contenedor_botones);
        div_contenedor_botones_textos.appendChild(div_contenedor_texto);
        ctn.appendChild(div_contenedor_botones_textos);
