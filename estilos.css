@@ -79,17 +79,17 @@
 }
 
 .al-agrandar .titulos-gifs {
-  font-size: 16px;
+  font-size: 15px;
   color: #000000;
   text-align: center;
   font-weight: 700;
 }
 
 .al-agrandar .imagen-agrandada-desktop {
-  width: 318px;
-  height: 245px;
   z-index: 20000;
   position: fixed;
+  max-width: 318px;
+  max-height: 190px;
 }
 
 body.dark {
@@ -127,16 +127,15 @@ body.dark {
   position: relative;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
-  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: white;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding-bottom: 4px;
-  padding-left: 13px;
+  margin-bottom: 5px;
 }
 
 .contenedor-gift .titulos-gifs {
@@ -145,9 +144,8 @@ body.dark {
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   color: white;
-  padding-left: 13px;
 }
 
 .dark .ouch img {
@@ -311,14 +309,14 @@ body.dark {
 .foto {
   background-color: #c5aaaa;
   border: solid black;
-  width: 243px;
-  height: 187px;
+  width: 156px;
+  height: 120px;
 }
 
 .gift-posicion {
   position: absolute;
-  width: 243px;
-  height: 187px;
+  width: 156px;
+  height: 120px;
 }
 
 .boton-favoritos-corazon-activo {
@@ -609,9 +607,10 @@ header {
 }
 
 .tipografia-home {
-  font-size: 30px;
+  font-size: 25px;
+  color: #572EE5;
   text-align: center;
-  line-height: 36px;
+  line-height: 33px;
   font-family: "Montserrat", sans-serif;
   color: #572EE5;
 }
@@ -1331,10 +1330,10 @@ footer {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 243px 243px;
-      grid-template-columns: 243px 243px;
-  grid-gap: 25px 21px;
-  padding: 10px;
+  -ms-grid-columns: 156px 156px;
+      grid-template-columns: 156px 156px;
+  grid-gap: 21px 18px;
+  padding: 5px;
 }
 
 .contenedor-gift {
@@ -1352,8 +1351,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  width: 243px;
-  height: 187px;
+  width: 156px;
+  height: 120px;
   background-color: #572EE5;
   /* &:hover {
         .mi-imagen {
@@ -1409,8 +1408,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  width: 243px;
-  height: 187px;
+  width: 156px;
+  height: 120px;
   margin-bottom: 131px;
   margin-top: 32px;
   margin-left: 22px;
@@ -1683,8 +1682,8 @@ i:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    width: 243px;
-    height: 187px;
+    width: 156px;
+    height: 120px;
     background-color: #572EE5;
   }
   .contenedor-gift:hover .mi-imagen {

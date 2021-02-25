@@ -74,17 +74,19 @@
         padding-bottom: 7px;
     }
     .titulos-gifs {
-        font-size: 16px;
+        font-size: 15px;
         color: #000000;
         text-align: center;
         font-weight: 700;
     }
 
     .imagen-agrandada-desktop {
-        width:  318px;
-        height: 245px;
+        
         z-index: 20000;
         position: fixed;
+        max-width: 318px;
+        max-height: 190px;
+
     }
 }
 
@@ -129,13 +131,12 @@ body {
         position: relative;
         width: 100%;
         font-family: "Roboto", sans-serif;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 16px;
-        color: white;
         display: flex;
+        color: white;
         align-self: flex-start;
-        padding-bottom: 4px;
-        padding-left: 13px;
+        margin-bottom: 5px;
     }
     .titulos-gifs {
         z-index: 2000;
@@ -143,9 +144,8 @@ body {
         width: 100%;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 15px;
         color: white;
-        padding-left: 13px;
     }
 }
 // cuando no hay nada para buscar o la busqueda es erronea
@@ -333,13 +333,13 @@ input {
 .foto {
     background-color: rgb(197, 170, 170);
     border: solid black;
-    width: 243px;
-    height: 187px;
+    width: 156px;
+    height: 120px;
 }
 .gift-posicion {
     position: absolute;
-    width: 243px;
-    height: 187px;
+    width: 156px;
+    height: 120px;
 }
 //BOTONES GIFTS
 .boton-favoritos-corazon-activo {
@@ -628,9 +628,10 @@ header {
 
 //texto arriba de la imagen
 .tipografia-home {
-    font-size: 30px;
+    font-size: 25px;
+    color: #572EE5;
     text-align: center;
-    line-height: 36px;
+    line-height: 33px;
     font-family: "Montserrat", sans-serif;
     //color violeta(variable)
     color: $color-violeta;
@@ -1160,6 +1161,8 @@ footer {
 }
 
 @media only screen and (max-width: 360px) {
+    
+    
     .contenedor1 {
         .imagen-central {
             max-width: 100%;
@@ -1220,6 +1223,7 @@ footer {
             font-size: 15px;
             color: #000000;
             text-align: center;
+            
         }
         .titulos-gifs{
             grid-row: 17;
@@ -1260,10 +1264,10 @@ footer {
     width: 97%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 243px 243px;
-    grid-gap: 25px 21px;
+    grid-template-columns: 156px 156px ;
+    grid-gap: 21px 18px;
 
-    padding: 10px;
+    padding: 5px;
 }
 .contenedor-gift {
     width: 100%;
@@ -1271,8 +1275,8 @@ footer {
     justify-content: flex-end;
     align-items: flex-start;
     flex-flow: row;
-    width: 243px;
-    height: 187px;
+    width: 156px;
+    height: 120px;
     background-color: $color-violeta;
     /* &:hover {
         .mi-imagen {
@@ -1306,8 +1310,8 @@ footer {
     justify-content: flex-end;
     align-items: flex-start;
     flex-flow: row;
-    width: 243px;
-    height: 187px;
+    width: 156px;
+    height: 120px;
     margin-bottom: 131px;
     margin-top: 32px;
     margin-left: 22px;
@@ -1543,8 +1547,8 @@ i {
         justify-content: flex-end;
         align-items: flex-start;
         flex-flow: row;
-        width: 243px;
-        height: 187px;
+        width: 156px;
+        height: 120px;
         background-color: $color-violeta;
         &:hover {
             .mi-imagen {
