@@ -382,8 +382,12 @@ getTrendings();
 
 var media_q = window.matchMedia("(min-width: 768px)")
 
+alert("Para deslizar, coloque el dedo en la seccion de tendencias y muévalo hacia la izquierda o hacia la derecha desde los costados");
   
-
+document.getElementById("trend_container").addEventListener("touchstart", touch_start)
+document.getElementById("trend_container").addEventListener("touchmove",touch_move)
+document.getElementById("trend_container").addEventListener("touchend",mouse_end)
+    
 
 function cambio_desktop_mobible(media_q) {
   if(media_q.matches){
@@ -397,9 +401,6 @@ function cambio_desktop_mobible(media_q) {
     getTrendings();
     next.classList.add("ocultar");
     previous.classList.add("ocultar");
-    document.getElementById("trend_container").addEventListener("touchstart", touch_start)
-    document.getElementById("trend_container").addEventListener("touchmove",touch_move)
-    document.getElementById("trend_container").addEventListener("touchend",mouse_end)
     
 
 
